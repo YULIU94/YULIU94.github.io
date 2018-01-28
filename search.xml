@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[first post]]></title>
-    <url>%2F2018%2F01%2F27%2Ffirst-post%2F</url>
-    <content type="text"><![CDATA[Hello world This website is Yu Liu’s homepage, built by Hexo+Github pages. Contents are written with Markdown syntax. This website is for: 1. Share idea “Do not go gentle into that good night” 2. Code review1234567@requires_authorizationclass SomeClass:passif __name__ == '__main__':# A commentprint 'hello world' 3. Photography 4. Schedule and plan Set up TensorFlow environment Build personal website [ ] Solve algorithm problems [ ] Learn ASP.NET MVC Framework [ ] 支持以 PDF 格式导出文稿 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率 新增 Todo 列表功能 修复 LaTex 公式渲染问题 新增 LaTex 公式编号功能]]></content>
+    <title><![CDATA[Hello world]]></title>
+    <url>%2F2018%2F01%2F27%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Hello world This website is Yu Liu’s homepage, built by Hexo+Github pages. Contents are written with Markdown syntax. This website is for: 1. Share idea “Do not go gentle into that good night” 2. Code review1234567@requires_authorizationclass SomeClass:passif __name__ == '__main__':# A commentprint 'hello world' 3. Photography 4. Schedule and plan Set up TensorFlow environment Build personal website Solve algorithm problems Learn ASP.NET MVC Framework]]></content>
       <categories>
         <category>article</category>
       </categories>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F01%2F27%2Fhello-world%2F</url>
+    <url>%2F2018%2F01%2F27%2Fbackup%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
