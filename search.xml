@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[ECMAScript 6]]></title>
+    <title><![CDATA[ECMAScript 6 features]]></title>
     <url>%2F2018%2F01%2F28%2FECMAScript-6%2F</url>
     <content type="text"><![CDATA[js]]></content>
       <categories>
         <category>Article</category>
       </categories>
-      <tags>
-        <tag>Front-end, Tech</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello world]]></title>
