@@ -5,10 +5,7 @@
     <url>%2F2018%2F01%2F27%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Hello world This website is Yu Liu’s homepage, built by Hexo+Github pages. Contents are written with Markdown syntax. This website is for: 1. Share idea “Do not go gentle into that good night” 2. Code review1234567@requires_authorizationclass SomeClass:passif __name__ == '__main__':# A commentprint 'hello world' 3. Photography 4. Schedule and plan Set up TensorFlow environment Build personal website Solve algorithm problems Learn ASP.NET MVC Framework]]></content>
       <categories>
-        <category>article</category>
+        <category>Article</category>
       </categories>
-      <tags>
-        <tag>tech</tag>
-      </tags>
   </entry>
 </search>
