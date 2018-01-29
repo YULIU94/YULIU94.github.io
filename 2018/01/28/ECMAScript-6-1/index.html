@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Front-end,Tech,JavaScript," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="YuLiu&#39;s home">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="constSupport for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an">
+<meta name="keywords" content="Front-end,Tech,JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ECMAScript 6 features (1)">
+<meta property="og:url" content="http://yoursite.com/2018/01/28/ECMAScript-6-1/index.html">
 <meta property="og:site_name" content="YuLiu&#39;s home">
+<meta property="og:description" content="constSupport for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-01-29T03:37:33.155Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YuLiu&#39;s home">
+<meta name="twitter:title" content="ECMAScript 6 features (1)">
+<meta name="twitter:description" content="constSupport for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/28/ECMAScript-6-1/"/>
 
 
 
 
 
-  <title>YuLiu's home</title>
+  <title>ECMAScript 6 features (1) | YuLiu's home</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,9 +248,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -276,9 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/28/ECMAScript-6-1/" itemprop="url">ECMAScript 6 features (1)</a></h1>
+          <h1 class="post-title" itemprop="name headline">ECMAScript 6 features (1)</h1>
         
 
         <div class="post-meta">
@@ -350,9 +352,7 @@
       
 
       
-        
-          
-            <h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>Support for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an object, this means the object itself can still be altered).</p>
+        <h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>Support for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an object, this means the object itself can still be altered).</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// add an attribute to foo, success</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line">foo.prop <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// assign foo to another object, error</span></span><br><span class="line">foo = &#123;&#125;; <span class="comment">// TypeError: "foo" is read-only</span></span><br></pre></td></tr></table></figure>
 <h2 id="let"><a href="#let" class="headerlink" title="let"></a>let</h2><p>Block-scoped variables (and constants) without hoisting.</p>
 <p>‘let’ only validates in scope:</p>
@@ -363,8 +363,6 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// error</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// error</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="ES6-has-6-methods-of-variable-declaration"><a href="#ES6-has-6-methods-of-variable-declaration" class="headerlink" title="ES6 has 6 methods of variable declaration"></a>ES6 has 6 methods of variable declaration</h2><p>ES5 has two methods of variable declaration: var, function;<br>ES6 has 4 more methods: let, const, import, class.</p>
 
-          
-        
       
     </div>
     
@@ -379,169 +377,46 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/27/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yu Liu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YuLiu's home">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/27/hello-world/" itemprop="url">Hello world</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-27T22:21:01-05:00">
-                2018-01-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Article/" itemprop="url" rel="index">
-                    <span itemprop="name">Article</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Front-end/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            Front-end</a>
           
-
+            <a href="/tags/Tech/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            Tech</a>
           
-            
+            <a href="/tags/JavaScript/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            JavaScript</a>
           
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h1><hr>
-<p>This website is Yu Liu’s homepage, built by Hexo+Github pages. Contents are written with Markdown syntax.</p>
-<p>This website is for:</p>
-<h3 id="1-Share-idea"><a href="#1-Share-idea" class="headerlink" title="1. Share idea"></a>1. Share idea</h3><blockquote>
-<p>“Do not go gentle into that good night”</p>
-</blockquote>
-<h3 id="2-Code-review"><a href="#2-Code-review" class="headerlink" title="2. Code review"></a>2. Code review</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line"><span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line"><span class="comment"># A comment</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'hello world'</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-Photography"><a href="#3-Photography" class="headerlink" title="3. Photography"></a>3. Photography</h3><p><img src="/upload_image/pic_0128_002.jpeg" alt=""></p>
-<h3 id="4-Schedule-and-plan"><a href="#4-Schedule-and-plan" class="headerlink" title="4. Schedule and plan"></a>4. Schedule and plan</h3><ul>
-<li style="list-style: none"><input type="checkbox" checked> Set up TensorFlow environment</li>
-<li style="list-style: none"><input type="checkbox" checked> Build personal website</li>
-<li style="list-style: none"><input type="checkbox"> Solve algorithm problems</li>
-<li style="list-style: none"><input type="checkbox"> Learn ASP.NET MVC Framework</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/27/hello-world/" rel="next" title="Hello world">
+                <i class="fa fa-chevron-left"></i> Hello world
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -551,10 +426,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -562,6 +438,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzYzNi8xMDE5MQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -582,8 +467,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -659,6 +553,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#const"><span class="nav-number">1.</span> <span class="nav-text">const</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#let"><span class="nav-number">2.</span> <span class="nav-text">let</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6-has-6-methods-of-variable-declaration"><span class="nav-number">3.</span> <span class="nav-text">ES6 has 6 methods of variable declaration</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -796,6 +706,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -823,6 +737,17 @@
 
 
 
+
+  <script type="text/javascript">
+    (function(d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
          
 
 
