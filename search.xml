@@ -5,7 +5,7 @@
     <url>%2F2018%2F01%2F28%2FECMAScript-6-1%2F</url>
     <content type="text"><![CDATA[constSupport for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an object, this means the object itself can still be altered). 12345678const foo = &#123;&#125;;// add an attribute to foo, successfoo.prop = 123;foo.prop // 123// assign foo to another object, errorfoo = &#123;&#125;; // TypeError: "foo" is read-only letBlock-scoped variables (and constants) without hoisting. ‘let’ only validates in scope: 123456789101112131415&#123;let a = 10;var b = 1;&#125;a // ReferenceError: a is not defined.b // 1which is useful in for loop:for (let i = 0; i &lt; 10; i++) &#123;// ...&#125;console.log(i);// ReferenceError: i is not defined Temporal dead zone (TDZ)If a variable is declared by ‘let’ in a block scope, it’s binding to the block scope and refrain from outside. 1234567891011if (true) &#123;// TDZ starttmp = 'abc'; // ReferenceErrorconsole.log(tmp); // ReferenceErrorlet tmp; // TDZ endconsole.log(tmp); // undefinedtmp = 123;console.log(tmp); // 123&#125; Repeat declaration is not allowed 1234567891011// errorfunction func() &#123;let a = 10;var a = 1;&#125;// errorfunction func() &#123;let a = 10;let a = 1;&#125; ES6 has 6 methods of variable declarationES5 has two methods of variable declaration: var, function;ES6 has 4 more methods: let, const, import, class.]]></content>
       <categories>
-        <category>Article</category>
+        <category>Technology</category>
       </categories>
       <tags>
         <tag>Front-end</tag>
@@ -18,7 +18,7 @@
     <url>%2F2018%2F01%2F27%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Hello world This website is Yu Liu’s homepage, built by Hexo+Github pages. Contents are written with Markdown syntax. This website is for: 1. Share idea “Do not go gentle into that good night” 2. Code review1234567@requires_authorizationclass SomeClass:passif __name__ == '__main__':# A commentprint 'hello world' 3. Photography 4. Schedule and plan Set up TensorFlow environment Build personal website Solve algorithm problems Learn ASP.NET MVC Framework]]></content>
       <categories>
-        <category>Article</category>
+        <category>Documentation</category>
       </categories>
   </entry>
 </search>
