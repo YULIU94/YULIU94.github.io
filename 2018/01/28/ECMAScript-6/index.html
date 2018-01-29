@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Front-end,Tech,JavaScript," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="js">
+<meta name="description" content="constSupport for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an">
+<meta name="keywords" content="Front-end,Tech,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ECMAScript 6 features">
+<meta property="og:title" content="ECMAScript 6 features (1)">
 <meta property="og:url" content="http://yoursite.com/2018/01/28/ECMAScript-6/index.html">
 <meta property="og:site_name" content="YuLiu&#39;s home">
-<meta property="og:description" content="js">
+<meta property="og:description" content="constSupport for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-29T02:38:25.799Z">
+<meta property="og:updated_time" content="2018-01-29T03:25:52.923Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ECMAScript 6 features">
-<meta name="twitter:description" content="js">
+<meta name="twitter:title" content="ECMAScript 6 features (1)">
+<meta name="twitter:description" content="constSupport for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an">
 
 
 
@@ -125,7 +126,7 @@
 
 
 
-  <title>ECMAScript 6 features | YuLiu's home</title>
+  <title>ECMAScript 6 features (1) | YuLiu's home</title>
   
 
 
@@ -279,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ECMAScript 6 features</h1>
+          <h1 class="post-title" itemprop="name headline">ECMAScript 6 features (1)</h1>
         
 
         <div class="post-meta">
@@ -351,7 +352,15 @@
       
 
       
-        <p>js</p>
+        <h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>Support for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an object, this means the object itself can still be altered).</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// add an attribute to foo, success</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line">foo.prop <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// assign foo to another object, error</span></span><br><span class="line">foo = &#123;&#125;; <span class="comment">// TypeError: "foo" is read-only</span></span><br></pre></td></tr></table></figure>
+<h2 id="let"><a href="#let" class="headerlink" title="let"></a>let</h2><p>Block-scoped variables (and constants) without hoisting.</p>
+<p>‘let’ only validates in scope:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">a <span class="comment">// ReferenceError: a is not defined.</span></span><br><span class="line">b <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line">which is useful <span class="keyword">in</span> <span class="keyword">for</span> loop:</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(i);</span><br><span class="line"><span class="comment">// ReferenceError: i is not defined</span></span><br></pre></td></tr></table></figure>
+<p><strong>Temporal dead zone (TDZ)</strong><br>If a variable is declared by ‘let’ in a block scope, it’s binding to the block scope and refrain from outside.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line"><span class="comment">// TDZ start</span></span><br><span class="line">tmp = <span class="string">'abc'</span>; <span class="comment">// ReferenceError</span></span><br><span class="line"><span class="built_in">console</span>.log(tmp); <span class="comment">// ReferenceError</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> tmp; <span class="comment">// TDZ end</span></span><br><span class="line"><span class="built_in">console</span>.log(tmp); <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line">tmp = <span class="number">123</span>;</span><br><span class="line"><span class="built_in">console</span>.log(tmp); <span class="comment">// 123</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Repeat declaration is not allowed</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// error</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// error</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -366,6 +375,22 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Front-end/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            Front-end</a>
+          
+            <a href="/tags/Tech/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            Tech</a>
+          
+            <a href="/tags/JavaScript/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            JavaScript</a>
+          
+        </div>
       
 
       
@@ -441,8 +466,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -479,7 +513,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -518,6 +552,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#const"><span class="nav-number">1.</span> <span class="nav-text">const</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#let"><span class="nav-number">2.</span> <span class="nav-text">let</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
