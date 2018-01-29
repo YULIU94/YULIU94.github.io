@@ -259,6 +259,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/28/ECMAScript-6-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yu Liu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuLiu's home">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/28/ECMAScript-6-2/" itemprop="url">ECMAScript 6 features (2)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-28T23:24:35-05:00">
+                2018-01-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><p><strong>Default Parameter Values</strong><br>Simple and intuitive default values for function parameters.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span> (<span class="params">x, y = <span class="number">7</span>, z = <span class="number">42</span></span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> x + y + z</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="number">1</span>) === <span class="number">50</span></span><br></pre></td></tr></table></figure>
+<p><strong>Rest Parameter</strong><br>Aggregation of remaining arguments into single parameter of variadic functions.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span> (<span class="params">x, y, ...a</span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> (x + y) * a.length</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="number">1</span>, <span class="number">2</span>, <span class="string">"hello"</span>, <span class="literal">true</span>, <span class="number">7</span>) === <span class="number">9</span></span><br></pre></td></tr></table></figure>
+<p><strong>Spread Operator</strong><br>Spreading of elements of an iterable collection (like an array or even a string) into both literal elements and individual function parameters.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> params = [ <span class="string">"hello"</span>, <span class="literal">true</span>, <span class="number">7</span> ]</span><br><span class="line"><span class="keyword">var</span> other = [ <span class="number">1</span>, <span class="number">2</span>, ...params ] <span class="comment">// [ 1, 2, "hello", true, 7 ]</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span> (<span class="params">x, y, ...a</span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> (x + y) * a.length</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="number">1</span>, <span class="number">2</span>, ...params) === <span class="number">9</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"foo"</span></span><br><span class="line"><span class="keyword">var</span> chars = [ ...str ] <span class="comment">// [ "f", "o", "o" ]</span></span><br></pre></td></tr></table></figure>
+<p><strong>Strict mode</strong><br>Since ES5, strict mode could be applied within function.<br>In ES6, if a function uses default parameter value, rest parameter or spread operator, strict mode couldn’t be used in the function.</p>
+<p><strong>Name</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">foo.name <span class="comment">// "foo"</span></span><br></pre></td></tr></table></figure>
+<h2 id="Arrow-Functions"><a href="#Arrow-Functions" class="headerlink" title="Arrow Functions"></a>Arrow Functions</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="params">v</span> =&gt;</span> v;</span><br></pre></td></tr></table></figure>
+<p>equals:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span>(<span class="params">v</span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> v;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>If there is no arguments or more than 1 arguments, use bracket.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="params">()</span> =&gt;</span> <span class="number">5</span>;</span><br><span class="line"><span class="comment">// equals</span></span><br><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="number">5</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sum = <span class="function">(<span class="params">num1, num2</span>) =&gt;</span> num1 + num2;</span><br><span class="line"><span class="comment">// equals</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1, num2</span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Example of arrow function combining with rest parameters:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = <span class="function">(<span class="params">...nums</span>) =&gt;</span> nums;</span><br><span class="line"></span><br><span class="line">numbers(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line"><span class="comment">// [1,2,3,4,5]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> headAndTail = <span class="function">(<span class="params">head, ...tail</span>) =&gt;</span> [head, tail];</span><br><span class="line"></span><br><span class="line">headAndTail(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line"><span class="comment">// [1,[2,3,4,5]]</span></span><br></pre></td></tr></table></figure>
+<h2 id="Tail-Call"><a href="#Tail-Call" class="headerlink" title="Tail Call"></a>Tail Call</h2><p>Definition: call one function at the last step of another function.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> g(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/28/ECMAScript-6-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -598,7 +756,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
