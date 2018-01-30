@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Front-end,Tech,JavaScript," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="YuLiu&#39;s home">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Data-Structure Set12345var s = new Set();[2,3,5,4,5,2,2].map(x =&amp;gt; s.add(x))for (i of s) &amp;#123;console.log(i)&amp;#125;// 2 3 4 5 Methods: size：Returns the number of values in the Set object. add(value)">
+<meta name="keywords" content="Front-end,Tech,JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ECMAScript 6(3)">
+<meta property="og:url" content="http://yoursite.com/2018/01/30/ECMAScript-6-3/index.html">
 <meta property="og:site_name" content="YuLiu&#39;s home">
+<meta property="og:description" content="Data-Structure Set12345var s = new Set();[2,3,5,4,5,2,2].map(x =&amp;gt; s.add(x))for (i of s) &amp;#123;console.log(i)&amp;#125;// 2 3 4 5 Methods: size：Returns the number of values in the Set object. add(value)">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-01-30T18:18:19.817Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YuLiu&#39;s home">
+<meta name="twitter:title" content="ECMAScript 6(3)">
+<meta name="twitter:description" content="Data-Structure Set12345var s = new Set();[2,3,5,4,5,2,2].map(x =&amp;gt; s.add(x))for (i of s) &amp;#123;console.log(i)&amp;#125;// 2 3 4 5 Methods: size：Returns the number of values in the Set object. add(value)">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/30/ECMAScript-6-3/"/>
 
 
 
 
 
-  <title>YuLiu's home</title>
+  <title>ECMAScript 6(3) | YuLiu's home</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -278,9 +282,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -310,9 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/30/ECMAScript-6-3/" itemprop="url">ECMAScript 6(3)</a></h1>
+          <h1 class="post-title" itemprop="name headline">ECMAScript 6(3)</h1>
         
 
         <div class="post-meta">
@@ -395,9 +397,7 @@
       
 
       
-        
-          
-            <p><em>Data-Structure</em></p>
+        <p><em>Data-Structure</em></p>
 <h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line"></span><br><span class="line">[<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">2</span>].map(<span class="function"><span class="params">x</span> =&gt;</span> s.add(x))</span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">of</span> s) &#123;<span class="built_in">console</span>.log(i)&#125;</span><br><span class="line"><span class="comment">// 2 3 4 5</span></span><br></pre></td></tr></table></figure>
 <h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods:"></a>Methods:</h3><ul>
 <li>size：Returns the number of values in the Set object.</li>
@@ -466,8 +466,6 @@
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myWeakMap = <span class="keyword">new</span> <span class="built_in">WeakMap</span>();</span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> obj2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line">myWeakMap.set(obj1, <span class="string">"cat"</span>);</span><br><span class="line">myWeakMap.set(obj2, <span class="number">24</span>);</span><br><span class="line">myWeakMap.has(obj1); <span class="comment">// true</span></span><br><span class="line">myWeakMap.get(obj2); <span class="comment">// 24</span></span><br><span class="line">myWeakMap.delete(obj1);</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -482,354 +480,46 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/28/ECMAScript-6-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yu Liu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YuLiu's home">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/28/ECMAScript-6-2/" itemprop="url">ECMAScript 6 features (2)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-28T23:24:35-05:00">
-                2018-01-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Front-end/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            Front-end</a>
           
-
+            <a href="/tags/Tech/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            Tech</a>
           
-            
+            <a href="/tags/JavaScript/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            JavaScript</a>
           
-
-          
-          
-             <span id="/2018/01/28/ECMAScript-6-2/" class="leancloud_visitors" data-flag-title="ECMAScript 6 features (2)">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><p><strong>Default Parameter Values</strong><br>Simple and intuitive default values for function parameters.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span> (<span class="params">x, y = <span class="number">7</span>, z = <span class="number">42</span></span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> x + y + z</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="number">1</span>) === <span class="number">50</span></span><br></pre></td></tr></table></figure>
-<p><strong>Rest Parameter</strong><br>Aggregation of remaining arguments into single parameter of variadic functions.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span> (<span class="params">x, y, ...a</span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> (x + y) * a.length</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="number">1</span>, <span class="number">2</span>, <span class="string">"hello"</span>, <span class="literal">true</span>, <span class="number">7</span>) === <span class="number">9</span></span><br></pre></td></tr></table></figure>
-<p><strong>Spread Operator</strong><br>Spreading of elements of an iterable collection (like an array or even a string) into both literal elements and individual function parameters.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> params = [ <span class="string">"hello"</span>, <span class="literal">true</span>, <span class="number">7</span> ]</span><br><span class="line"><span class="keyword">var</span> other = [ <span class="number">1</span>, <span class="number">2</span>, ...params ] <span class="comment">// [ 1, 2, "hello", true, 7 ]</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span> (<span class="params">x, y, ...a</span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> (x + y) * a.length</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="number">1</span>, <span class="number">2</span>, ...params) === <span class="number">9</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"foo"</span></span><br><span class="line"><span class="keyword">var</span> chars = [ ...str ] <span class="comment">// [ "f", "o", "o" ]</span></span><br></pre></td></tr></table></figure>
-<p><strong>Strict mode</strong><br>Since ES5, strict mode could be applied within function.<br>In ES6, if a function uses default parameter value, rest parameter or spread operator, strict mode couldn’t be used in the function.</p>
-<p><strong>Name</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">foo.name <span class="comment">// "foo"</span></span><br></pre></td></tr></table></figure>
-<h2 id="Arrow-Functions"><a href="#Arrow-Functions" class="headerlink" title="Arrow Functions"></a>Arrow Functions</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="params">v</span> =&gt;</span> v;</span><br></pre></td></tr></table></figure>
-<p>equals:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span>(<span class="params">v</span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> v;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>If there is no arguments or more than 1 arguments, use bracket.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="params">()</span> =&gt;</span> <span class="number">5</span>;</span><br><span class="line"><span class="comment">// equals</span></span><br><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="number">5</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sum = <span class="function">(<span class="params">num1, num2</span>) =&gt;</span> num1 + num2;</span><br><span class="line"><span class="comment">// equals</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1, num2</span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>Example of arrow function combining with rest parameters:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = <span class="function">(<span class="params">...nums</span>) =&gt;</span> nums;</span><br><span class="line"></span><br><span class="line">numbers(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line"><span class="comment">// [1,2,3,4,5]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> headAndTail = <span class="function">(<span class="params">head, ...tail</span>) =&gt;</span> [head, tail];</span><br><span class="line"></span><br><span class="line">headAndTail(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line"><span class="comment">// [1,[2,3,4,5]]</span></span><br></pre></td></tr></table></figure>
-<h2 id="Tail-Call"><a href="#Tail-Call" class="headerlink" title="Tail Call"></a>Tail Call</h2><p>Definition: call one function at the last step of another function.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> g(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>Tail Recursion</strong></p>
-<p>A recursive function is tail recursive when recursive call is the last thing executed by the function.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">n, total</span>) </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (n === <span class="number">1</span>) <span class="keyword">return</span> total;</span><br><span class="line"><span class="keyword">return</span> factorial(n - <span class="number">1</span>, n * total);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">factorial(<span class="number">5</span>, <span class="number">1</span>) <span class="comment">// 120</span></span><br></pre></td></tr></table></figure>
-<p>The tail recursive functions considered better than non tail recursive functions as tail-recursion can be optimized by compiler. The idea used by compilers to optimize tail-recursive functions is simple, since the recursive call is the last statement, there is nothing left to do in the current function, so saving the current function’s stack frame is of no use (See this for more details).</p>
-<p>Example: (Fibonacci)</p>
-<p>Non tail recursive:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fibonacci</span> (<span class="params">n</span>) </span>&#123;</span><br><span class="line"><span class="keyword">if</span> ( n &lt;= <span class="number">1</span> ) &#123;<span class="keyword">return</span> <span class="number">1</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> Fibonacci(n - <span class="number">1</span>) + Fibonacci(n - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Fibonacci(<span class="number">10</span>) <span class="comment">// 89</span></span><br><span class="line">Fibonacci(<span class="number">100</span>) <span class="comment">// overflow</span></span><br><span class="line">Fibonacci(<span class="number">500</span>) <span class="comment">// overflow</span></span><br></pre></td></tr></table></figure>
-<p>Tail recursive:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fibonacci2</span> (<span class="params">n , ac1 = <span class="number">1</span> , ac2 = <span class="number">1</span></span>) </span>&#123;</span><br><span class="line"><span class="keyword">if</span>( n &lt;= <span class="number">1</span> ) &#123;<span class="keyword">return</span> ac2&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> Fibonacci2 (n - <span class="number">1</span>, ac2, ac1 + ac2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Fibonacci2(<span class="number">100</span>) <span class="comment">// 573147844013817200000</span></span><br><span class="line">Fibonacci2(<span class="number">1000</span>) <span class="comment">// 7.0330367711422765e+208</span></span><br><span class="line">Fibonacci2(<span class="number">10000</span>) <span class="comment">// Infinity</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/28/ECMAScript-6-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yu Liu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YuLiu's home">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/28/ECMAScript-6-1/" itemprop="url">ECMAScript 6 features (1)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-28T21:32:13-05:00">
-                2018-01-28
-              </time>
+              <a href="/2018/01/28/ECMAScript-6-2/" rel="next" title="ECMAScript 6 features (2)">
+                <i class="fa fa-chevron-left"></i> ECMAScript 6 features (2)
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/01/28/ECMAScript-6-1/" class="leancloud_visitors" data-flag-title="ECMAScript 6 features (1)">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>Support for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an object, this means the object itself can still be altered).</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// add an attribute to foo, success</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line">foo.prop <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// assign foo to another object, error</span></span><br><span class="line">foo = &#123;&#125;; <span class="comment">// TypeError: "foo" is read-only</span></span><br></pre></td></tr></table></figure>
-<h2 id="let"><a href="#let" class="headerlink" title="let"></a>let</h2><p>Block-scoped variables (and constants) without hoisting.</p>
-<p>‘let’ only validates in scope:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">a <span class="comment">// ReferenceError: a is not defined.</span></span><br><span class="line">b <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line">which is useful <span class="keyword">in</span> <span class="keyword">for</span> loop:</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(i);</span><br><span class="line"><span class="comment">// ReferenceError: i is not defined</span></span><br></pre></td></tr></table></figure>
-<p><strong>Temporal dead zone (TDZ)</strong><br>If a variable is declared by ‘let’ in a block scope, it’s binding to the block scope and refrain from outside.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line"><span class="comment">// TDZ start</span></span><br><span class="line">tmp = <span class="string">'abc'</span>; <span class="comment">// ReferenceError</span></span><br><span class="line"><span class="built_in">console</span>.log(tmp); <span class="comment">// ReferenceError</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> tmp; <span class="comment">// TDZ end</span></span><br><span class="line"><span class="built_in">console</span>.log(tmp); <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line">tmp = <span class="number">123</span>;</span><br><span class="line"><span class="built_in">console</span>.log(tmp); <span class="comment">// 123</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Repeat declaration is not allowed</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// error</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// error</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="ES6-has-6-methods-of-variable-declaration"><a href="#ES6-has-6-methods-of-variable-declaration" class="headerlink" title="ES6 has 6 methods of variable declaration"></a>ES6 has 6 methods of variable declaration</h2><p>ES5 has two methods of variable declaration: var, function;<br>ES6 has 4 more methods: let, const, import, class.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -839,176 +529,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/27/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yu Liu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YuLiu's home">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/27/hello-world/" itemprop="url">Hello world</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-27T22:21:01-05:00">
-                2018-01-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Documentation/" itemprop="url" rel="index">
-                    <span itemprop="name">Documentation</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/01/27/hello-world/" class="leancloud_visitors" data-flag-title="Hello world">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h1><hr>
-<p>This website is Yu Liu’s homepage, built by Hexo+Github pages. Contents are written with Markdown syntax.</p>
-<p>This website is for:</p>
-<h3 id="1-Share-idea"><a href="#1-Share-idea" class="headerlink" title="1. Share idea"></a>1. Share idea</h3><blockquote>
-<p>“Do not go gentle into that good night”</p>
-</blockquote>
-<h3 id="2-Code-review"><a href="#2-Code-review" class="headerlink" title="2. Code review"></a>2. Code review</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line"><span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line"><span class="comment"># A comment</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'hello world'</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-Photography"><a href="#3-Photography" class="headerlink" title="3. Photography"></a>3. Photography</h3><p><img src="/upload_image/pic_0128_002.jpeg" alt=""></p>
-<h3 id="4-Schedule-and-plan"><a href="#4-Schedule-and-plan" class="headerlink" title="4. Schedule and plan"></a>4. Schedule and plan</h3><ul>
-<li style="list-style: none"><input type="checkbox" checked> Set up TensorFlow environment</li>
-<li style="list-style: none"><input type="checkbox" checked> Build personal website</li>
-<li style="list-style: none"><input type="checkbox"> Solve algorithm problems</li>
-<li style="list-style: none"><input type="checkbox"> Learn ASP.NET MVC Framework</li>
-</ul>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -1016,6 +541,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzYzNi8xMDE5MQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -1036,8 +570,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1113,6 +656,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Set"><span class="nav-number">1.</span> <span class="nav-text">Set</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Methods"><span class="nav-number">1.1.</span> <span class="nav-text">Methods:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Iteration"><span class="nav-number">1.2.</span> <span class="nav-text">Iteration</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map"><span class="nav-number">2.</span> <span class="nav-text">Map</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Properties-Methods"><span class="nav-number">2.1.</span> <span class="nav-text">Properties/Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Convert"><span class="nav-number">2.2.</span> <span class="nav-text">Convert</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Differences-between-Object-and-Map"><span class="nav-number">2.3.</span> <span class="nav-text">Differences between Object and Map</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WeakSet"><span class="nav-number">3.</span> <span class="nav-text">WeakSet</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Differences-between-Set-and-WeakSet"><span class="nav-number">3.1.</span> <span class="nav-text">Differences between Set and WeakSet</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WeakMap"><span class="nav-number">4.</span> <span class="nav-text">WeakMap</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1250,6 +809,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1277,6 +840,17 @@
 
 
 
+
+  <script type="text/javascript">
+    (function(d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
          
 
 
