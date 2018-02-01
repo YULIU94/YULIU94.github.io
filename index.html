@@ -7,7 +7,7 @@
 
 <html class="theme-next pisces use-motion" lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -121,7 +121,7 @@
 
 
 
-  <title>YuLiu's home</title>
+  <title>YuLiu's home</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -140,7 +140,7 @@
     
   
 
-  <div class="container sidebar-position-left 
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
   page-home">
     <div class="headband"></div>
 
@@ -322,7 +322,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/30/PCA-Mathematical-principle/" itemprop="url">PCA-Mathematical principle</a></h1>
+                <a class="post-title-link" href="/2018/01/30/PCA-Mathematical-principle/" itemprop="url">PCA - Mathematics (1)</a></h1>
         
 
         <div class="post-meta">
@@ -374,7 +374,7 @@
 
           
           
-             <span id="/2018/01/30/PCA-Mathematical-principle/" class="leancloud_visitors" data-flag-title="PCA-Mathematical principle">
+             <span id="/2018/01/30/PCA-Mathematical-principle/" class="leancloud_visitors" data-flag-title="PCA - Mathematics (1)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -406,10 +406,16 @@
 
       
         
-          
-            <p><strong>Principal component analysis (PCA)</strong> is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components.</p>
-
-          
+          <p><strong>Principal component analysis (PCA)</strong> is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components.</p>
+<h2 id="Vector-representation-and-Dimensionality-reduction-of-data"><a href="#Vector-representation-and-Dimensionality-reduction-of-data" class="headerlink" title="Vector representation and Dimensionality reduction of data"></a>Vector representation and Dimensionality reduction of data</h2><p>In general, in data mining and machine learning, data are represented as vectors.<br>For example:<br>$$ (500,240,25,13,2312.15)^𝖳 $$</p>
+<p>As we know, the scale of dimensionality of data is in proportion to complexity of machine learning algorithm, so we can reduce dimensionality to implify calculation. Obviuosly, dimensionality reduction means loss of information. However, due to the correlation among data, we could minimize the loss in the above process, which is the purpose of PCA.</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/30/PCA-Mathematical-principle/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1811,6 +1817,45 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
 
   
 

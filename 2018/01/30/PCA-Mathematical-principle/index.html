@@ -7,7 +7,7 @@
 
 <html class="theme-next pisces use-motion" lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -82,14 +82,14 @@
 <meta name="description" content="Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly">
 <meta name="keywords" content="Mathematics,Machine Learning,PCA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PCA-Mathematical principle">
+<meta property="og:title" content="PCA - Mathematics (1)">
 <meta property="og:url" content="http://yoursite.com/2018/01/30/PCA-Mathematical-principle/index.html">
 <meta property="og:site_name" content="YuLiu&#39;s home">
 <meta property="og:description" content="Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-30T21:48:00.272Z">
+<meta property="og:updated_time" content="2018-02-01T03:42:04.359Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PCA-Mathematical principle">
+<meta name="twitter:title" content="PCA - Mathematics (1)">
 <meta name="twitter:description" content="Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly">
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>PCA-Mathematical principle | YuLiu's home</title>
+  <title>PCA - Mathematics (1) | YuLiu's home</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -145,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PCA-Mathematical principle</h1>
+          <h1 class="post-title" itemprop="name headline">PCA - Mathematics (1)</h1>
         
 
         <div class="post-meta">
@@ -376,7 +376,7 @@
 
           
           
-             <span id="/2018/01/30/PCA-Mathematical-principle/" class="leancloud_visitors" data-flag-title="PCA-Mathematical principle">
+             <span id="/2018/01/30/PCA-Mathematical-principle/" class="leancloud_visitors" data-flag-title="PCA - Mathematics (1)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -408,6 +408,19 @@
 
       
         <p><strong>Principal component analysis (PCA)</strong> is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components.</p>
+<h2 id="Vector-representation-and-Dimensionality-reduction-of-data"><a href="#Vector-representation-and-Dimensionality-reduction-of-data" class="headerlink" title="Vector representation and Dimensionality reduction of data"></a>Vector representation and Dimensionality reduction of data</h2><p>In general, in data mining and machine learning, data are represented as vectors.<br>For example:<br>$$ (500,240,25,13,2312.15)^𝖳 $$</p>
+<p>As we know, the scale of dimensionality of data is in proportion to complexity of machine learning algorithm, so we can reduce dimensionality to implify calculation. Obviuosly, dimensionality reduction means loss of information. However, due to the correlation among data, we could minimize the loss in the above process, which is the purpose of PCA.</p>
+<a id="more"></a>
+<h2 id="Change-of-bases"><a href="#Change-of-bases" class="headerlink" title="Change of bases"></a>Change of bases</h2><h3 id="Inner-product"><a href="#Inner-product" class="headerlink" title="Inner product"></a>Inner product</h3><p>Inner product of two vectors is defined as:</p>
+<p>$$ (a_1,a_2,⋯,a_n)^𝖳⋅(b_1,b_2,⋯,b_n)^𝖳=a_1b_1+a_2b_2+⋯+a_nb_n $$</p>
+<p>and</p>
+<p>$$ A⋅B=|A||B|cos(a) $$</p>
+<p>Let |B| = 1, that is $ A⋅B=|A|cos(a) $. The above definition could be explained that the inner product of A and B equals the vector length projected from A to B.</p>
+<h3 id="Base"><a href="#Base" class="headerlink" title="Base"></a>Base</h3><p>To describe a vector, we need a set of bases. Then the vector could be represented as the combination of projections to all bases. Usually, we choose (1,0) and (0,1) as bases, but actually we can choose any two linearly independent vectors as bases. For example, we can use $ (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}) $ and $ (\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}) $ as new bases to represent the same vector.</p>
+<h3 id="Matrix-representation-of-form-change"><a href="#Matrix-representation-of-form-change" class="headerlink" title="Matrix representation of form change"></a>Matrix representation of form change</h3><p>For example, we want to transform (3, 2) based on new bases $ (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}) $ and $ (\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}) $, which could be represented by the following form:</p>
+<p>$$<br>\left(<br>\begin{matrix}<br>\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} \\<br>-\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}}<br>\end{matrix}<br>\right)<br>\left(<br>\begin{matrix}<br>1 &amp; 2 &amp; 3 \\<br>1 &amp; 2 &amp; 3<br>\end{matrix}<br>\right)<br>=<br>\left(<br>\begin{matrix}<br>\frac{2}{\sqrt{2}} &amp; \frac{4}{\sqrt{2}} &amp; \frac{6}{\sqrt{2}} \\<br>0 &amp; 0 &amp; 0<br>\end{matrix}<br>\right)<br>$$</p>
+<p>In general, if we have M N-dimesion vector and want to transform them into R N-dimesion new spaces, we first construct matrix A combining R bases by row, then construct matrix B combining vectors by column. The product of A and B is the result, where the column in AB is transformed from column in A.</p>
+<p>The above shows an explanation of matrix product:<br><strong>product of two matrices(AB) means to transform each column vector in B to the new space with rows in A as bases.</strong></p>
 
       
     </div>
@@ -513,8 +526,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -590,6 +612,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vector-representation-and-Dimensionality-reduction-of-data"><span class="nav-number">1.</span> <span class="nav-text">Vector representation and Dimensionality reduction of data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-of-bases"><span class="nav-number">2.</span> <span class="nav-text">Change of bases</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Inner-product"><span class="nav-number">2.1.</span> <span class="nav-text">Inner product</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Base"><span class="nav-number">2.2.</span> <span class="nav-text">Base</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Matrix-representation-of-form-change"><span class="nav-number">2.3.</span> <span class="nav-text">Matrix representation of form change</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1220,6 +1258,45 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
 
   
 
