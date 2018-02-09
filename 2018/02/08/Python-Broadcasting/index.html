@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Front-end,Tech,JavaScript," />
+  <meta name="keywords" content="Python,NumPy,broadcasting," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="constSupport for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an">
-<meta name="keywords" content="Front-end,Tech,JavaScript">
+<meta name="description" content="##Vectorization## In the course Neural Networks and Deep Learning, Andrew Ng introduces vetorization in machine learning by giving the following examples: 123456789101112131415161718192021222324import">
+<meta name="keywords" content="Python,NumPy,broadcasting">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ECMAScript 6 features (1)">
-<meta property="og:url" content="http://yoursite.com/2018/01/28/ECMAScript-6-1/index.html">
+<meta property="og:title" content="Python-Broadcasting">
+<meta property="og:url" content="http://yoursite.com/2018/02/08/Python-Broadcasting/index.html">
 <meta property="og:site_name" content="Yu Liu">
-<meta property="og:description" content="constSupport for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an">
+<meta property="og:description" content="##Vectorization## In the course Neural Networks and Deep Learning, Andrew Ng introduces vetorization in machine learning by giving the following examples: 123456789101112131415161718192021222324import">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-30T19:40:33.043Z">
+<meta property="og:updated_time" content="2018-02-09T02:13:39.162Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ECMAScript 6 features (1)">
-<meta name="twitter:description" content="constSupport for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an">
+<meta name="twitter:title" content="Python-Broadcasting">
+<meta name="twitter:description" content="##Vectorization## In the course Neural Networks and Deep Learning, Andrew Ng introduces vetorization in machine learning by giving the following examples: 123456789101112131415161718192021222324import">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/28/ECMAScript-6-1/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/08/Python-Broadcasting/"/>
 
 
 
 
 
-  <title>ECMAScript 6 features (1) | Yu Liu</title>
+  <title>Python-Broadcasting | Yu Liu</title>
   
 
 
@@ -316,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/28/ECMAScript-6-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/08/Python-Broadcasting/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yu Liu">
@@ -333,7 +333,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ECMAScript 6 features (1)</h1>
+          <h1 class="post-title" itemprop="name headline">Python-Broadcasting</h1>
         
 
         <div class="post-meta">
@@ -345,8 +345,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-28T21:32:13-05:00">
-                2018-01-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-08T16:27:27-05:00">
+                2018-02-08
               </time>
             
 
@@ -385,7 +385,7 @@
 
           
           
-             <span id="/2018/01/28/ECMAScript-6-1/" class="leancloud_visitors" data-flag-title="ECMAScript 6 features (1)">
+             <span id="/2018/02/08/Python-Broadcasting/" class="leancloud_visitors" data-flag-title="Python-Broadcasting">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -416,17 +416,52 @@
       
 
       
-        <h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>Support for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an object, this means the object itself can still be altered).</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// add an attribute to foo, success</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line">foo.prop <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// assign foo to another object, error</span></span><br><span class="line">foo = &#123;&#125;; <span class="comment">// TypeError: "foo" is read-only</span></span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="let"><a href="#let" class="headerlink" title="let"></a>let</h2><p>Block-scoped variables (and constants) without hoisting.</p>
-<p>‘let’ only validates in scope:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">a <span class="comment">// ReferenceError: a is not defined.</span></span><br><span class="line">b <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line">which is useful <span class="keyword">in</span> <span class="keyword">for</span> loop:</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(i);</span><br><span class="line"><span class="comment">// ReferenceError: i is not defined</span></span><br></pre></td></tr></table></figure>
-<p><strong>Temporal dead zone (TDZ)</strong><br>If a variable is declared by ‘let’ in a block scope, it’s binding to the block scope and refrain from outside.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line"><span class="comment">// TDZ start</span></span><br><span class="line">tmp = <span class="string">'abc'</span>; <span class="comment">// ReferenceError</span></span><br><span class="line"><span class="built_in">console</span>.log(tmp); <span class="comment">// ReferenceError</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> tmp; <span class="comment">// TDZ end</span></span><br><span class="line"><span class="built_in">console</span>.log(tmp); <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line">tmp = <span class="number">123</span>;</span><br><span class="line"><span class="built_in">console</span>.log(tmp); <span class="comment">// 123</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Repeat declaration is not allowed</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// error</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// error</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="ES6-has-6-methods-of-variable-declaration"><a href="#ES6-has-6-methods-of-variable-declaration" class="headerlink" title="ES6 has 6 methods of variable declaration"></a>ES6 has 6 methods of variable declaration</h2><p>ES5 has two methods of variable declaration: var, function;<br>ES6 has 4 more methods: let, const, import, class.</p>
+        <p>##Vectorization##</p>
+<p>In the course Neural Networks and Deep Learning, Andrew Ng introduces vetorization in machine learning by giving the following examples:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">a = np.random.rand(<span class="number">1000000</span>)</span><br><span class="line">b = np.random.rand(<span class="number">1000000</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># vectorization</span></span><br><span class="line">tic = time.time()</span><br><span class="line">c = np.dot(a,b)</span><br><span class="line">toc = time.time()</span><br><span class="line"></span><br><span class="line">print(c)</span><br><span class="line">print(<span class="string">"Vectorization:"</span> + str(<span class="number">1000</span>*(toc-tic)) + <span class="string">"ms"</span>)</span><br><span class="line"></span><br><span class="line">c = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># vectorization</span></span><br><span class="line">tic = time.time()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1000000</span>):</span><br><span class="line">c += a[i]*b[i]</span><br><span class="line">toc = time.time()</span><br><span class="line"></span><br><span class="line">print(c)</span><br><span class="line">print(<span class="string">"For loop:"</span> + str(<span class="number">1000</span>*(toc-tic)) + <span class="string">"ms"</span>)</span><br></pre></td></tr></table></figure>
+<p>The above code uses vetorization and for loop to do the same calculation. However, the for loop version cost much more time than the vectorization version.</p>
+<blockquote>
+<p>Output:<br>249888.154501<br>Vectorization:2.2249221801757812ms<br>249888.154501<br>For loop:599.0450382232666ms</p>
+</blockquote>
+<p>The above example indicates that in python it’s more efficient to use vectorization instead of for loop. This kind of technique is also called SIMD(single instruction multiple data) in CPU/GPU parallel processing.</p>
+<p>##Broadcasting##</p>
+<blockquote>
+<p>The term <strong>broadcasting</strong> describes how numpy treats arrays with different shapes during arithmetic operations. Subject to certain constraints, the smaller array is “broadcast” across the larger array so that they have compatible shapes. Broadcasting provides a means of vectorizing array operations so that looping occurs in C instead of Python. It does this without making needless copies of data and usually leads to efficient algorithm implementations.</p>
+</blockquote>
+<p>NumPy operations are usually done on pairs of arrays on an element-by-element basis. In the simplest case, the two arrays must have exactly the same shape, as in the following example:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = np.array([<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = np.array([<span class="number">2.0</span>, <span class="number">2.0</span>, <span class="number">2.0</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a * b</span><br><span class="line">array([ <span class="number">2.</span>,  <span class="number">4.</span>,  <span class="number">6.</span>])</span><br></pre></td></tr></table></figure>
+<p>NumPy’s broadcasting rule relaxes this constraint when the arrays’ shapes meet certain constraints. The simplest broadcasting example occurs when an array and a scalar value are combined in an operation:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = np.array([<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = <span class="number">2.0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a * b</span><br><span class="line">array([ <span class="number">2.</span>,  <span class="number">4.</span>,  <span class="number">6.</span>])</span><br></pre></td></tr></table></figure>
+<p>The result is equivalent to the previous example where b was an array. We can think of the scalar b being stretched during the arithmetic operation into an array with the same shape as a. The new elements in b are simply copies of the original scalar. The stretching analogy is only conceptual. NumPy is smart enough to use the original scalar value without actually making copies, so that broadcasting operations are as memory and computationally efficient as possible.</p>
+<p>The code in the second example is more efficient than that in the first because broadcasting moves less memory around during the multiplication (b is a scalar rather than an array).</p>
+<p>##General Broadcasting Rules##</p>
+<p>When operating on two arrays, NumPy compares their shapes element-wise. It starts with the trailing dimensions, and works its way forward. Two dimensions are compatible when</p>
+<ol>
+<li>they are equal</li>
+<li>one of them is 1</li>
+</ol>
+<p>Arrays don’t have to have the same number of dimensions. For example, if you have a 256x256x3 array of RGB values, and you want to scale each color in the image by a different value, you can multiply the image by a one-dimensional array with 3 values.</p>
+<blockquote>
+<p>Image  (3d array): 256 x 256 x 3<br>Scale  (1d array):             3<br>Result (3d array): 256 x 256 x 3</p>
+</blockquote>
+<p>When either of the dimensions compared is one, the other is used. In other words, dimensions with size 1 are stretched or “copied” to match the other.</p>
+<blockquote>
+<p>A      (4d array):  8 x 1 x 6 x 1<br>B      (3d array):      7 x 1 x 5<br>Result (4d array):  8 x 7 x 6 x 5</p>
+<p>A      (2d array):  5 x 4<br>B      (1d array):      1<br>Result (2d array):  5 x 4</p>
+<p>A      (2d array):  5 x 4<br>B      (1d array):      4<br>Result (2d array):  5 x 4</p>
+<p>A      (3d array):  15 x 3 x 5<br>B      (3d array):  15 x 1 x 5<br>Result (3d array):  15 x 3 x 5</p>
+<p>A      (3d array):  15 x 3 x 5<br>B      (2d array):       3 x 5<br>Result (3d array):  15 x 3 x 5</p>
+</blockquote>
+<p>Here are examples of shapes that do not broadcast:</p>
+<blockquote>
+<p>A      (1d array):  3<br>B      (1d array):  4 # trailing dimensions do not match</p>
+<p>A      (2d array):      2 x 1<br>B      (3d array):  8 x 4 x 3 # second from last dimensions mismatched</p>
+</blockquote>
+<p>##References##</p>
+<ol>
+<li><a href="https://www.coursera.org/learn/neural-networks-deep-learning/lecture/NYnog/vectorization" target="_blank" rel="noopener">Neural Networks and Deep Learning</a></li>
+<li><a href="https://docs.scipy.org/doc/numpy-1.12.0/user/basics.broadcasting.html" target="_blank" rel="noopener">Broadcasting — NumPy v1.12 Manual</a></li>
+</ol>
 
       
     </div>
@@ -444,17 +479,17 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Front-end/" rel="tag">
+            <a href="/tags/Python/" rel="tag">
             <i class="fa fa-tag"></i> 
-            Front-end</a>
+            Python</a>
           
-            <a href="/tags/Tech/" rel="tag">
+            <a href="/tags/NumPy/" rel="tag">
             <i class="fa fa-tag"></i> 
-            Tech</a>
+            NumPy</a>
           
-            <a href="/tags/JavaScript/" rel="tag">
+            <a href="/tags/broadcasting/" rel="tag">
             <i class="fa fa-tag"></i> 
-            JavaScript</a>
+            broadcasting</a>
           
         </div>
       
@@ -467,8 +502,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/27/hello-world/" rel="next" title="Hello world">
-                <i class="fa fa-chevron-left"></i> Hello world
+              <a href="/2018/02/07/Weekly-Report-20180207/" rel="next" title="Google Analytics Introduction">
+                <i class="fa fa-chevron-left"></i> Google Analytics Introduction
               </a>
             
           </div>
@@ -476,10 +511,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/28/ECMAScript-6-2/" rel="prev" title="ECMAScript 6 features (2)">
-                ECMAScript 6 features (2) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -536,17 +567,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -634,22 +656,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#const"><span class="nav-number">1.</span> <span class="nav-text">const</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#let"><span class="nav-number">2.</span> <span class="nav-text">let</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6-has-6-methods-of-variable-declaration"><span class="nav-number">3.</span> <span class="nav-text">ES6 has 6 methods of variable declaration</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
