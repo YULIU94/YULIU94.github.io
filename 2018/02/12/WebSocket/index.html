@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="WebSocket," />
 
 
 
@@ -79,14 +79,21 @@
 
 
 
+<meta name="description" content="Why WebSocketMany people might have the doubt, why do we need WebSocket when we already have HTTP protocal. The answer is simple: with HTTP communication could only be initiated by client. For example">
+<meta name="keywords" content="WebSocket">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WebSocket">
 <meta property="og:url" content="http://yoursite.com/2018/02/12/WebSocket/index.html">
 <meta property="og:site_name" content="Yu Liu">
+<meta property="og:description" content="Why WebSocketMany people might have the doubt, why do we need WebSocket when we already have HTTP protocal. The answer is simple: with HTTP communication could only be initiated by client. For example">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-12T16:20:52.737Z">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017051507.jpg">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017051502.png">
+<meta property="og:updated_time" content="2018-02-12T18:20:38.538Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WebSocket">
+<meta name="twitter:description" content="Why WebSocketMany people might have the doubt, why do we need WebSocket when we already have HTTP protocal. The answer is simple: with HTTP communication could only be initiated by client. For example">
+<meta name="twitter:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017051507.jpg">
 
 
 
@@ -352,6 +359,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -390,7 +419,91 @@
       
 
       
-        
+        <h2 id="Why-WebSocket"><a href="#Why-WebSocket" class="headerlink" title="Why WebSocket"></a>Why WebSocket</h2><p>Many people might have the doubt, why do we need WebSocket when we already have HTTP protocal. The answer is simple: with HTTP communication could only be initiated by client.</p>
+<p>For example, if we want to know about the weather today, we can only send request from client to server, then the server responses with the search result. It’s not applicable for server to push information to client automatically.</p>
+<a id="more"></a>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017051507.jpg" alt="" title=""></p>
+<p>Under the condition that client need the real-time status of server, it would be difficult for traditional HTTP protocal to achieve that. One commonly used solution is called polling. But polling is inefficient which creates a large amount of requests. Thus, WebSocket is created to solve the problem above.</p>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Web Sockets is a next-generation bidirectional communication technology for web applications which operates over a single socket and is exposed via a JavaScript interface in HTML 5 compliant browsers.</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017051502.png" alt="" title=""></p>
+<p>Once you get a Web Socket connection with the web server, you can send data from browser to server by calling a send() method, and receive data from server to browser by an onmessage event handler.</p>
+<p>Following is the API which creates a new WebSocket object.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var Socket = new WebSocket(url, [protocal] );</span><br></pre></td></tr></table></figure>
+<p>Here first argument, url, specifies the URL to which to connect. The second attribute, protocol is optional, and if present, specifies a sub-protocol that the server must support for the connection to be successful.</p>
+<h2 id="WebSocket-Attributes"><a href="#WebSocket-Attributes" class="headerlink" title="WebSocket Attributes"></a>WebSocket Attributes</h2><p>Following are the attribute of WebSocket object. Assuming we created Socket object as mentioned above −</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Socket.readyState</td>
+<td>The readonly attribute readyState represents the state of the connection. It can have the following values:<br>A value of 0 indicates that the connection has not yet been established.<br>A value of 1 indicates that the connection is established and communication is possible.<br> A value of 2 indicates that the connection is going through the closing handshake.<br> A value of 3 indicates that the connection has been closed or could not be opened.</td>
+</tr>
+<tr>
+<td>Socket.bufferedAmount</td>
+<td>The readonly attribute bufferedAmount represents the number of bytes of UTF-8 text that have been queued using send() method.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="WebSocket-Events"><a href="#WebSocket-Events" class="headerlink" title="WebSocket Events"></a>WebSocket Events</h2><p>Following are the events associated with WebSocket object. Assuming we created Socket object as mentioned above:</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Event Handler</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>open</td>
+<td>Socket.onopen</td>
+<td>This event occurs when socket connection is established.</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Socket.onmessage</td>
+<td>This event occurs when client receives data from server.</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Socket.onerror</td>
+<td>This event occurs when there is any error in communication.</td>
+</tr>
+<tr>
+<td>close</td>
+<td>Socket.onclose</td>
+<td>This event occurs when connection is closed.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="WebSocket-Methods"><a href="#WebSocket-Methods" class="headerlink" title="WebSocket Methods"></a>WebSocket Methods</h2><p>Following are the methods associated with WebSocket object. Assuming we created Socket object as mentioned above:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Socket.send()</td>
+<td>The send(data) method transmits data using the connection.</td>
+</tr>
+<tr>
+<td>Socket.close()</td>
+<td>The close() method would be used to terminate any existing connection.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="WebSocket-Example"><a href="#WebSocket-Example" class="headerlink" title="WebSocket Example"></a>WebSocket Example</h2><p>A WebSocket is a standard bidirectional TCP socket between the client and the server. The socket starts out as a HTTP connection and then “Upgrades” to a TCP socket after a HTTP handshake. After the handshake, either side can send data.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">function WebSocketTest()</span><br><span class="line">&#123;</span><br><span class="line">if (&quot;WebSocket&quot; in window)</span><br><span class="line">&#123;</span><br><span class="line">alert(&quot;WebSocket is supported by your Browser!&quot;);</span><br><span class="line"></span><br><span class="line">// Let us open a web socket</span><br><span class="line">var ws = new WebSocket(&quot;ws://localhost:9998/echo&quot;);</span><br><span class="line"></span><br><span class="line">ws.onopen = function()</span><br><span class="line">&#123;</span><br><span class="line">// Web Socket is connected, send data using send()</span><br><span class="line">ws.send(&quot;Message to send&quot;);</span><br><span class="line">alert(&quot;Message is sent...&quot;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ws.onmessage = function (evt)</span><br><span class="line">&#123;</span><br><span class="line">var received_msg = evt.data;</span><br><span class="line">alert(&quot;Message is received...&quot;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ws.onclose = function()</span><br><span class="line">&#123;</span><br><span class="line">// websocket is closed.</span><br><span class="line">alert(&quot;Connection is closed...&quot;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">window.onbeforeunload = function(event) &#123;</span><br><span class="line">socket.close();</span><br><span class="line">&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">// The browser doesn&apos;t support WebSocket</span><br><span class="line">alert(&quot;WebSocket NOT supported by your Browser!&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id=&quot;sse&quot;&gt;</span><br><span class="line">&lt;a href=&quot;javascript:WebSocketTest()&quot;&gt;Run WebSocket&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="https://www.html5rocks.com/en/tutorials/websockets/basics/" target="_blank" rel="noopener">Introducing WebSockets: Bringing Sockets to the Web</a><br><a href="https://www.tutorialspoint.com/websockets/websockets_send_receive_messages.htm" target="_blank" rel="noopener">WebSockets - Send &amp; Receive Messages</a><br><a href="https://www.tutorialspoint.com/html5/html5_websocket.htm" target="_blank" rel="noopener">HTML5 - WebSockets</a><br><a href="https://en.wikipedia.org/wiki/Push_technology" target="_blank" rel="noopener">Push technology</a><br><a href="https://www.pubnub.com/blog/2015-01-05-websockets-vs-rest-api-understanding-the-difference/" target="_blank" rel="noopener">WebSockets vs REST: Understanding the Difference</a><br><a href="http://www.ruanyifeng.com/blog/2017/05/websocket.html" target="_blank" rel="noopener">WebSockets Tutorial</a></p>
+
       
     </div>
     
@@ -404,6 +517,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/WebSocket/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            WebSocket</a>
+          
+        </div>
       
 
       
@@ -479,8 +600,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -517,7 +647,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -568,6 +698,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-WebSocket"><span class="nav-number">1.</span> <span class="nav-text">Why WebSocket</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">2.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebSocket-Attributes"><span class="nav-number">3.</span> <span class="nav-text">WebSocket Attributes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebSocket-Events"><span class="nav-number">4.</span> <span class="nav-text">WebSocket Events</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebSocket-Methods"><span class="nav-number">5.</span> <span class="nav-text">WebSocket Methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebSocket-Example"><span class="nav-number">6.</span> <span class="nav-text">WebSocket Example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">7.</span> <span class="nav-text">References</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

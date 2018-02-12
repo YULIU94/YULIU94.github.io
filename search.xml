@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[WebSocket]]></title>
     <url>%2F2018%2F02%2F12%2FWebSocket%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[Why WebSocketMany people might have the doubt, why do we need WebSocket when we already have HTTP protocal. The answer is simple: with HTTP communication could only be initiated by client. For example, if we want to know about the weather today, we can only send request from client to server, then the server responses with the search result. It’s not applicable for server to push information to client automatically. Under the condition that client need the real-time status of server, it would be difficult for traditional HTTP protocal to achieve that. One commonly used solution is called polling. But polling is inefficient which creates a large amount of requests. Thus, WebSocket is created to solve the problem above. OverviewWeb Sockets is a next-generation bidirectional communication technology for web applications which operates over a single socket and is exposed via a JavaScript interface in HTML 5 compliant browsers. Once you get a Web Socket connection with the web server, you can send data from browser to server by calling a send() method, and receive data from server to browser by an onmessage event handler. Following is the API which creates a new WebSocket object. 1var Socket = new WebSocket(url, [protocal] ); Here first argument, url, specifies the URL to which to connect. The second attribute, protocol is optional, and if present, specifies a sub-protocol that the server must support for the connection to be successful. WebSocket AttributesFollowing are the attribute of WebSocket object. Assuming we created Socket object as mentioned above − Attribute Description Socket.readyState The readonly attribute readyState represents the state of the connection. It can have the following values:A value of 0 indicates that the connection has not yet been established.A value of 1 indicates that the connection is established and communication is possible. A value of 2 indicates that the connection is going through the closing handshake. A value of 3 indicates that the connection has been closed or could not be opened. Socket.bufferedAmount The readonly attribute bufferedAmount represents the number of bytes of UTF-8 text that have been queued using send() method. WebSocket EventsFollowing are the events associated with WebSocket object. Assuming we created Socket object as mentioned above: Event Event Handler Description open Socket.onopen This event occurs when socket connection is established. message Socket.onmessage This event occurs when client receives data from server. error Socket.onerror This event occurs when there is any error in communication. close Socket.onclose This event occurs when connection is closed. WebSocket MethodsFollowing are the methods associated with WebSocket object. Assuming we created Socket object as mentioned above: Method Description Socket.send() The send(data) method transmits data using the connection. Socket.close() The close() method would be used to terminate any existing connection. WebSocket ExampleA WebSocket is a standard bidirectional TCP socket between the client and the server. The socket starts out as a HTTP connection and then “Upgrades” to a TCP socket after a HTTP handshake. After the handshake, either side can send data. 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455&lt;!DOCTYPE HTML&gt;&lt;html&gt;&lt;head&gt;&lt;script type=&quot;text/javascript&quot;&gt;function WebSocketTest()&#123;if (&quot;WebSocket&quot; in window)&#123;alert(&quot;WebSocket is supported by your Browser!&quot;);// Let us open a web socketvar ws = new WebSocket(&quot;ws://localhost:9998/echo&quot;);ws.onopen = function()&#123;// Web Socket is connected, send data using send()ws.send(&quot;Message to send&quot;);alert(&quot;Message is sent...&quot;);&#125;;ws.onmessage = function (evt)&#123;var received_msg = evt.data;alert(&quot;Message is received...&quot;);&#125;;ws.onclose = function()&#123;// websocket is closed.alert(&quot;Connection is closed...&quot;);&#125;;window.onbeforeunload = function(event) &#123;socket.close();&#125;;&#125;else&#123;// The browser doesn&apos;t support WebSocketalert(&quot;WebSocket NOT supported by your Browser!&quot;);&#125;&#125;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;div id=&quot;sse&quot;&gt;&lt;a href=&quot;javascript:WebSocketTest()&quot;&gt;Run WebSocket&lt;/a&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt; ReferencesIntroducing WebSockets: Bringing Sockets to the WebWebSockets - Send &amp; Receive MessagesHTML5 - WebSocketsPush technologyWebSockets vs REST: Understanding the DifferenceWebSockets Tutorial]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>WebSocket</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Building a cat classifier with logistic regression from scratch]]></title>
@@ -13,8 +19,8 @@
         <category>Technology</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>Machine Learning</tag>
+        <tag>Python</tag>
         <tag>Logistic Regression</tag>
         <tag>Neural Network</tag>
       </tags>
@@ -27,11 +33,11 @@
         <category>Technology</category>
       </categories>
       <tags>
+        <tag>Machine Learning</tag>
         <tag>Python</tag>
         <tag>NumPy</tag>
         <tag>vectorization</tag>
         <tag>broadcasting</tag>
-        <tag>Machine Learning</tag>
       </tags>
   </entry>
   <entry>
@@ -53,8 +59,8 @@
         <category>Technology</category>
       </categories>
       <tags>
-        <tag>Machine Learning</tag>
         <tag>Mathematics</tag>
+        <tag>Machine Learning</tag>
         <tag>PCA</tag>
       </tags>
   </entry>
