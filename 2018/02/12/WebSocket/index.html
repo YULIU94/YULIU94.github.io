@@ -89,7 +89,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017051507.jpg">
 <meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017051502.png">
-<meta property="og:updated_time" content="2018-02-14T18:27:10.582Z">
+<meta property="og:updated_time" content="2018-02-14T20:12:31.919Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WebSocket Tutorial">
 <meta name="twitter:description" content="Why WebSocketMany people might have the doubt, why do we need WebSocket when we already have HTTP protocal. The answer is simple: with HTTP communication could only be initiated by client. For example">
@@ -428,7 +428,7 @@
 <p><img src="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017051502.png" alt="" title=""></p>
 <p>Once you get a Web Socket connection with the web server, you can send data from browser to server by calling a send() method, and receive data from server to browser by an onmessage event handler.</p>
 <p>Following is the API which creates a new WebSocket object.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var Socket = new WebSocket(url, [protocal] );</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Socket = <span class="keyword">new</span> WebSocket(url, [protocal] );</span><br></pre></td></tr></table></figure>
 <p>Here first argument, url, specifies the URL to which to connect. The second attribute, protocol is optional, and if present, specifies a sub-protocol that the server must support for the connection to be successful.</p>
 <h2 id="WebSocket-Attributes"><a href="#WebSocket-Attributes" class="headerlink" title="WebSocket Attributes"></a>WebSocket Attributes</h2><p>Following are the attribute of WebSocket object. Assuming we created Socket object as mentioned above −</p>
 <table>
