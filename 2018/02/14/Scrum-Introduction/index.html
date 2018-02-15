@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Mathematics,Machine Learning,PCA," />
+  <meta name="keywords" content="Scrum,Agile," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly">
-<meta name="keywords" content="Mathematics,Machine Learning,PCA">
+<meta name="description" content="Definition of ScrumScrum (n): A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value. Scrum is:• Lig">
+<meta name="keywords" content="Scrum,Agile">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PCA - Mathematics (1)">
-<meta property="og:url" content="http://yoursite.com/2018/01/30/PCA-Mathematical-principle/index.html">
+<meta property="og:title" content="Scrum Introduction">
+<meta property="og:url" content="http://yoursite.com/2018/02/14/Scrum-Introduction/index.html">
 <meta property="og:site_name" content="Yu Liu">
-<meta property="og:description" content="Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly">
+<meta property="og:description" content="Definition of ScrumScrum (n): A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value. Scrum is:• Lig">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-01T18:36:05.767Z">
+<meta property="og:image" content="https://s1.ax1x.com/2018/02/15/9YTeqx.jpg">
+<meta property="og:updated_time" content="2018-02-15T15:16:48.221Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PCA - Mathematics (1)">
-<meta name="twitter:description" content="Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly">
+<meta name="twitter:title" content="Scrum Introduction">
+<meta name="twitter:description" content="Definition of ScrumScrum (n): A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value. Scrum is:• Lig">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/02/15/9YTeqx.jpg">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/30/PCA-Mathematical-principle/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/14/Scrum-Introduction/"/>
 
 
 
 
 
-  <title>PCA - Mathematics (1) | Yu Liu</title>
+  <title>Scrum Introduction | Yu Liu</title>
   
 
 
@@ -316,7 +318,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/30/PCA-Mathematical-principle/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/14/Scrum-Introduction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yu Liu">
@@ -333,7 +335,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PCA - Mathematics (1)</h1>
+          <h1 class="post-title" itemprop="name headline">Scrum Introduction</h1>
         
 
         <div class="post-meta">
@@ -345,8 +347,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-30T16:42:45-05:00">
-                2018-01-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-14T16:26:15-05:00">
+                2018-02-14
               </time>
             
 
@@ -368,8 +370,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
+                  <a href="/categories/software-development/" itemprop="url" rel="index">
+                    <span itemprop="name">software development</span>
                   </a>
                 </span>
 
@@ -385,7 +387,7 @@
 
           
           
-             <span id="/2018/01/30/PCA-Mathematical-principle/" class="leancloud_visitors" data-flag-title="PCA - Mathematics (1)">
+             <span id="/2018/02/14/Scrum-Introduction/" class="leancloud_visitors" data-flag-title="Scrum Introduction">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -416,20 +418,75 @@
       
 
       
-        <p><strong>Principal component analysis (PCA)</strong> is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components.</p>
-<h2 id="Vector-representation-and-Dimensionality-reduction-of-data"><a href="#Vector-representation-and-Dimensionality-reduction-of-data" class="headerlink" title="Vector representation and Dimensionality reduction of data"></a>Vector representation and Dimensionality reduction of data</h2><p>In general, in data mining and machine learning, data are represented as vectors.<br>For example:<br>$$ (500,240,25,13,2312.15)^𝖳 $$</p>
-<p>As we know, the scale of dimensionality of data is in proportion to complexity of machine learning algorithm, so we can reduce dimensionality to simplify calculation. Obviuosly, dimensionality reduction means loss of information. However, due to the correlation among data, we could minimize the loss in the above process, which is the purpose of PCA.</p>
-<a id="more"></a>
-<h2 id="Change-of-bases"><a href="#Change-of-bases" class="headerlink" title="Change of bases"></a>Change of bases</h2><h3 id="Inner-product"><a href="#Inner-product" class="headerlink" title="Inner product"></a>Inner product</h3><p>Inner product of two vectors is defined as:</p>
-<p>$$ (a_1,a_2,⋯,a_n)^𝖳⋅(b_1,b_2,⋯,b_n)^𝖳=a_1b_1+a_2b_2+⋯+a_nb_n $$</p>
-<p>and</p>
-<p>$$ A⋅B=|A||B|cos(a) $$</p>
-<p>Let |B| = 1, that is $ A⋅B=|A|cos(a) $. The above definition could be explained that the inner product of A and B equals the vector length projected from A to B.</p>
-<h3 id="Base"><a href="#Base" class="headerlink" title="Base"></a>Base</h3><p>To describe a vector, we need a set of bases. Then the vector could be represented as the combination of projections to all bases. Usually, we choose (1,0) and (0,1) as bases, but actually we can choose any two linearly independent vectors as bases. For example, we can use $ (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}) $ and $ (\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}) $ as new bases to represent the same vector.</p>
-<h3 id="Matrix-representation-of-form-change"><a href="#Matrix-representation-of-form-change" class="headerlink" title="Matrix representation of form change"></a>Matrix representation of form change</h3><p>For example, we want to transform (3, 2) based on new bases $ (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}) $ and $ (\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}) $, which could be represented by the following form:</p>
-<p>$$<br>\left(<br>\begin{matrix}<br>\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} \\<br>-\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}}<br>\end{matrix}<br>\right)<br>\left(<br>\begin{matrix}<br>1 &amp; 2 &amp; 3 \\<br>1 &amp; 2 &amp; 3<br>\end{matrix}<br>\right)<br>=<br>\left(<br>\begin{matrix}<br>\frac{2}{\sqrt{2}} &amp; \frac{4}{\sqrt{2}} &amp; \frac{6}{\sqrt{2}} \\<br>0 &amp; 0 &amp; 0<br>\end{matrix}<br>\right)<br>$$</p>
-<p>In general, if we have M N-dimesion vector and want to transform them into R N-dimesion new spaces, we first construct matrix A combining R bases by row, then construct matrix B combining vectors by column. The product of A and B is the result, where the column in AB is transformed from column in A.</p>
-<p>The above shows an explanation of matrix product:<br><strong>product of two matrices(AB) means to transform each column vector in B to the new space with rows in A as bases.</strong></p>
+        <h2 id="Definition-of-Scrum"><a href="#Definition-of-Scrum" class="headerlink" title="Definition of Scrum"></a>Definition of Scrum</h2><p><strong>Scrum (n)</strong>: A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value.</p>
+<p>Scrum is:<br>• Lightweight<br>• Simple to understand<br>• Difficult to master</p>
+<h2 id="Uses-of-Scrum"><a href="#Uses-of-Scrum" class="headerlink" title="Uses of Scrum"></a>Uses of Scrum</h2><ol>
+<li>Research and identify viable markets, technologies, and product capabilities;</li>
+<li>Develop products and enhancements;</li>
+<li>Release products and enhancements, as frequently as many times per day;</li>
+<li>Develop and sustain Cloud (online, secure, on-demand) and other operational<br>environments for product use; and,</li>
+<li>Sustain and renew products.</li>
+</ol>
+<h2 id="Scrum-Theory"><a href="#Scrum-Theory" class="headerlink" title="Scrum Theory"></a>Scrum Theory</h2><p>Scrum is founded on empirical process control theory, or empiricism. Empiricism asserts that knowledge comes from experience and making decisions based on what is known. Scrum employs an iterative, incremental approach to optimize predictability and control risk.</p>
+<p><img src="https://s1.ax1x.com/2018/02/15/9YTeqx.jpg" alt="9YTeqx.jpg"></p>
+<p>Three pillars uphold every implementation of empirical process control:<br>transparency, inspection, and adaptation.</p>
+<h3 id="Transparency"><a href="#Transparency" class="headerlink" title="Transparency"></a>Transparency</h3><p>Significant aspects of the process must be visible to those responsible for the outcome. Transparency requires those aspects be defined by a common standard so observers share a common understanding of what is being seen. For example:</p>
+<p>• A common language referring to the process must be shared by all participants; and,<br>• Those performing the work and those inspecting the resulting increment must share a common definition of “Done”.</p>
+<h3 id="Inspection"><a href="#Inspection" class="headerlink" title="Inspection"></a>Inspection</h3><p>Scrum users must frequently inspect Scrum artifacts and progress toward a Sprint Goal to detect undesirable variances. Their inspection should not be so frequent that inspection gets in the way of the work. Inspections are most beneficial when diligently performed by skilled inspectors at the point of work.</p>
+<h3 id="Adaptation"><a href="#Adaptation" class="headerlink" title="Adaptation"></a>Adaptation</h3><p>If an inspector determines that one or more aspects of a process deviate outside acceptable limits, and that the resulting product will be unacceptable, the process or the material being processed must be adjusted. An adjustment must be made as soon as possible to minimize further deviation.</p>
+<p>Scrum prescribes four formal events for inspection and adaptation, as described in the Scrum Events section of this document:</p>
+<p>• Sprint Planning<br>• Daily Scrum<br>• Sprint Review<br>• Sprint Retrospective</p>
+<h2 id="The-Scrum-Team"><a href="#The-Scrum-Team" class="headerlink" title="The Scrum Team"></a>The Scrum Team</h2><p>The Scrum Team consists of a Product Owner, the Development Team, and a Scrum Master.</p>
+<p>Scrum Teams are self-organizing and cross-functional. Self-organizing teams choose how best to accomplish their work, rather than being directed by others outside the team. Cross-functional teams have all competencies needed to accomplish the work without depending on others not part of the team. The team model in Scrum is designed to optimize flexibility, creativity, and productivity.</p>
+<h3 id="The-Product-Owner"><a href="#The-Product-Owner" class="headerlink" title="The Product Owner"></a>The Product Owner</h3><p>The Product Owner is responsible for maximizing the value of the product resulting from work of the Development Team. How this is done may vary widely across organizations, Scrum Teams, and individuals.</p>
+<p>The Product Owner is the sole person responsible for managing the Product Backlog. Product Backlog management includes:</p>
+<p>• Clearly expressing Product Backlog items;<br>• Ordering the items in the Product Backlog to best achieve goals and missions;<br>• Optimizing the value of the work the Development Team performs;<br>• Ensuring that the Product Backlog is visible, transparent, and clear to all, and shows what the Scrum Team will work on next;<br>• Ensuring the Development Team understands items in the Product Backlog to the level needed.</p>
+<p>The Product Owner may do the above work, or have the Development Team do it. However, the Product Owner remains accountable.</p>
+<p>The Product Owner is one person, not a committee. The Product Owner may represent the desires of a committee in the Product Backlog, but those wanting to change a Product Backlog item’s priority must address the Product Owner.</p>
+<p>For the Product Owner to succeed, the entire organization must respect his or her decisions. The Product Owner’s decisions are visible in the content and ordering of the Product Backlog. No one can force the Development Team to work from a different set of requirements.</p>
+<h3 id="The-Development-Team"><a href="#The-Development-Team" class="headerlink" title="The Development Team"></a>The Development Team</h3><p>The Development Team consists of professionals who do the work of delivering a potentially releasable Increment of “Done” product at the end of each Sprint. A “Done” increment is required at the Sprint Review. Only members of the Development Team create the Increment.</p>
+<p>Development Teams are structured and empowered by the organization to organize and manage their own work. The resulting synergy optimizes the Development Team’s overall efficiency and effectiveness.</p>
+<p>Development Teams have the following characteristics:</p>
+<p>• They are self-organizing. No one (not even the Scrum Master) tells the Development Team how to turn Product Backlog into Increments of potentially releasable functionality;<br>• Development Teams are cross-functional, with all the skills as a team necessary to create a product Increment;<br>• Scrum recognizes no titles for Development Team members, regardless of the work being performed by the person;<br>• Scrum recognizes no sub-teams in the Development Team, regardless of domains that need to be addressed like testing, architecture, operations, or business analysis;<br>• Individual Development Team members may have specialized skills and areas of focus, but accountability belongs to the Development Team as a whole.</p>
+<h4 id="Development-Team-Size"><a href="#Development-Team-Size" class="headerlink" title="Development Team Size"></a>Development Team Size</h4><p>Optimal Development Team size is small enough to remain nimble and large enough to complete significant work within a Sprint. Fewer than three Development Team members decrease interaction and results in smaller productivity gains. Smaller Development Teams may encounter skill constraints during the Sprint, causing the Development Team to be unable to deliver a potentially releasable Increment. Having more than nine members requires too much coordination. Large Development Teams generate too much complexity for an empirical process to be useful. The Product Owner and Scrum Master roles are not included in this count unless they are also executing the work of the Sprint Backlog.</p>
+<h3 id="The-Scrum-Master"><a href="#The-Scrum-Master" class="headerlink" title="The Scrum Master"></a>The Scrum Master</h3><p>The Scrum Master is responsible for promoting and supporting Scrum as defined in the Scrum Guide. Scrum Masters do this by helping everyone understand Scrum theory, practices, rules, and values.</p>
+<p>The Scrum Master is a servant-leader for the Scrum Team. The Scrum Master helps those outside the Scrum Team understand which of their interactions with the Scrum Team are helpful and which aren’t. The Scrum Master helps everyone change these interactions to maximize the value created by the Scrum Team.</p>
+<h4 id="Scrum-Master-Service-to-the-Product-Owner"><a href="#Scrum-Master-Service-to-the-Product-Owner" class="headerlink" title="Scrum Master Service to the Product Owner"></a>Scrum Master Service to the Product Owner</h4><p>The Scrum Master serves the Product Owner in several ways, including:<br>• Ensuring that goals, scope, and product domain are understood by everyone on the Scrum<br>Team as well as possible;<br>• Finding techniques for effective Product Backlog management;<br>• Helping the Scrum Team understand the need for clear and concise Product Backlog items;<br>• Understanding product planning in an empirical environment;<br>• Ensuring the Product Owner knows how to arrange the Product Backlog to maximize value;<br>• Understanding and practicing agility;<br>• Facilitating Scrum events as requested or needed.</p>
+<h4 id="Scrum-Master-Service-to-the-Development-Team"><a href="#Scrum-Master-Service-to-the-Development-Team" class="headerlink" title="Scrum Master Service to the Development Team"></a>Scrum Master Service to the Development Team</h4><p>The Scrum Master serves the Development Team in several ways, including:<br>• Coaching the Development Team in self-organization and cross-functionality;<br>• Helping the Development Team to create high-value products;<br>• Removing impediments to the Development Team’s progress;<br>• Facilitating Scrum events as requested or needed;<br>• Coaching the Development Team in organizational environments in which Scrum is not yet fully adopted and understood.</p>
+<h4 id="Scrum-Master-Service-to-the-Organization"><a href="#Scrum-Master-Service-to-the-Organization" class="headerlink" title="Scrum Master Service to the Organization"></a>Scrum Master Service to the Organization</h4><p>The Scrum Master serves the organization in several ways, including:<br>• Leading and coaching the organization in its Scrum adoption;<br>• Planning Scrum implementations within the organization;<br>• Helping employees and stakeholders understand and enact Scrum and empirical product<br>development;<br>• Causing change that increases the productivity of the Scrum Team;<br>• Working with other Scrum Masters to increase the effectiveness of the application of Scrum in the organization.</p>
+<h2 id="Scrum-Events"><a href="#Scrum-Events" class="headerlink" title="Scrum Events"></a>Scrum Events</h2><p>Prescribed events are used in Scrum to create regularity and to minimize the need for meetings not defined in Scrum. All events are time-boxed events, such that every event has a maximum duration. Once a Sprint begins, its duration is fixed and cannot be shortened or lengthened. The remaining events may end whenever the purpose of the event is achieved, ensuring an appropriate amount of time is spent without allowing waste in the process. The Scrum Events are:</p>
+<ul>
+<li>Sprint</li>
+<li>Sprint Planning</li>
+<li>Daily Scrum</li>
+<li>Sprint Review</li>
+<li>Sprint Retrospective</li>
+</ul>
+<h3 id="The-Sprint"><a href="#The-Sprint" class="headerlink" title="The Sprint"></a>The Sprint</h3><p>The heart of Scrum is a Sprint, a time-box of one month or less during which a “Done”, useable, and potentially releasable product Increment is created. Sprints have consistent durations throughout a development effort. A new Sprint starts immediately after the conclusion of the<br>previous Sprint.</p>
+<p>During the Sprint:<br>• No changes are made that would endanger the Sprint Goal;<br>• Quality goals do not decrease;<br>• Scope may be clarified and re-negotiated between the Product Owner and Development Team as more is learned.</p>
+<p>Each Sprint may be considered a project with no more than a one-month horizon. Like projects, Sprints are used to accomplish something. Each Sprint has a goal of what is to be built, a design and flexible plan that will guide building it, the work, and the resultant product increment.</p>
+<p>Sprints are limited to one calendar month. When a Sprint’s horizon is too long the definition of what is being built may change, complexity may rise, and risk may increase. Sprints enable predictability by ensuring inspection and adaptation of progress toward a Sprint Goal at least every calendar month. Sprints also limit risk to one calendar month of cost.</p>
+<h3 id="Sprint-Planning"><a href="#Sprint-Planning" class="headerlink" title="Sprint Planning"></a>Sprint Planning</h3><p>The work to be performed in the Sprint is planned at the Sprint Planning. This plan is created by the collaborative work of the entire Scrum Team.</p>
+<p>Sprint Planning is time-boxed to a maximum of eight hours for a one-month Sprint. For shorter Sprints, the event is usually shorter. The Scrum Master ensures that the event takes place and that attendants understand its purpose. The Scrum Master teaches the Scrum Team to keep it within the time-box.</p>
+<p>Sprint Planning answers the following:<br>• What can be delivered in the Increment resulting from the upcoming Sprint?<br>• How will the work needed to deliver the Increment be achieved?</p>
+<h4 id="Topic-One-What-can-be-done-this-Sprint"><a href="#Topic-One-What-can-be-done-this-Sprint" class="headerlink" title="Topic One: What can be done this Sprint?"></a>Topic One: What can be done this Sprint?</h4><p>The Development Team works to forecast the functionality that will be developed during the Sprint. The Product Owner discusses the objective that the Sprint should achieve and the Product Backlog items that, if completed in the Sprint, would achieve the Sprint Goal. The entire Scrum Team collaborates on understanding the work of the Sprint.</p>
+<h4 id="Topic-Two-How-will-the-chosen-work-get-done"><a href="#Topic-Two-How-will-the-chosen-work-get-done" class="headerlink" title="Topic Two: How will the chosen work get done?"></a>Topic Two: How will the chosen work get done?</h4><p>Having set the Sprint Goal and selected the Product Backlog items for the Sprint, the Development Team decides how it will build this functionality into a “Done” product Increment during the Sprint. The Product Backlog items selected for this Sprint plus the plan for delivering them is called the Sprint Backlog.</p>
+<p>By the end of the Sprint Planning, the Development Team should be able to explain to the Product Owner and Scrum Master how it intends to work as a self-organizing team to accomplish the Sprint Goal and create the anticipated Increment.</p>
+<h4 id="Sprint-Goal"><a href="#Sprint-Goal" class="headerlink" title="Sprint Goal"></a>Sprint Goal</h4><p>The Sprint Goal is an objective set for the Sprint that can be met through the implementation of Product Backlog. It provides guidance to the Development Team on why it is building the Increment. It is created during the Sprint Planning meeting. The Sprint Goal gives the Development Team some flexibility regarding the functionality implemented within the Sprint.</p>
+<h3 id="Daily-Scrum"><a href="#Daily-Scrum" class="headerlink" title="Daily Scrum"></a>Daily Scrum</h3><p>The Daily Scrum is a 15-minute time-boxed event for the Development Team. The Daily Scrum is held every day of the Sprint. At it, the Development Team plans work for the next 24 hours. This optimizes team collaboration and performance by inspecting the work since the last Daily Scrum and forecasting upcoming Sprint work. The Daily Scrum is held at the same time and place each day to reduce complexity.</p>
+<h3 id="Sprint-Review"><a href="#Sprint-Review" class="headerlink" title="Sprint Review"></a>Sprint Review</h3><p>A Sprint Review is held at the end of the Sprint to inspect the Increment and adapt the Product Backlog if needed. During the Sprint Review, the Scrum Team and stakeholders collaborate about what was done in the Sprint.</p>
+<p>The Sprint Review includes the following elements:<br>• Attendees include the Scrum Team and key stakeholders invited by the Product Owner;<br>• The Product Owner explains what Product Backlog items have been “Done” and what has not been “Done”;<br>• The Development Team discusses what went well during the Sprint, what problems it ran into, and how those problems were solved;<br>• The Development Team demonstrates the work that it has “Done” and answers questions about the Increment;<br>• The Product Owner discusses the Product Backlog as it stands. He or she projects likely target and delivery dates based on progress to date (if needed);<br>• The entire group collaborates on what to do next, so that the Sprint Review provides valuable input to subsequent Sprint Planning;<br>• Review of how the marketplace or potential use of the product might have changed what is the most valuable thing to do next;<br>• Review of the timeline, budget, potential capabilities, and marketplace for the next anticipated releases of functionality or capability of the product.</p>
+<p>The result of the Sprint Review is a revised Product Backlog that defines the probable Product<br>Backlog items for the next Sprint. The Product Backlog may also be adjusted overall to meet new<br>opportunities.</p>
+<h3 id="Sprint-Retrospective"><a href="#Sprint-Retrospective" class="headerlink" title="Sprint Retrospective"></a>Sprint Retrospective</h3><p>The Sprint Retrospective is an opportunity for the Scrum Team to inspect itself and create a plan for improvements to be enacted during the next Sprint.</p>
+<p>The purpose of the Sprint Retrospective is to:<br>• Inspect how the last Sprint went with regards to people, relationships, process, and tools;<br>• Identify and order the major items that went well and potential improvements;<br>• Create a plan for implementing improvements to the way the Scrum Team does its work.</p>
+<h2 id="Scrum-Artifacts"><a href="#Scrum-Artifacts" class="headerlink" title="Scrum Artifacts"></a>Scrum Artifacts</h2><p>Scrum’s artifacts represent work or value to provide transparency and opportunities for inspection and adaptation. Artifacts defined by Scrum are specifically designed to maximize transparency of key information so that everybody has the same understanding of the artifact.</p>
+<p>The Scrum Artifacts are:</p>
+<ul>
+<li>Product Backlog</li>
+<li>Sprint Backlog</li>
+<li>Increment</li>
+</ul>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="https://www.scrum.org/resources/what-is-scrum" target="_blank" rel="noopener">what-is-scrum</a><br><a href="http://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100" target="_blank" rel="noopener"><em>2017-Scrum-Guide</em></a></p>
 
       
     </div>
@@ -447,17 +504,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Mathematics/" rel="tag">
+            <a href="/tags/Scrum/" rel="tag">
             <i class="fa fa-tag"></i> 
-            Mathematics</a>
+            Scrum</a>
           
-            <a href="/tags/Machine-Learning/" rel="tag">
+            <a href="/tags/Agile/" rel="tag">
             <i class="fa fa-tag"></i> 
-            Machine Learning</a>
-          
-            <a href="/tags/PCA/" rel="tag">
-            <i class="fa fa-tag"></i> 
-            PCA</a>
+            Agile</a>
           
         </div>
       
@@ -470,8 +523,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/30/ECMAScript-6-3/" rel="next" title="ECMAScript 6 features (3)">
-                <i class="fa fa-chevron-left"></i> ECMAScript 6 features (3)
+              <a href="/2018/02/14/LINQ/" rel="next" title="LINQ Tutorial">
+                <i class="fa fa-chevron-left"></i> LINQ Tutorial
               </a>
             
           </div>
@@ -479,10 +532,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/07/Weekly-Report-20180207/" rel="prev" title="Google Analytics Introduction">
-                Google Analytics Introduction <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -647,7 +696,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vector-representation-and-Dimensionality-reduction-of-data"><span class="nav-number">1.</span> <span class="nav-text">Vector representation and Dimensionality reduction of data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-of-bases"><span class="nav-number">2.</span> <span class="nav-text">Change of bases</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Inner-product"><span class="nav-number">2.1.</span> <span class="nav-text">Inner product</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Base"><span class="nav-number">2.2.</span> <span class="nav-text">Base</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Matrix-representation-of-form-change"><span class="nav-number">2.3.</span> <span class="nav-text">Matrix representation of form change</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-of-Scrum"><span class="nav-number">1.</span> <span class="nav-text">Definition of Scrum</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Uses-of-Scrum"><span class="nav-number">2.</span> <span class="nav-text">Uses of Scrum</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scrum-Theory"><span class="nav-number">3.</span> <span class="nav-text">Scrum Theory</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Transparency"><span class="nav-number">3.1.</span> <span class="nav-text">Transparency</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Inspection"><span class="nav-number">3.2.</span> <span class="nav-text">Inspection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Adaptation"><span class="nav-number">3.3.</span> <span class="nav-text">Adaptation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Scrum-Team"><span class="nav-number">4.</span> <span class="nav-text">The Scrum Team</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Product-Owner"><span class="nav-number">4.1.</span> <span class="nav-text">The Product Owner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Development-Team"><span class="nav-number">4.2.</span> <span class="nav-text">The Development Team</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Development-Team-Size"><span class="nav-number">4.2.1.</span> <span class="nav-text">Development Team Size</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Scrum-Master"><span class="nav-number">4.3.</span> <span class="nav-text">The Scrum Master</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Scrum-Master-Service-to-the-Product-Owner"><span class="nav-number">4.3.1.</span> <span class="nav-text">Scrum Master Service to the Product Owner</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Scrum-Master-Service-to-the-Development-Team"><span class="nav-number">4.3.2.</span> <span class="nav-text">Scrum Master Service to the Development Team</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Scrum-Master-Service-to-the-Organization"><span class="nav-number">4.3.3.</span> <span class="nav-text">Scrum Master Service to the Organization</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scrum-Events"><span class="nav-number">5.</span> <span class="nav-text">Scrum Events</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Sprint"><span class="nav-number">5.1.</span> <span class="nav-text">The Sprint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sprint-Planning"><span class="nav-number">5.2.</span> <span class="nav-text">Sprint Planning</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Topic-One-What-can-be-done-this-Sprint"><span class="nav-number">5.2.1.</span> <span class="nav-text">Topic One: What can be done this Sprint?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Topic-Two-How-will-the-chosen-work-get-done"><span class="nav-number">5.2.2.</span> <span class="nav-text">Topic Two: How will the chosen work get done?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sprint-Goal"><span class="nav-number">5.2.3.</span> <span class="nav-text">Sprint Goal</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Daily-Scrum"><span class="nav-number">5.3.</span> <span class="nav-text">Daily Scrum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sprint-Review"><span class="nav-number">5.4.</span> <span class="nav-text">Sprint Review</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sprint-Retrospective"><span class="nav-number">5.5.</span> <span class="nav-text">Sprint Retrospective</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scrum-Artifacts"><span class="nav-number">6.</span> <span class="nav-text">Scrum Artifacts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">7.</span> <span class="nav-text">References</span></a></li></ol></div>
             
 
           </div>
