@@ -79,15 +79,22 @@
 
 
 
+<meta name="description" content="DefinitionDevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.">
 <meta name="keywords" content="DevOps">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DevOps Introduction">
 <meta property="og:url" content="http://yoursite.com/2018/02/15/DevOps-Introduction/index.html">
 <meta property="og:site_name" content="Yu Liu">
+<meta property="og:description" content="DefinitionDevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-15T18:48:26.068Z">
+<meta property="og:image" content="https://s1.ax1x.com/2018/02/16/9YHHIK.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/02/16/9Y7shD.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/02/16/9YHTVx.png">
+<meta property="og:updated_time" content="2018-02-15T18:59:44.205Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DevOps Introduction">
+<meta name="twitter:description" content="DefinitionDevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/02/16/9YHHIK.png">
 
 
 
@@ -413,7 +420,62 @@
       
 
       
-        
+        <h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p>DevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.</p>
+<a id="more"></a>
+<h2 id="DevOps-toolchain"><a href="#DevOps-toolchain" class="headerlink" title="DevOps toolchain"></a>DevOps toolchain</h2><ol>
+<li>Code — code development and review, source code management tools, code merging</li>
+<li>Build — continuous integration tools, build status</li>
+<li>Test — continuous testing tools that provide feedback on business risks</li>
+<li>Package — artifact repository, application pre-deployment staging</li>
+<li>Release — change management, release approvals, release automation</li>
+<li>Configure — infrastructure configuration and management, Infrastructure as Code tools</li>
+<li>Monitor — applications performance monitoring, end–user experience</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2018/02/16/9YHHIK.png" alt="9YHHIK.png"></p>
+<h2 id="Why-DevOps"><a href="#Why-DevOps" class="headerlink" title="Why DevOps"></a>Why DevOps</h2><p>The Water-fall model worked fine and served well for many years however it had some challenges. In the following diagram the challenges of Waterfall Model are highlighted.</p>
+<p><img src="https://s1.ax1x.com/2018/02/16/9Y7shD.png" alt="9Y7shD.png"></p>
+<p>In the above diagram you can see that both Development and Operations had challenges in the Waterfall Model.</p>
+<p>From <strong>Developers</strong> point of view there were majorly two challenges:</p>
+<ol>
+<li><p>After Development, the code deployment time was huge.</p>
+</li>
+<li><p>Pressure of work on old, pending and new code was high because development and deployment time was high.</p>
+</li>
+</ol>
+<p>On the other hand, <strong>Operations</strong> was also not completely satisfied. There were four major challenges they faced as per the above diagram:</p>
+<ol>
+<li><p>It was difficult to maintain ~100% uptime of the production environment.</p>
+</li>
+<li><p>Infrastructure Automation tools were not very affective.</p>
+</li>
+<li><p>Number of severs to be monitored keeps on increasing with time and hence the complexity.</p>
+</li>
+<li><p>It was very difficult to provide feedback and diagnose issue in the product.</p>
+</li>
+</ol>
+<p>In the following diagram proposed solution to the challenges of Waterfall Model are highlighted.</p>
+<p><img src="https://s1.ax1x.com/2018/02/16/9YHTVx.png" alt="9YHTVx.png"></p>
+<p>In the above diagram, Probable Solutions for the issues faced by Developers and Operations are highlighted in blue. This sets the guidelines for an Ideal Software Development strategy.</p>
+<p>From Developers point of view:</p>
+<ol>
+<li><p>A system which enables code deployment without any delay or wait time.</p>
+</li>
+<li><p>A system where work happens on the current code itself i.e. development sprints are short and well planned.</p>
+</li>
+</ol>
+<p>From Operations point of view:</p>
+<ol>
+<li><p>System should have at-least 99% uptime.</p>
+</li>
+<li><p>Tools &amp; systems are there in place for easy administration.</p>
+</li>
+<li><p>Effective monitoring and feedbacks system should be there.</p>
+</li>
+<li><p>Better Collaboration between Development &amp; Operations and is common requirement for Developers and Operations team.</p>
+</li>
+</ol>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="https://en.wikipedia.org/wiki/DevOps" target="_blank" rel="noopener">DevOps - Wikipedia</a><br><a href="https://www.edureka.co/blog/devops-tutorial" target="_blank" rel="noopener">DevOps Tutorial : Introduction To DevOps</a><br><a href="https://theagileadmin.com/what-is-devops/" target="_blank" rel="noopener">What Is DevOps?</a></p>
+
       
     </div>
     
@@ -510,8 +572,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -599,6 +670,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition"><span class="nav-number">1.</span> <span class="nav-text">Definition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DevOps-toolchain"><span class="nav-number">2.</span> <span class="nav-text">DevOps toolchain</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-DevOps"><span class="nav-number">3.</span> <span class="nav-text">Why DevOps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

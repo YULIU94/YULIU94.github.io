@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[DevOps Introduction]]></title>
     <url>%2F2018%2F02%2F15%2FDevOps-Introduction%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[DefinitionDevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality. DevOps toolchain Code — code development and review, source code management tools, code merging Build — continuous integration tools, build status Test — continuous testing tools that provide feedback on business risks Package — artifact repository, application pre-deployment staging Release — change management, release approvals, release automation Configure — infrastructure configuration and management, Infrastructure as Code tools Monitor — applications performance monitoring, end–user experience Why DevOpsThe Water-fall model worked fine and served well for many years however it had some challenges. In the following diagram the challenges of Waterfall Model are highlighted. In the above diagram you can see that both Development and Operations had challenges in the Waterfall Model. From Developers point of view there were majorly two challenges: After Development, the code deployment time was huge. Pressure of work on old, pending and new code was high because development and deployment time was high. On the other hand, Operations was also not completely satisfied. There were four major challenges they faced as per the above diagram: It was difficult to maintain ~100% uptime of the production environment. Infrastructure Automation tools were not very affective. Number of severs to be monitored keeps on increasing with time and hence the complexity. It was very difficult to provide feedback and diagnose issue in the product. In the following diagram proposed solution to the challenges of Waterfall Model are highlighted. In the above diagram, Probable Solutions for the issues faced by Developers and Operations are highlighted in blue. This sets the guidelines for an Ideal Software Development strategy. From Developers point of view: A system which enables code deployment without any delay or wait time. A system where work happens on the current code itself i.e. development sprints are short and well planned. From Operations point of view: System should have at-least 99% uptime. Tools &amp; systems are there in place for easy administration. Effective monitoring and feedbacks system should be there. Better Collaboration between Development &amp; Operations and is common requirement for Developers and Operations team. ReferencesDevOps - WikipediaDevOps Tutorial : Introduction To DevOpsWhat Is DevOps?]]></content>
       <categories>
         <category>software development</category>
       </categories>
@@ -55,8 +55,8 @@
         <category>Technology</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>Machine Learning</tag>
+        <tag>Python</tag>
         <tag>Logistic Regression</tag>
         <tag>Neural Network</tag>
       </tags>
@@ -69,11 +69,11 @@
         <category>Technology</category>
       </categories>
       <tags>
+        <tag>Machine Learning</tag>
         <tag>Python</tag>
         <tag>NumPy</tag>
         <tag>vectorization</tag>
         <tag>broadcasting</tag>
-        <tag>Machine Learning</tag>
       </tags>
   </entry>
   <entry>
@@ -95,8 +95,8 @@
         <category>Technology</category>
       </categories>
       <tags>
-        <tag>Machine Learning</tag>
         <tag>Mathematics</tag>
+        <tag>Machine Learning</tag>
         <tag>PCA</tag>
       </tags>
   </entry>
