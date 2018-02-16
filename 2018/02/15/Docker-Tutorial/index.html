@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Mathematics,Machine Learning,PCA," />
+  <meta name="keywords" content="Docker," />
 
 
 
@@ -79,18 +79,21 @@
 
 
 
-<meta name="description" content="Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly">
-<meta name="keywords" content="Mathematics,Machine Learning,PCA">
+<meta name="description" content="What is Docker?Wikipedia defines Docker as  an open-source project that automates the deployment of software applications inside containers by providing an additional layer of abstraction and automati">
+<meta name="keywords" content="Docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PCA - Mathematics (1)">
-<meta property="og:url" content="http://yoursite.com/2018/01/30/PCA-Mathematical-principle/index.html">
+<meta property="og:title" content="Docker Tutorial (1) -- Introduction">
+<meta property="og:url" content="http://yoursite.com/2018/02/15/Docker-Tutorial/index.html">
 <meta property="og:site_name" content="Yu Liu">
-<meta property="og:description" content="Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly">
+<meta property="og:description" content="What is Docker?Wikipedia defines Docker as  an open-source project that automates the deployment of software applications inside containers by providing an additional layer of abstraction and automati">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-01T18:36:05.767Z">
+<meta property="og:image" content="https://www.docker.com/sites/default/files/Container%402x.png">
+<meta property="og:image" content="https://www.docker.com/sites/default/files/VM%402x.png">
+<meta property="og:updated_time" content="2018-02-16T21:05:00.875Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PCA - Mathematics (1)">
-<meta name="twitter:description" content="Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly">
+<meta name="twitter:title" content="Docker Tutorial (1) -- Introduction">
+<meta name="twitter:description" content="What is Docker?Wikipedia defines Docker as  an open-source project that automates the deployment of software applications inside containers by providing an additional layer of abstraction and automati">
+<meta name="twitter:image" content="https://www.docker.com/sites/default/files/Container%402x.png">
 
 
 
@@ -120,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/30/PCA-Mathematical-principle/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/15/Docker-Tutorial/"/>
 
 
 
 
 
-  <title>PCA - Mathematics (1) | Yu Liu</title>
+  <title>Docker Tutorial (1) -- Introduction | Yu Liu</title>
   
 
 
@@ -316,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/30/PCA-Mathematical-principle/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/15/Docker-Tutorial/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yu Liu">
@@ -333,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PCA - Mathematics (1)</h1>
+          <h1 class="post-title" itemprop="name headline">Docker Tutorial (1) -- Introduction</h1>
         
 
         <div class="post-meta">
@@ -345,8 +348,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-30T16:42:45-05:00">
-                2018-01-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-15T14:28:58-05:00">
+                2018-02-15
               </time>
             
 
@@ -385,7 +388,7 @@
 
           
           
-             <span id="/2018/01/30/PCA-Mathematical-principle/" class="leancloud_visitors" data-flag-title="PCA - Mathematics (1)">
+             <span id="/2018/02/15/Docker-Tutorial/" class="leancloud_visitors" data-flag-title="Docker Tutorial (1) -- Introduction">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -416,20 +419,57 @@
       
 
       
-        <p><strong>Principal component analysis (PCA)</strong> is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components.</p>
-<h2 id="Vector-representation-and-Dimensionality-reduction-of-data"><a href="#Vector-representation-and-Dimensionality-reduction-of-data" class="headerlink" title="Vector representation and Dimensionality reduction of data"></a>Vector representation and Dimensionality reduction of data</h2><p>In general, in data mining and machine learning, data are represented as vectors.<br>For example:<br>$$ (500,240,25,13,2312.15)^𝖳 $$</p>
-<p>As we know, the scale of dimensionality of data is in proportion to complexity of machine learning algorithm, so we can reduce dimensionality to simplify calculation. Obviuosly, dimensionality reduction means loss of information. However, due to the correlation among data, we could minimize the loss in the above process, which is the purpose of PCA.</p>
-<a id="more"></a>
-<h2 id="Change-of-bases"><a href="#Change-of-bases" class="headerlink" title="Change of bases"></a>Change of bases</h2><h3 id="Inner-product"><a href="#Inner-product" class="headerlink" title="Inner product"></a>Inner product</h3><p>Inner product of two vectors is defined as:</p>
-<p>$$ (a_1,a_2,⋯,a_n)^𝖳⋅(b_1,b_2,⋯,b_n)^𝖳=a_1b_1+a_2b_2+⋯+a_nb_n $$</p>
-<p>and</p>
-<p>$$ A⋅B=|A||B|cos(a) $$</p>
-<p>Let |B| = 1, that is $ A⋅B=|A|cos(a) $. The above definition could be explained that the inner product of A and B equals the vector length projected from A to B.</p>
-<h3 id="Base"><a href="#Base" class="headerlink" title="Base"></a>Base</h3><p>To describe a vector, we need a set of bases. Then the vector could be represented as the combination of projections to all bases. Usually, we choose (1,0) and (0,1) as bases, but actually we can choose any two linearly independent vectors as bases. For example, we can use $ (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}) $ and $ (\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}) $ as new bases to represent the same vector.</p>
-<h3 id="Matrix-representation-of-form-change"><a href="#Matrix-representation-of-form-change" class="headerlink" title="Matrix representation of form change"></a>Matrix representation of form change</h3><p>For example, we want to transform (3, 2) based on new bases $ (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}) $ and $ (\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}) $, which could be represented by the following form:</p>
-<p>$$<br>\left(<br>\begin{matrix}<br>\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} \\<br>-\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}}<br>\end{matrix}<br>\right)<br>\left(<br>\begin{matrix}<br>1 &amp; 2 &amp; 3 \\<br>1 &amp; 2 &amp; 3<br>\end{matrix}<br>\right)<br>=<br>\left(<br>\begin{matrix}<br>\frac{2}{\sqrt{2}} &amp; \frac{4}{\sqrt{2}} &amp; \frac{6}{\sqrt{2}} \\<br>0 &amp; 0 &amp; 0<br>\end{matrix}<br>\right)<br>$$</p>
-<p>In general, if we have M N-dimesion vector and want to transform them into R N-dimesion new spaces, we first construct matrix A combining R bases by row, then construct matrix B combining vectors by column. The product of A and B is the result, where the column in AB is transformed from column in A.</p>
-<p>The above shows an explanation of matrix product:<br><strong>product of two matrices(AB) means to transform each column vector in B to the new space with rows in A as bases.</strong></p>
+        <h2 id="What-is-Docker"><a href="#What-is-Docker" class="headerlink" title="What is Docker?"></a>What is Docker?</h2><p>Wikipedia defines Docker as</p>
+<blockquote>
+<p>an open-source project that automates the deployment of software applications inside containers by providing an additional layer of abstraction and automation of OS-level virtualization on Linux.</p>
+</blockquote>
+<h2 id="Why-Docker"><a href="#Why-Docker" class="headerlink" title="Why Docker?"></a>Why Docker?</h2><p>Environment is essential for running software and it’s inconvenient to set up the same environment on different devices.</p>
+<p>Virtual machine could solve the above problem by creating an isolated operating system as the environment. However, virtual machine has disadvantages, such as consuming resources, creating redundant steps and slow initialization.</p>
+<table><br><tbody><br><tr><br><td><img src="https://www.docker.com/sites/default/files/Container%402x.png" alt="Container stack example"></td><br><td><img src="https://www.docker.com/sites/default/files/VM%402x.png" alt="Virtual machine stack example"></td><br></tr><br></tbody><br></table>
+
+<p>While Docker utilizes the virtualization technology in the Linux kernel, it does not create virtual machines.</p>
+<p>Until a few releases ago, running Docker on OSX and Windows was quite a hassle. Lately however, Docker has invested significantly into improving the on-boarding experience for its users on these OSes, thus running Docker now is a cakewalk. The getting started guide on Docker has detailed instructions for setting up Docker on <a href="https://www.docker.com/community-edition#/mac" target="_blank" rel="noopener">Mac</a>, <a href="https://www.docker.com/community-edition#/linux" target="_blank" rel="noopener">Linux</a> and <a href="https://www.docker.com/community-edition#/windows" target="_blank" rel="noopener">Windows</a>.</p>
+<p>Once you are done installing Docker, test your Docker installation by running the following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">##List Docker CLI commands</span><br><span class="line">docker</span><br><span class="line">docker container --help</span><br><span class="line"></span><br><span class="line">## Display Docker version and info</span><br><span class="line">docker --version</span><br><span class="line">docker version</span><br><span class="line">docker info</span><br><span class="line"></span><br><span class="line">## Excecute Docker image</span><br><span class="line">docker run hello-world</span><br><span class="line"></span><br><span class="line">## List Docker images</span><br><span class="line">docker image ls</span><br><span class="line"></span><br><span class="line">## List Docker containers (running, all, all in quiet mode)</span><br><span class="line">docker container ls</span><br><span class="line">docker container ls -all</span><br><span class="line">docker container ls -a -q</span><br></pre></td></tr></table></figure>
+<h2 id="Docker-Example-Busybox"><a href="#Docker-Example-Busybox" class="headerlink" title="Docker Example(Busybox)"></a>Docker Example(Busybox)</h2><p>To get started, let’s run the following in our terminal:</p>
+<blockquote>
+<p>$ docker pull busybox</p>
+</blockquote>
+<p>The pull command fetches the busybox image from the Docker registry and saves it to our system. You can use the docker images command to see a list of all images on your system.</p>
+<blockquote>
+<p>$ docker images<br>REPOSITORY | TAG | IMAGE ID | CREATED | VIRTUAL SIZE<br>—|<br>busybox | latest | c51f86c28340 | 4 weeks ago | 1.109 MB</p>
+</blockquote>
+<h3 id="Docker-Run"><a href="#Docker-Run" class="headerlink" title="Docker Run"></a>Docker Run</h3><p>Let’s now run a Docker container based on this image.</p>
+<blockquote>
+<p>$ docker run busybox</p>
+</blockquote>
+<p>The docker ps command shows you all containers that are currently running.</p>
+<blockquote>
+<p>$ docker ps<br>CONTAINER |ID     |   IMAGE  |   COMMAND    |    CREATED      |  STATUS      |        PORTS        |       NAMES<br>—|</p>
+</blockquote>
+<p>Since no containers are running, we see a blank line. Let’s try a more useful variant: docker ps -a</p>
+<blockquote>
+<p>$ docker ps -a<br>CONTAINER ID | IMAGE  |  COMMAND  | CREATED |  STATUS  | PORTS |  NAMES<br>—|<br>305297d7a235     |   busybox       |      “uptime”   |         11 minutes ago    |  Exited (0) 11 minutes ago  |              |       distracted_goldstine |<br>ff0a5c3750b9      |  busybox     |        “sh”     |           12 minutes ago  |    Exited (0) 12 minutes ago   |  |    elated_ramanujan</p>
+</blockquote>
+<p>Before we move ahead though, let’s quickly talk about deleting containers. To do that, you can run the <strong><em>docker rm</em></strong> command.</p>
+<blockquote>
+<p>$ docker rm 305297d7a235 ff0a5c3750b9</p>
+</blockquote>
+<p>On deletion, you should see the IDs echoed back to you. If you have a bunch of containers to delete in one go, copy-pasting IDs can be tedious. In that case, you can simply run:</p>
+<blockquote>
+<p>\$ docker rm $(docker ps -a -q -f status=exited)</p>
+</blockquote>
+<p>This command deletes all containers that have a status of exited. In case you’re wondering, the <strong><em>-q</em></strong> flag, only returns the numeric IDs and <strong><em>-f</em></strong> filters output based on conditions provided. One last thing that’ll be useful is the <strong><em>–rm</em></strong> flag that can be passed to docker run which automatically deletes the container once it’s exited from. For one off docker runs, <strong><em>–rm</em></strong> flag is very useful.</p>
+<p>Lastly, you can also delete images that you no longer need by running docker <strong><em>rmi</em></strong>.</p>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2><p>In the last section, we used a lot of Docker-specific jargon which might be confusing to some. So before we go further, let me clarify some terminology that is used frequently in the Docker ecosystem.</p>
+<ul>
+<li>Images - The blueprints of our application which form the basis of containers. In the demo above, we used the docker pull command to download the busybox image.</li>
+<li>Containers - Created from Docker images and run the actual application. We create a container using docker run which we did using the busybox image that we downloaded. A list of running containers can be seen using the docker ps command.</li>
+<li>Docker Daemon - The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system to which clients talk to.</li>
+<li>Docker Client - The command line tool that allows the user to interact with the daemon. More generally, there can be other forms of clients too - such as Kitematic which provide a GUI to the users.</li>
+<li>Docker Hub - A registry of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.<br>Top</li>
+</ul>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="https://docker-curriculum.com/" target="_blank" rel="noopener">A Docker Tutorial for Beginners</a><br><a href="http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html" target="_blank" rel="noopener">Docker Tutorial</a><br><a href="https://docs.docker.com/engine/reference/builder/#usage" target="_blank" rel="noopener">Dockerfile reference</a><br><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">Docs Docker - Get Started</a></p>
 
       
     </div>
@@ -447,17 +487,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Mathematics/" rel="tag">
+            <a href="/tags/Docker/" rel="tag">
             <i class="fa fa-tag"></i> 
-            Mathematics</a>
-          
-            <a href="/tags/Machine-Learning/" rel="tag">
-            <i class="fa fa-tag"></i> 
-            Machine Learning</a>
-          
-            <a href="/tags/PCA/" rel="tag">
-            <i class="fa fa-tag"></i> 
-            PCA</a>
+            Docker</a>
           
         </div>
       
@@ -470,8 +502,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/30/ECMAScript-6-3/" rel="next" title="ECMAScript 6 features (3)">
-                <i class="fa fa-chevron-left"></i> ECMAScript 6 features (3)
+              <a href="/2018/02/15/DevOps-Introduction/" rel="next" title="DevOps Introduction">
+                <i class="fa fa-chevron-left"></i> DevOps Introduction
               </a>
             
           </div>
@@ -479,10 +511,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/07/Weekly-Report-20180207/" rel="prev" title="Google Analytics Introduction">
-                Google Analytics Introduction <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -647,7 +675,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vector-representation-and-Dimensionality-reduction-of-data"><span class="nav-number">1.</span> <span class="nav-text">Vector representation and Dimensionality reduction of data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-of-bases"><span class="nav-number">2.</span> <span class="nav-text">Change of bases</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Inner-product"><span class="nav-number">2.1.</span> <span class="nav-text">Inner product</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Base"><span class="nav-number">2.2.</span> <span class="nav-text">Base</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Matrix-representation-of-form-change"><span class="nav-number">2.3.</span> <span class="nav-text">Matrix representation of form change</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-Docker"><span class="nav-number">1.</span> <span class="nav-text">What is Docker?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-Docker"><span class="nav-number">2.</span> <span class="nav-text">Why Docker?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Example-Busybox"><span class="nav-number">3.</span> <span class="nav-text">Docker Example(Busybox)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker-Run"><span class="nav-number">3.1.</span> <span class="nav-text">Docker Run</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminology"><span class="nav-number">4.</span> <span class="nav-text">Terminology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">5.</span> <span class="nav-text">References</span></a></li></ol></div>
             
 
           </div>

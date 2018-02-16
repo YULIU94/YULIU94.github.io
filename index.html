@@ -312,6 +312,209 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/15/Docker-Tutorial/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yu Liu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yu Liu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/15/Docker-Tutorial/" itemprop="url">Docker Tutorial (1) -- Introduction</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-15T14:28:58-05:00">
+                2018-02-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/02/15/Docker-Tutorial/" class="leancloud_visitors" data-flag-title="Docker Tutorial (1) -- Introduction">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="What-is-Docker"><a href="#What-is-Docker" class="headerlink" title="What is Docker?"></a>What is Docker?</h2><p>Wikipedia defines Docker as</p>
+<blockquote>
+<p>an open-source project that automates the deployment of software applications inside containers by providing an additional layer of abstraction and automation of OS-level virtualization on Linux.</p>
+</blockquote>
+<h2 id="Why-Docker"><a href="#Why-Docker" class="headerlink" title="Why Docker?"></a>Why Docker?</h2><p>Environment is essential for running software and it’s inconvenient to set up the same environment on different devices.</p>
+<p>Virtual machine could solve the above problem by creating an isolated operating system as the environment. However, virtual machine has disadvantages, such as consuming resources, creating redundant steps and slow initialization.</p>
+<table><br><tbody><br><tr><br><td><img src="https://www.docker.com/sites/default/files/Container%402x.png" alt="Container stack example"></td><br><td><img src="https://www.docker.com/sites/default/files/VM%402x.png" alt="Virtual machine stack example"></td><br></tr><br></tbody><br></table>
+
+<p>While Docker utilizes the virtualization technology in the Linux kernel, it does not create virtual machines.</p>
+<p>Until a few releases ago, running Docker on OSX and Windows was quite a hassle. Lately however, Docker has invested significantly into improving the on-boarding experience for its users on these OSes, thus running Docker now is a cakewalk. The getting started guide on Docker has detailed instructions for setting up Docker on <a href="https://www.docker.com/community-edition#/mac" target="_blank" rel="noopener">Mac</a>, <a href="https://www.docker.com/community-edition#/linux" target="_blank" rel="noopener">Linux</a> and <a href="https://www.docker.com/community-edition#/windows" target="_blank" rel="noopener">Windows</a>.</p>
+<p>Once you are done installing Docker, test your Docker installation by running the following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">##List Docker CLI commands</span><br><span class="line">docker</span><br><span class="line">docker container --help</span><br><span class="line"></span><br><span class="line">## Display Docker version and info</span><br><span class="line">docker --version</span><br><span class="line">docker version</span><br><span class="line">docker info</span><br><span class="line"></span><br><span class="line">## Excecute Docker image</span><br><span class="line">docker run hello-world</span><br><span class="line"></span><br><span class="line">## List Docker images</span><br><span class="line">docker image ls</span><br><span class="line"></span><br><span class="line">## List Docker containers (running, all, all in quiet mode)</span><br><span class="line">docker container ls</span><br><span class="line">docker container ls -all</span><br><span class="line">docker container ls -a -q</span><br></pre></td></tr></table></figure>
+<h2 id="Docker-Example-Busybox"><a href="#Docker-Example-Busybox" class="headerlink" title="Docker Example(Busybox)"></a>Docker Example(Busybox)</h2><p>To get started, let’s run the following in our terminal:</p>
+<blockquote>
+<p>$ docker pull busybox</p>
+</blockquote>
+<p>The pull command fetches the busybox image from the Docker registry and saves it to our system. You can use the docker images command to see a list of all images on your system.</p>
+<blockquote>
+<p>$ docker images<br>REPOSITORY | TAG | IMAGE ID | CREATED | VIRTUAL SIZE<br>—|<br>busybox | latest | c51f86c28340 | 4 weeks ago | 1.109 MB</p>
+</blockquote>
+<h3 id="Docker-Run"><a href="#Docker-Run" class="headerlink" title="Docker Run"></a>Docker Run</h3><p>Let’s now run a Docker container based on this image.</p>
+<blockquote>
+<p>$ docker run busybox</p>
+</blockquote>
+<p>The docker ps command shows you all containers that are currently running.</p>
+<blockquote>
+<p>$ docker ps<br>CONTAINER |ID     |   IMAGE  |   COMMAND    |    CREATED      |  STATUS      |        PORTS        |       NAMES<br>—|</p>
+</blockquote>
+<p>Since no containers are running, we see a blank line. Let’s try a more useful variant: docker ps -a</p>
+<blockquote>
+<p>$ docker ps -a<br>CONTAINER ID | IMAGE  |  COMMAND  | CREATED |  STATUS  | PORTS |  NAMES<br>—|<br>305297d7a235     |   busybox       |      “uptime”   |         11 minutes ago    |  Exited (0) 11 minutes ago  |              |       distracted_goldstine |<br>ff0a5c3750b9      |  busybox     |        “sh”     |           12 minutes ago  |    Exited (0) 12 minutes ago   |  |    elated_ramanujan</p>
+</blockquote>
+<p>Before we move ahead though, let’s quickly talk about deleting containers. To do that, you can run the <strong><em>docker rm</em></strong> command.</p>
+<blockquote>
+<p>$ docker rm 305297d7a235 ff0a5c3750b9</p>
+</blockquote>
+<p>On deletion, you should see the IDs echoed back to you. If you have a bunch of containers to delete in one go, copy-pasting IDs can be tedious. In that case, you can simply run:</p>
+<blockquote>
+<p>\$ docker rm $(docker ps -a -q -f status=exited)</p>
+</blockquote>
+<p>This command deletes all containers that have a status of exited. In case you’re wondering, the <strong><em>-q</em></strong> flag, only returns the numeric IDs and <strong><em>-f</em></strong> filters output based on conditions provided. One last thing that’ll be useful is the <strong><em>–rm</em></strong> flag that can be passed to docker run which automatically deletes the container once it’s exited from. For one off docker runs, <strong><em>–rm</em></strong> flag is very useful.</p>
+<p>Lastly, you can also delete images that you no longer need by running docker <strong><em>rmi</em></strong>.</p>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2><p>In the last section, we used a lot of Docker-specific jargon which might be confusing to some. So before we go further, let me clarify some terminology that is used frequently in the Docker ecosystem.</p>
+<ul>
+<li>Images - The blueprints of our application which form the basis of containers. In the demo above, we used the docker pull command to download the busybox image.</li>
+<li>Containers - Created from Docker images and run the actual application. We create a container using docker run which we did using the busybox image that we downloaded. A list of running containers can be seen using the docker ps command.</li>
+<li>Docker Daemon - The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system to which clients talk to.</li>
+<li>Docker Client - The command line tool that allows the user to interact with the daemon. More generally, there can be other forms of clients too - such as Kitematic which provide a GUI to the users.</li>
+<li>Docker Hub - A registry of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.<br>Top</li>
+</ul>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="https://docker-curriculum.com/" target="_blank" rel="noopener">A Docker Tutorial for Beginners</a><br><a href="http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html" target="_blank" rel="noopener">Docker Tutorial</a><br><a href="https://docs.docker.com/engine/reference/builder/#usage" target="_blank" rel="noopener">Dockerfile reference</a><br><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">Docs Docker - Get Started</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/15/DevOps-Introduction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1751,166 +1954,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/28/ECMAScript-6-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yu Liu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yu Liu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/28/ECMAScript-6-2/" itemprop="url">ECMAScript 6 features (2)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-28T23:24:35-05:00">
-                2018-01-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/01/28/ECMAScript-6-2/" class="leancloud_visitors" data-flag-title="ECMAScript 6 features (2)">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><p><strong>Default Parameter Values</strong><br>Simple and intuitive default values for function parameters.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span> (<span class="params">x, y = <span class="number">7</span>, z = <span class="number">42</span></span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> x + y + z</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="number">1</span>) === <span class="number">50</span></span><br></pre></td></tr></table></figure>
-<p><strong>Rest Parameter</strong><br>Aggregation of remaining arguments into single parameter of variadic functions.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span> (<span class="params">x, y, ...a</span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> (x + y) * a.length</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="number">1</span>, <span class="number">2</span>, <span class="string">"hello"</span>, <span class="literal">true</span>, <span class="number">7</span>) === <span class="number">9</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/28/ECMAScript-6-2/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1961,7 +2004,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1983,7 +2026,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
