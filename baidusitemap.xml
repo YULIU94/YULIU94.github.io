@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/02/15/Docker-Tutorial/</loc>
-    <lastmod>2018-02-17T16:00:25.671Z</lastmod>
+    <lastmod>2018-02-20T22:44:57.614Z</lastmod>
     <data>
         <display>
         <title>Docker Tutorial (1) -- Introduction</title>
@@ -138,9 +138,9 @@
         <title>Building a cat classifier with logistic regression from scratch</title>
         <pubTime>2018-02-09T21:15:40.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>Python</tag>
          
         <tag>Logistic Regression</tag>
          
@@ -164,6 +164,8 @@
         <title>Python - Vectorization and Broadcasting</title>
         <pubTime>2018-02-08T21:27:27.000Z</pubTime>
         
+        <tag>Machine Learning</tag>
+         
         <tag>Python</tag>
          
         <tag>NumPy</tag>
@@ -171,8 +173,6 @@
         <tag>vectorization</tag>
          
         <tag>broadcasting</tag>
-         
-        <tag>Machine Learning</tag>
          
          
            
@@ -272,9 +272,9 @@
         <title>PCA - Mathematics (1)</title>
         <pubTime>2018-01-30T21:42:45.000Z</pubTime>
         
-        <tag>Machine Learning</tag>
-         
         <tag>Mathematics</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>PCA</tag>
          
