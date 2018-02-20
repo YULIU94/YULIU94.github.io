@@ -89,7 +89,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://www.docker.com/sites/default/files/Container%402x.png">
 <meta property="og:image" content="https://www.docker.com/sites/default/files/VM%402x.png">
-<meta property="og:updated_time" content="2018-02-16T21:05:00.875Z">
+<meta property="og:updated_time" content="2018-02-17T16:00:25.671Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker Tutorial (1) -- Introduction">
 <meta name="twitter:description" content="What is Docker?Wikipedia defines Docker as  an open-source project that automates the deployment of software applications inside containers by providing an additional layer of abstraction and automati">
@@ -423,9 +423,10 @@
 <blockquote>
 <p>an open-source project that automates the deployment of software applications inside containers by providing an additional layer of abstraction and automation of OS-level virtualization on Linux.</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="Why-Docker"><a href="#Why-Docker" class="headerlink" title="Why Docker?"></a>Why Docker?</h2><p>Environment is essential for running software and it’s inconvenient to set up the same environment on different devices.</p>
 <p>Virtual machine could solve the above problem by creating an isolated operating system as the environment. However, virtual machine has disadvantages, such as consuming resources, creating redundant steps and slow initialization.</p>
-<table><br><tbody><br><tr><br><td><img src="https://www.docker.com/sites/default/files/Container%402x.png" alt="Container stack example"></td><br><td><img src="https://www.docker.com/sites/default/files/VM%402x.png" alt="Virtual machine stack example"></td><br></tr><br></tbody><br></table>
+<div align="center"><br><img src="https://www.docker.com/sites/default/files/Container%402x.png" alt="Container stack example"><img src="https://www.docker.com/sites/default/files/VM%402x.png" alt="Virtual machine stack example"><br></div>
 
 <p>While Docker utilizes the virtualization technology in the Linux kernel, it does not create virtual machines.</p>
 <p>Until a few releases ago, running Docker on OSX and Windows was quite a hassle. Lately however, Docker has invested significantly into improving the on-boarding experience for its users on these OSes, thus running Docker now is a cakewalk. The getting started guide on Docker has detailed instructions for setting up Docker on <a href="https://www.docker.com/community-edition#/mac" target="_blank" rel="noopener">Mac</a>, <a href="https://www.docker.com/community-edition#/linux" target="_blank" rel="noopener">Linux</a> and <a href="https://www.docker.com/community-edition#/windows" target="_blank" rel="noopener">Windows</a>.</p>
@@ -437,20 +438,60 @@
 </blockquote>
 <p>The pull command fetches the busybox image from the Docker registry and saves it to our system. You can use the docker images command to see a list of all images on your system.</p>
 <blockquote>
-<p>$ docker images<br>REPOSITORY | TAG | IMAGE ID | CREATED | VIRTUAL SIZE<br>—|<br>busybox | latest | c51f86c28340 | 4 weeks ago | 1.109 MB</p>
+<p>$ docker images</p>
 </blockquote>
+<table>
+<thead>
+<tr>
+<th>REPOSITORY</th>
+<th>TAG</th>
+<th>IMAGE ID</th>
+<th>CREATED</th>
+<th>VIRTUAL SIZE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>busybox</td>
+<td>latest</td>
+<td>c51f86c28340</td>
+<td>4 weeks ago</td>
+<td>1.109 MB</td>
+</tr>
+</tbody>
+</table>
 <h3 id="Docker-Run"><a href="#Docker-Run" class="headerlink" title="Docker Run"></a>Docker Run</h3><p>Let’s now run a Docker container based on this image.</p>
 <blockquote>
 <p>$ docker run busybox</p>
 </blockquote>
 <p>The docker ps command shows you all containers that are currently running.</p>
 <blockquote>
-<p>$ docker ps<br>CONTAINER |ID     |   IMAGE  |   COMMAND    |    CREATED      |  STATUS      |        PORTS        |       NAMES<br>—|</p>
+<p>$ docker ps</p>
 </blockquote>
-<p>Since no containers are running, we see a blank line. Let’s try a more useful variant: docker ps -a</p>
-<blockquote>
-<p>$ docker ps -a<br>CONTAINER ID | IMAGE  |  COMMAND  | CREATED |  STATUS  | PORTS |  NAMES<br>—|<br>305297d7a235     |   busybox       |      “uptime”   |         11 minutes ago    |  Exited (0) 11 minutes ago  |              |       distracted_goldstine |<br>ff0a5c3750b9      |  busybox     |        “sh”     |           12 minutes ago  |    Exited (0) 12 minutes ago   |  |    elated_ramanujan</p>
-</blockquote>
+<table>
+<thead>
+<tr>
+<th>CONTAINER ID</th>
+<th>IMAGE</th>
+<th>COMMAND</th>
+<th>CREATED</th>
+<th>STATUS</th>
+<th>PORTS</th>
+<th>NAMES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p>Before we move ahead though, let’s quickly talk about deleting containers. To do that, you can run the <strong><em>docker rm</em></strong> command.</p>
 <blockquote>
 <p>$ docker rm 305297d7a235 ff0a5c3750b9</p>
@@ -511,6 +552,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/16/Docker-Tutorial-Define-a-container-with-Dockerfile/" rel="prev" title="Docker Tutorial(2) -- Define a container with Dockerfile">
+                Docker Tutorial(2) -- Define a container with Dockerfile <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -592,7 +637,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

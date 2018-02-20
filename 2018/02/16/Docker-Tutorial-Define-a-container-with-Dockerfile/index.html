@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Docker," />
 
 
 
@@ -79,13 +79,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yu Liu">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta name="description" content="Define a container with DockerfileCreate an empty directory. Change directories (cd) into the new directory, create a file called Dockerfile, copy-and-paste the following content into that file, and s">
+<meta name="keywords" content="Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker Tutorial(2) -- Define a container with Dockerfile">
+<meta property="og:url" content="http://yoursite.com/2018/02/16/Docker-Tutorial-Define-a-container-with-Dockerfile/index.html">
 <meta property="og:site_name" content="Yu Liu">
+<meta property="og:description" content="Define a container with DockerfileCreate an empty directory. Change directories (cd) into the new directory, create a file called Dockerfile, copy-and-paste the following content into that file, and s">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://s1.ax1x.com/2018/02/17/9tFy6I.png">
+<meta property="og:updated_time" content="2018-02-17T15:33:39.565Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yu Liu">
+<meta name="twitter:title" content="Docker Tutorial(2) -- Define a container with Dockerfile">
+<meta name="twitter:description" content="Define a container with DockerfileCreate an empty directory. Change directories (cd) into the new directory, create a file called Dockerfile, copy-and-paste the following content into that file, and s">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/02/17/9tFy6I.png">
 
 
 
@@ -115,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/page/2/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/16/Docker-Tutorial-Define-a-container-with-Dockerfile/"/>
 
 
 
 
 
-  <title>Yu Liu</title>
+  <title>Docker Tutorial(2) -- Define a container with Dockerfile | Yu Liu</title>
   
 
 
@@ -149,8 +156,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
-  page-home">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -297,9 +303,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -312,7 +318,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/30/ECMAScript-6-3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Docker-Tutorial-Define-a-container-with-Dockerfile/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yu Liu">
@@ -329,9 +335,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/30/ECMAScript-6-3/" itemprop="url">ECMAScript 6 features (3)</a></h1>
+          <h1 class="post-title" itemprop="name headline">Docker Tutorial(2) -- Define a container with Dockerfile</h1>
         
 
         <div class="post-meta">
@@ -343,8 +347,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-30T09:33:45-05:00">
-                2018-01-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-16T16:29:26-05:00">
+                2018-02-16
               </time>
             
 
@@ -383,7 +387,7 @@
 
           
           
-             <span id="/2018/01/30/ECMAScript-6-3/" class="leancloud_visitors" data-flag-title="ECMAScript 6 features (3)">
+             <span id="/2018/02/16/Docker-Tutorial-Define-a-container-with-Dockerfile/" class="leancloud_visitors" data-flag-title="Docker Tutorial(2) -- Define a container with Dockerfile">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -414,505 +418,114 @@
       
 
       
-        
-          <p><em>Data-Structure</em></p>
-<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line"></span><br><span class="line">[<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">2</span>].map(<span class="function"><span class="params">x</span> =&gt;</span> s.add(x))</span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">of</span> s) &#123;<span class="built_in">console</span>.log(i)&#125;</span><br><span class="line"><span class="comment">// 2 3 4 5</span></span><br></pre></td></tr></table></figure>
-<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods:"></a>Methods:</h3><ul>
-<li>size：Returns the number of values in the Set object.</li>
-<li>add(value)：Appends a new element with the given value to the Set object. Returns the Set object.</li>
-<li>delete(value)：Removes the element associated to the value and returns the value that</li>
-<li>has(value)：Returns a boolean asserting whether an element is present with the given value in the Set object or not.</li>
-<li>clear()：Removes all elements from the Set object.</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/30/ECMAScript-6-3/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/28/ECMAScript-6-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yu Liu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yu Liu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/28/ECMAScript-6-2/" itemprop="url">ECMAScript 6 features (2)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-28T23:24:35-05:00">
-                2018-01-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/01/28/ECMAScript-6-2/" class="leancloud_visitors" data-flag-title="ECMAScript 6 features (2)">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><p><strong>Default Parameter Values</strong><br>Simple and intuitive default values for function parameters.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span> (<span class="params">x, y = <span class="number">7</span>, z = <span class="number">42</span></span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> x + y + z</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="number">1</span>) === <span class="number">50</span></span><br></pre></td></tr></table></figure>
-<p><strong>Rest Parameter</strong><br>Aggregation of remaining arguments into single parameter of variadic functions.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span> (<span class="params">x, y, ...a</span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> (x + y) * a.length</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="number">1</span>, <span class="number">2</span>, <span class="string">"hello"</span>, <span class="literal">true</span>, <span class="number">7</span>) === <span class="number">9</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/28/ECMAScript-6-2/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/28/ECMAScript-6-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yu Liu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yu Liu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/28/ECMAScript-6-1/" itemprop="url">ECMAScript 6 features (1)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-28T21:32:13-05:00">
-                2018-01-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/01/28/ECMAScript-6-1/" class="leancloud_visitors" data-flag-title="ECMAScript 6 features (1)">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>Support for constants, variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an object, this means the object itself can still be altered).</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// add an attribute to foo, success</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line">foo.prop <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// assign foo to another object, error</span></span><br><span class="line">foo = &#123;&#125;; <span class="comment">// TypeError: "foo" is read-only</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/28/ECMAScript-6-1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/27/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yu Liu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yu Liu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/27/hello-world/" itemprop="url">Hello world</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-27T22:21:01-05:00">
-                2018-01-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Documentation/" itemprop="url" rel="index">
-                    <span itemprop="name">Documentation</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/01/27/hello-world/" class="leancloud_visitors" data-flag-title="Hello world">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h1><hr>
-<p>This website is Yu Liu’s homepage, built by Hexo+Github pages. Contents are written with Markdown syntax.</p>
-<p>This website is for:</p>
-<h3 id="1-Share-idea"><a href="#1-Share-idea" class="headerlink" title="1. Share idea"></a>1. Share idea</h3><blockquote>
-<p>“Do not go gentle into that good night”</p>
+        <h2 id="Define-a-container-with-Dockerfile"><a href="#Define-a-container-with-Dockerfile" class="headerlink" title="Define a container with Dockerfile"></a>Define a container with Dockerfile</h2><p>Create an empty directory. Change directories (cd) into the new directory, create a file called Dockerfile, copy-and-paste the following content into that file, and save it. Take note of the comments that explain each statement in your new Dockerfile.</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># Use an official Python runtime as a parent image</span><br><span class="line">FROM python:2.7-slim</span><br><span class="line"></span><br><span class="line"># Set the working directory to /app</span><br><span class="line">WORKDIR /app</span><br><span class="line"></span><br><span class="line"># Copy the current directory contents into the container at /app</span><br><span class="line">ADD . /app</span><br><span class="line"></span><br><span class="line"># Install any needed packages specified in requirements.txt</span><br><span class="line">RUN pip install --trusted-host pypi.python.org -r requirements.txt</span><br><span class="line"></span><br><span class="line"># Make port 80 available to the world outside this container</span><br><span class="line">EXPOSE 80</span><br><span class="line"></span><br><span class="line"># Define environment variable</span><br><span class="line">ENV NAME World</span><br><span class="line"></span><br><span class="line"># Run app.py when the container launches</span><br><span class="line">CMD [&quot;python&quot;, &quot;app.py&quot;]</span><br></pre></td></tr></table></figure>
+<p>This Dockerfile refers to a couple of files we haven’t created yet, namely app.py and requirements.txt. Let’s create those next.</p>
+<h3 id="The-app-itself"><a href="#The-app-itself" class="headerlink" title="The app itself"></a>The app itself</h3><p>Create two more files, <strong><em>requirements.txt</em></strong> and <strong><em>app.py</em></strong>, and put them in the same folder with the <strong><em>Dockerfile</em></strong>. This completes our app, which as you can see is quite simple. When the above Dockerfile is built into an image, <strong><em>app.py</em></strong> and <strong><em>requirements.txt</em></strong> is present because of that Dockerfile’s <strong><em>ADD</em></strong> command, and the output from <strong><em>app.py</em></strong> is accessible over HTTP thanks to the <strong><em>EXPOSE</em></strong> command.</p>
+<p>requirements.txt</p>
+<blockquote>
+<p>Flask<br>Redis</p>
 </blockquote>
-<h3 id="2-Code-review"><a href="#2-Code-review" class="headerlink" title="2. Code review"></a>2. Code review</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line"><span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line"><span class="comment"># A comment</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'hello world'</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/27/hello-world/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<p>app.py<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">from flask import Flask</span><br><span class="line">from redis import Redis, RedisError</span><br><span class="line">import os</span><br><span class="line">import socket</span><br><span class="line"></span><br><span class="line"># Connect to Redis</span><br><span class="line">redis = Redis(host=&quot;redis&quot;, db=0, socket_connect_timeout=2, socket_timeout=2)</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line">@app.route(&quot;/&quot;)</span><br><span class="line">def hello():</span><br><span class="line">try:</span><br><span class="line">visits = redis.incr(&quot;counter&quot;)</span><br><span class="line">except RedisError:</span><br><span class="line">visits = &quot;&lt;i&gt;cannot connect to Redis, counter disabled&lt;/i&gt;&quot;</span><br><span class="line"></span><br><span class="line">html = &quot;&lt;h3&gt;Hello &#123;name&#125;!&lt;/h3&gt;&quot; \</span><br><span class="line">&quot;&lt;b&gt;Hostname:&lt;/b&gt; &#123;hostname&#125;&lt;br/&gt;&quot; \</span><br><span class="line">&quot;&lt;b&gt;Visits:&lt;/b&gt; &#123;visits&#125;&quot;</span><br><span class="line">return html.format(name=os.getenv(&quot;NAME&quot;, &quot;world&quot;), hostname=socket.gethostname(), visits=visits)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">app.run(host=&apos;0.0.0.0&apos;, port=80)</span><br></pre></td></tr></table></figure></p>
+<p>Now we see that pip install -r requirements.txt installs the Flask and Redis libraries for Python, and the app prints the environment variable NAME, as well as the output of a call to socket.gethostname(). Finally, because Redis isn’t running (as we’ve only installed the Python library, and not Redis itself), we should expect that the attempt to use it here fails and produces the error message.</p>
+<p>That’s it! You don’t need Python or anything in requirements.txt on your system, nor does building or running this image install them on your system. It doesn’t seem like you’ve really set up an environment with Python and Flask, but you have.</p>
+<h3 id="Build-the-app"><a href="#Build-the-app" class="headerlink" title="Build the app"></a>Build the app</h3><p>We are ready to build the app. Make sure you are still at the top level of your new directory. Here’s what ls should show:</p>
+<blockquote>
+<p>$ ls<br>Dockerfile        app.py            requirements.txt</p>
+</blockquote>
+<p>Now run the build command. This creates a Docker image, which we’re going to tag using -t so it has a friendly name.</p>
+<blockquote>
+<p>docker build -t friendlyhello .</p>
+</blockquote>
+<p>Where is your built image? It’s in your machine’s local Docker image registry:</p>
+<blockquote>
+<p>$ docker image ls</p>
+<p>REPOSITORY            TAG                 IMAGE ID<br>friendlyhello         latest              326387cea398</p>
+</blockquote>
+<h3 id="Run-the-app"><a href="#Run-the-app" class="headerlink" title="Run the app"></a>Run the app</h3><p>Run the app, mapping your machine’s port 4000 to the container’s published port 80 using -p:</p>
+<blockquote>
+<p>docker run -p 4000:80 friendlyhello</p>
+</blockquote>
+<p>You should see a message that Python is serving your app at <a href="http://0.0.0.0:80" target="_blank" rel="noopener">http://0.0.0.0:80</a>. But that message is coming from inside the container, which doesn’t know you mapped port 80 of that container to 4000, making the correct URL <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>.</p>
+<p>Go to that URL in a web browser to see the display content served up on a web page.</p>
+<p><img src="https://s1.ax1x.com/2018/02/17/9tFy6I.png" alt="9tFy6I.png"></p>
+<blockquote>
+<p>Note: If you are using Docker Toolbox on Windows 7, use the Docker Machine IP instead of localhost. For example, <a href="http://192.168.99.100:4000/" target="_blank" rel="noopener">http://192.168.99.100:4000/</a>. To find the IP address, use the command docker-machine ip.</p>
+</blockquote>
+<p>You can also use the curl command in a shell to view the same content.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ curl http://localhost:4000</span><br><span class="line"></span><br><span class="line">&lt;h3&gt;Hello World!&lt;/h3&gt;&lt;b&gt;Hostname:&lt;/b&gt; 8fc990912a14&lt;br/&gt;&lt;b&gt;Visits:&lt;/b&gt; &lt;i&gt;cannot connect to Redis, counter disabled&lt;/i&gt;</span><br></pre></td></tr></table></figure>
+<p>Now let’s run the app in the background, in detached mode:</p>
+<blockquote>
+<p>docker run -d -p 4000:80 friendlyhello</p>
+</blockquote>
+<p>You get the long container ID for your app and then are kicked back to your terminal. Your container is running in the background. You can also see the abbreviated container ID with docker container ls (and both work interchangeably when running commands):</p>
+<blockquote>
+<p>$ docker container ls</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>CONTAINER ID</th>
+<th>IMAGE</th>
+<th>COMMAND</th>
+<th>CREATED</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1fa4ab2cf395</td>
+<td>friendlyhello</td>
+<td>“python app.py”</td>
+<td>28 seconds ago</td>
+</tr>
+</tbody>
+</table>
+<p>Notice that CONTAINER ID matches what’s on <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>.</p>
+<p>Now use <strong><em>docker container stop</em></strong> to end the process, using the CONTAINER ID, like so:</p>
+<blockquote>
+<p>docker container stop 1fa4ab2cf395</p>
+</blockquote>
+<h2 id="Share-your-image"><a href="#Share-your-image" class="headerlink" title="Share your image"></a>Share your image</h2><p>A registry is a collection of repositories, and a repository is a collection of images—sort of like a GitHub repository, except the code is already built. An account on a registry can create many repositories. The docker CLI uses Docker’s public registry by default.</p>
+<blockquote>
+<p>Note: We use Docker’s public registry here just because it’s free and pre-configured, but there are many public ones to choose from, and you can even set up your own private registry using Docker Trusted Registry.</p>
+</blockquote>
+<h3 id="Log-in-with-your-Docker-ID"><a href="#Log-in-with-your-Docker-ID" class="headerlink" title="Log in with your Docker ID"></a>Log in with your Docker ID</h3><p>If you don’t have a Docker account, sign up for one at cloud.docker.com. Make note of your username.</p>
+<p>Log in to the Docker public registry on your local machine.</p>
+<blockquote>
+<p>$ docker login</p>
+</blockquote>
+<h3 id="Tag-the-image"><a href="#Tag-the-image" class="headerlink" title="Tag the image"></a>Tag the image</h3><p>The notation for associating a local image with a repository on a registry is <strong><em>username/repository:tag</em></strong>. The tag is optional, but recommended, since it is the mechanism that registries use to give Docker images a version. Give the repository and tag meaningful names for the context, such as get-started:part2. This puts the image in the get-started repository and tag it as part2.</p>
+<p>Now, put it all together to tag the image. Run <strong><em>docker tag image</em></strong> with your username, repository, and tag names so that the image uploads to your desired destination. The syntax of the command is:</p>
+<blockquote>
+<p>docker tag image username/repository:tag</p>
+</blockquote>
+<p>For example:</p>
+<blockquote>
+<p>docker tag friendlyhello john/get-started:part2</p>
+</blockquote>
+<h3 id="Publish-the-image"><a href="#Publish-the-image" class="headerlink" title="Publish the image"></a>Publish the image</h3><p>Upload your tagged image to the repository:</p>
+<blockquote>
+<p>docker push username/repository:tag</p>
+</blockquote>
+<p>Once complete, the results of this upload are publicly available. If you log in to <a href="https://hub.docker.com/" target="_blank" rel="noopener">Docker Hub</a>, you see the new image there, with its pull command.</p>
+<h3 id="Pull-and-run-the-image-from-the-remote-repository"><a href="#Pull-and-run-the-image-from-the-remote-repository" class="headerlink" title="Pull and run the image from the remote repository"></a>Pull and run the image from the remote repository</h3><p>From now on, you can use docker run and run your app on any machine with this command:</p>
+<blockquote>
+<p>docker run -p 4000:80 username/repository:tag</p>
+</blockquote>
+<p>If the image isn’t available locally on the machine, Docker pulls it from the repository.</p>
+<blockquote>
+<p>$ docker run -p 4000:80 john/get-started:part2</p>
+<p>Unable to find image ‘john/get-started:part2’ locally<br>part2: Pulling from john/get-started<br>10a267c67f42: Already exists<br>f68a39a6a5e4: Already exists<br>9beaffc0cf19: Already exists<br>3c1fe835fb6b: Already exists<br>4c9f1fa8fcb8: Already exists<br>ee7d8f576a14: Already exists<br>fbccdcced46e: Already exists<br>Digest: sha256:0601c866aab2adcc6498200efd0f754037e909e5fd42069adeff72d1e2439068<br>Status: Downloaded newer image for john/get-started:part2</p>
+<ul>
+<li>Running on <a href="http://0.0.0.0:80/" target="_blank" rel="noopener">http://0.0.0.0:80/</a> (Press CTRL+C to quit)</li>
+</ul>
+</blockquote>
+<p>No matter where docker run executes, it pulls your image, along with Python and all the dependencies from requirements.txt, and runs your code. It all travels together in a neat little package, and you don’t need to install anything on the host machine for Docker to run it.</p>
+<p>Here is a list of the basic Docker commands from this page, and some related ones if you’d like to explore a bit before moving on.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"># Create image using this directory&apos;s Dockerfile</span><br><span class="line">docker build -t friendlyhello .</span><br><span class="line"></span><br><span class="line"># Run &quot;friendlyname&quot; mapping port 4000 to 80</span><br><span class="line">docker run -p 4000:80 friendlyhello</span><br><span class="line"></span><br><span class="line"># Same thing, but in detached mode</span><br><span class="line">docker run -d -p 4000:80 friendlyhello</span><br><span class="line"></span><br><span class="line"># List all running containers</span><br><span class="line">docker container ls</span><br><span class="line"></span><br><span class="line"># List all containers, even those not running</span><br><span class="line">docker container ls -a</span><br><span class="line"></span><br><span class="line"># Gracefully stop the specified container</span><br><span class="line">docker container stop &lt;hash&gt;</span><br><span class="line"></span><br><span class="line"># Force shutdown of the specified container</span><br><span class="line">docker container kill &lt;hash&gt;</span><br><span class="line"></span><br><span class="line"># Remove specified container from this machine</span><br><span class="line">docker container rm &lt;hash&gt;</span><br><span class="line"></span><br><span class="line"># Remove all containers</span><br><span class="line">docker container rm \$(docker container ls -a -q)</span><br><span class="line"></span><br><span class="line"># List all images on this machine</span><br><span class="line">docker image ls -a</span><br><span class="line"></span><br><span class="line"># Remove specified image from this machine</span><br><span class="line">docker image rm &lt;image id&gt;</span><br><span class="line"></span><br><span class="line"># Remove all images from this machine</span><br><span class="line">docker image rm $(docker image ls -a -q)</span><br><span class="line"></span><br><span class="line"># Log in this CLI session using your Docker credentials</span><br><span class="line">docker login</span><br><span class="line"></span><br><span class="line"># Tag &lt;image&gt; for upload to registry</span><br><span class="line">docker tag &lt;image&gt; username/repository:tag</span><br><span class="line"></span><br><span class="line"># Upload tagged image to registry</span><br><span class="line">docker push username/repository:tag</span><br><span class="line"></span><br><span class="line"># Run image from a reg</span><br><span class="line">docker run username/repository:tag</span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="https://docker-curriculum.com/" target="_blank" rel="noopener">A Docker Tutorial for Beginners</a><br><a href="http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html" target="_blank" rel="noopener">Docker Tutorial</a><br><a href="https://docs.docker.com/engine/reference/builder/#usage" target="_blank" rel="noopener">Dockerfile reference</a><br><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">Docs Docker - Get Started</a></p>
+
       
     </div>
     
@@ -927,14 +540,38 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/Docker/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            Docker</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/15/Docker-Tutorial/" rel="next" title="Docker Tutorial (1) -- Introduction">
+                <i class="fa fa-chevron-left"></i> Docker Tutorial (1) -- Introduction
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -944,14 +581,11 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -959,6 +593,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzYzNi8xMDE5MQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -979,8 +622,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1068,6 +720,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Define-a-container-with-Dockerfile"><span class="nav-number">1.</span> <span class="nav-text">Define a container with Dockerfile</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-app-itself"><span class="nav-number">1.1.</span> <span class="nav-text">The app itself</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Build-the-app"><span class="nav-number">1.2.</span> <span class="nav-text">Build the app</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-the-app"><span class="nav-number">1.3.</span> <span class="nav-text">Run the app</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-your-image"><span class="nav-number">2.</span> <span class="nav-text">Share your image</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Log-in-with-your-Docker-ID"><span class="nav-number">2.1.</span> <span class="nav-text">Log in with your Docker ID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-the-image"><span class="nav-number">2.2.</span> <span class="nav-text">Tag the image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Publish-the-image"><span class="nav-number">2.3.</span> <span class="nav-text">Publish the image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pull-and-run-the-image-from-the-remote-repository"><span class="nav-number">2.4.</span> <span class="nav-text">Pull and run the image from the remote repository</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">3.</span> <span class="nav-text">References</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1205,6 +873,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1232,6 +904,17 @@
 
 
 
+
+  <script type="text/javascript">
+    (function(d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
          
 
 
