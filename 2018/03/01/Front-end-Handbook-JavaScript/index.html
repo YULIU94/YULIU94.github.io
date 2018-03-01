@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yu Liu">
-<meta property="og:url" content="http://yoursite.com/tags/broadcasting/index.html">
+<meta name="description" content="Explain how ‘this’ works in JavaScriptThere’s no simple explanation for this; it is one of the most confusing concepts in JavaScript. A hand-wavey explanation is that the value of this depends on how">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Front-end Handbook JavaScript">
+<meta property="og:url" content="http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/index.html">
 <meta property="og:site_name" content="Yu Liu">
+<meta property="og:description" content="Explain how ‘this’ works in JavaScriptThere’s no simple explanation for this; it is one of the most confusing concepts in JavaScript. A hand-wavey explanation is that the value of this depends on how">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-03-01T19:46:32.773Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yu Liu">
+<meta name="twitter:title" content="Front-end Handbook JavaScript">
+<meta name="twitter:description" content="Explain how ‘this’ works in JavaScriptThere’s no simple explanation for this; it is one of the most confusing concepts in JavaScript. A hand-wavey explanation is that the value of this depends on how">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/broadcasting/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/"/>
 
 
 
 
 
-  <title>Tag: broadcasting | Yu Liu</title>
+  <title>Front-end Handbook JavaScript | Yu Liu</title>
   
 
 
@@ -149,7 +154,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -297,54 +302,238 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>broadcasting<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yu Liu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yu Liu">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/02/08/Python-Broadcasting/" itemprop="url">
-              
-                <span itemprop="name">Python - Vectorization and Broadcasting</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Front-end Handbook JavaScript</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-08T16:27:27-05:00"
-              content="2018-02-08" >
-          02-08
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-01T14:41:49-05:00">
+                2018-03-01
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/03/01/Front-end-Handbook-JavaScript/" class="leancloud_visitors" data-flag-title="Front-end Handbook JavaScript">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Explain-how-‘this’-works-in-JavaScript"><a href="#Explain-how-‘this’-works-in-JavaScript" class="headerlink" title="Explain how ‘this’ works in JavaScript"></a>Explain how ‘this’ works in JavaScript</h3><p>There’s no simple explanation for this; it is one of the most confusing concepts in JavaScript. A hand-wavey explanation is that the value of this depends on how the function is called. I have read many explanations on this online, and I found Arnav Aggrawal’s explanation to be the clearest. The following rules are applied:</p>
+<ol>
+<li>If the new keyword is used when calling the function, this inside the function is a brand new object.</li>
+<li>If apply, call, or bind are used to call/create a function, this inside the function is the object that is passed in as the argument.</li>
+<li>If a function is called as a method, such as obj.method() — this is the object that the function is a property of.</li>
+<li>If a function is invoked as a free function invocation, meaning it was invoked without any of the conditions present above, this is the global object. In a browser, it is the window object. If in strict mode (‘use strict’), this will be undefined instead of the global object.</li>
+<li>If multiple of the above rules apply, the rule that is higher wins and will set the this value.</li>
+<li>If the function is an ES2015 arrow function, it ignores all the rules above and receives the this value of its surrounding scope at the time it is created.<a id="more"></a>
+References<br><a href="https://codeburst.io/the-simple-rules-to-this-in-javascript-35d97f31bde3" target="_blank" rel="noopener">https://codeburst.io/the-simple-rules-to-this-in-javascript-35d97f31bde3</a><br><a href="https://stackoverflow.com/a/3127440/1751946" target="_blank" rel="noopener">https://stackoverflow.com/a/3127440/1751946</a></li>
+</ol>
+<h3 id="What’s-the-difference-between-an-“attribute”-and-a-“property”"><a href="#What’s-the-difference-between-an-“attribute”-and-a-“property”" class="headerlink" title="What’s the difference between an “attribute” and a “property”?"></a>What’s the difference between an “attribute” and a “property”?</h3><p>Attributes are defined on the HTML markup but properties are defined on the DOM. To illustrate the difference, imagine we have this text field in our HTML: &lt; input type=”text” value=”Hello”&gt;.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> input = <span class="built_in">document</span>.querySelector(<span class="string">'input'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(input.getAttribute(<span class="string">'value'</span>)); <span class="comment">// Hello</span></span><br><span class="line"><span class="built_in">console</span>.log(input.value); <span class="comment">// Hello</span></span><br></pre></td></tr></table></figure></p>
+<p>But after you change the value of the text field by adding “World!” to it, this becomes:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(input.getAttribute(<span class="string">'value'</span>)); <span class="comment">// Hello</span></span><br><span class="line"><span class="built_in">console</span>.log(input.value); <span class="comment">// Hello World!</span></span><br></pre></td></tr></table></figure></p>
+<p>References<br><a href="https://stackoverflow.com/questions/6003819/properties-and-attributes-in-html" target="_blank" rel="noopener">https://stackoverflow.com/questions/6003819/properties-and-attributes-in-html</a></p>
+<h3 id="What-is-the-difference-between-and"><a href="#What-is-the-difference-between-and" class="headerlink" title="What is the difference between == and ===?"></a>What is the difference between == and ===?</h3><p>== is the abstract equality operator while === is the strict equality operator. The == operator will compare for equality after doing any necessary type conversions. The === operator will not do type conversion, so if two values are not the same type === will simply return false. When using ==, funky things can happen, such as:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 == &apos;1&apos;; // true</span><br><span class="line">1 == [1]; // true</span><br><span class="line">1 == true; // true</span><br><span class="line">0 == &apos;&apos;; // true</span><br><span class="line">0 == &apos;0&apos;; // true</span><br><span class="line">0 == false; // true</span><br></pre></td></tr></table></figure>
+<p>My advice is never to use the == operator, except for convenience when comparing against null or undefined, where a == null will return true if a is null or undefined.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = null;</span><br><span class="line">console.log(a == null); // true</span><br><span class="line">console.log(a == undefined); // true</span><br></pre></td></tr></table></figure>
+<p>References<br><a href="https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons" target="_blank" rel="noopener">https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons</a></p>
+<h3 id="What-is-“use-strict”-What-are-the-advantages-and-disadvantages-to-using-it"><a href="#What-is-“use-strict”-What-are-the-advantages-and-disadvantages-to-using-it" class="headerlink" title="What is “use strict”;? What are the advantages and disadvantages to using it?"></a>What is “use strict”;? What are the advantages and disadvantages to using it?</h3><p>‘use strict’ is a statement used to enable strict mode to entire scripts or individual functions. Strict mode is a way to opt in to a restricted variant of JavaScript.</p>
+<p><strong>Advantages:</strong></p>
+<p>Makes it impossible to accidentally create global variables.<br>Makes assignments which would otherwise silently fail to throw an exception.<br>Makes attempts to delete undeletable properties throw (where before the attempt would simply have no effect).<br>Requires that function parameter names be unique.<br>this is undefined in the global context.<br>It catches some common coding bloopers, throwing exceptions.<br>It disables features that are confusing or poorly thought out.</p>
+<p><strong>Disadvantages:</strong></p>
+<p>Many missing features that some developers might be used to.<br>No more access to function.caller and function.arguments.<br>Concatenation of scripts written in different strict modes might cause issues.<br>Overall, I think the benefits outweigh the disadvantages, and I never had to rely on the features that strict mode blocks. I would recommend using strict mode.</p>
+<p>References<br><a href="http://2ality.com/2011/10/strict-mode-hatred.html" target="_blank" rel="noopener">http://2ality.com/2011/10/strict-mode-hatred.html</a><br><a href="http://lucybain.com/blog/2014/js-use-strict/" target="_blank" rel="noopener">http://lucybain.com/blog/2014/js-use-strict/</a></p>
+<h3 id="Explain-what-a-single-page-app-is-and-how-to-make-one-SEO-friendly"><a href="#Explain-what-a-single-page-app-is-and-how-to-make-one-SEO-friendly" class="headerlink" title="Explain what a single page app is and how to make one SEO-friendly."></a>Explain what a single page app is and how to make one SEO-friendly.</h3><p>Web developers these days refer to the products they build as web apps, rather than websites. While there is no strict difference between the two terms, web apps tend to be highly interactive and dynamic, allowing the user to perform actions and receive a response for their action. Traditionally, the browser receives HTML from the server and renders it. When the user navigates to another URL, a full-page refresh is required and the server sends fresh new HTML for the new page. This is called server-side rendering.</p>
+<p>However in modern SPAs, client-side rendering is used instead. The browser loads the initial page from the server, along with the scripts (frameworks, libraries, app code) and stylesheets required for the whole app. When the user navigates to other pages, a page refresh is not triggered. The URL of the page is updated via the HTML5 History API. New data required for the new page, usually in JSON format, is retrieved by the browser via AJAX requests to the server. The SPA then dynamically updates the page with the data via JavaScript, which it has already downloaded in the initial page load. This model is similar to how native mobile apps work.</p>
+<p><strong>The benefits:</strong></p>
+<p>The app feels more responsive and users do not see the flash between page navigations due to full-page refreshes.<br>Fewer HTTP requests are made to the server, as the same assets do not have to be downloaded again for each page load.<br>Clear separation of the concerns between the client and the server; you can easily build new clients for different platforms (e.g. mobile, chatbots, smart watches) without having to modify the server code. You can also modify the technology stack on the client and server independently, as long as the API contract is not broken.</p>
+<p><strong>The downsides:</strong></p>
+<p>Heavier initial page load due to loading of framework, app code, and assets required for multiple pages.<br>There’s an additional step to be done on your server which is to configure it to route all requests to a single entry point and allow client-side routing to take over from there.<br>SPAs are reliant on JavaScript to render content, but not all search engines execute JavaScript during crawling, and they may see empty content on your page. This inadvertently hurts the Search Engine Optimization (SEO) of your app. However, most of the time, when you are building apps, SEO is not the most important factor, as not all the content needs to be indexable by search engines. To overcome this, you can either server-side render your app or use services such as Prerender to “render your javascript in a browser, save the static HTML, and return that to the crawlers”.</p>
+<p>References<br><a href="https://github.com/grab/front-end-guide#single-page-apps-spas" target="_blank" rel="noopener">https://github.com/grab/front-end-guide#single-page-apps-spas</a><br><a href="http://stackoverflow.com/questions/21862054/single-page-app-advantages-and-disadvantages" target="_blank" rel="noopener">http://stackoverflow.com/questions/21862054/single-page-app-advantages-and-disadvantages</a><br><a href="http://blog.isquaredsoftware.com/presentations/2016-10-revolution-of-web-dev/" target="_blank" rel="noopener">http://blog.isquaredsoftware.com/presentations/2016-10-revolution-of-web-dev/</a><br><a href="https://medium.freecodecamp.com/heres-why-client-side-rendering-won-46a349fadb52" target="_blank" rel="noopener">https://medium.freecodecamp.com/heres-why-client-side-rendering-won-46a349fadb52</a></p>
+<h3 id="What-are-the-pros-and-cons-of-using-Promises-instead-of-callbacks"><a href="#What-are-the-pros-and-cons-of-using-Promises-instead-of-callbacks" class="headerlink" title="What are the pros and cons of using Promises instead of callbacks?"></a>What are the pros and cons of using Promises instead of callbacks?</h3><p><strong>Pros</strong></p>
+<p>Avoid callback hell which can be unreadable.<br>Makes it easy to write sequential asynchronous code that is readable with .then().<br>Makes it easy to write parallel asynchronous code with Promise.all().</p>
+<p><strong>Cons</strong></p>
+<p>Slightly more complex code (debatable).<br>In older browsers where ES2015 is not supported, you need to load a polyfill in order to use it.</p>
+<h3 id="Explain-the-difference-between-synchronous-and-asynchronous-functions"><a href="#Explain-the-difference-between-synchronous-and-asynchronous-functions" class="headerlink" title="Explain the difference between synchronous and asynchronous functions."></a>Explain the difference between synchronous and asynchronous functions.</h3><p>Synchronous functions are blocking while asynchronous functions are not. In synchronous functions, statements complete before the next statement is run. In this case the program is evaluated exactly in order of the statements and execution of the program is paused if one of the statements take a very long time.</p>
+<p>Asynchronous functions usually accept a callback as a parameter and execution continues on the next line immediately after the asynchronous function is invoked. The callback is only invoked when the asynchronous operation is complete and the call stack is empty. Heavy duty operations such as loading data from a web server or querying a database should be done asynchronously so that the main thread can continue executing other operations instead of blocking until that long operation to complete (in the case of browsers, the UI will freeze).</p>
+<h3 id="Explain-the-differences-on-the-usage-of-foo-between-function-foo-and-var-foo-function"><a href="#Explain-the-differences-on-the-usage-of-foo-between-function-foo-and-var-foo-function" class="headerlink" title="Explain the differences on the usage of foo between function foo() {} and var foo = function() {}"></a>Explain the differences on the usage of foo between function foo() {} and var foo = function() {}</h3><p>The former is a function declaration while the latter is a function expression. The key difference is that function declarations have its body hoisted but the bodies of function expressions are not (they have the same hoisting behaviour as variables). For more explanation on hoisting, refer to the question above on hoisting. If you try to invoke a function expression before it is defined, you will get an Uncaught TypeError: XXX is not a function error.</p>
+<p>Function Declaration<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">foo(); <span class="comment">// 'FOOOOO'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'FOOOOO'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Function Expression<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">foo(); // Uncaught TypeError: foo is not a function</span><br><span class="line">var foo = function() &#123;</span><br><span class="line">console.log(&apos;FOOOOO&apos;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>References<br><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function</a></p>
+<h3 id="What-are-the-differences-between-null-and-undefined"><a href="#What-are-the-differences-between-null-and-undefined" class="headerlink" title="What are the differences between null and undefined?"></a>What are the differences between null and undefined?</h3><p><strong>undefined</strong></p>
+<p>undefined means, value of the variable is not defined. JavaScript has a global variable undefined whose value is “undefined” and typeof undefined is also “undefined”. Remember, undefined is not a constant or a keyword. undefined is a type with exactly one value: undefined. Assigning a new value to it does not change the value of the type undefined.</p>
+<p><strong>8 Ways to get Undefined:</strong></p>
+<ul>
+<li>A declared variable without assigning any value to it.</li>
+<li>Implicit returns of functions due to missing return statements.</li>
+<li>return statements that do not explicitly return anything.</li>
+<li>Lookups of non-existent properties in an object.</li>
+<li>Function parameters that have not passed.</li>
+<li>Anything that has been set to the value of undefined.</li>
+<li>Any expression in the form of void(expression)</li>
+<li>The value of the global variable undefined</li>
+</ul>
+<p><strong>null</strong></p>
+<p>null means empty or non-existent value which is used by programmers to indicate “no value”. null is a primitive value and you can assign null to any variable. null is not an object, it is a primitive value. For example, you cannot add properties to it. Sometimes people wrongly assume that it is an object, because typeof null returns “object”.</p>
+<p><em>Btw, null == undefined.</em></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/16/Docker-Tutorial-Define-a-container-with-Dockerfile/" rel="next" title="Docker Tutorial(2) -- Define a container with Dockerfile">
+                <i class="fa fa-chevron-left"></i> Docker Tutorial(2) -- Define a container with Dockerfile
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -352,6 +541,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzYzNi8xMDE5MQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -372,8 +570,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -461,6 +668,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Explain-how-‘this’-works-in-JavaScript"><span class="nav-number">1.</span> <span class="nav-text">Explain how ‘this’ works in JavaScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What’s-the-difference-between-an-“attribute”-and-a-“property”"><span class="nav-number">2.</span> <span class="nav-text">What’s the difference between an “attribute” and a “property”?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-the-difference-between-and"><span class="nav-number">3.</span> <span class="nav-text">What is the difference between == and ===?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-“use-strict”-What-are-the-advantages-and-disadvantages-to-using-it"><span class="nav-number">4.</span> <span class="nav-text">What is “use strict”;? What are the advantages and disadvantages to using it?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Explain-what-a-single-page-app-is-and-how-to-make-one-SEO-friendly"><span class="nav-number">5.</span> <span class="nav-text">Explain what a single page app is and how to make one SEO-friendly.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-are-the-pros-and-cons-of-using-Promises-instead-of-callbacks"><span class="nav-number">6.</span> <span class="nav-text">What are the pros and cons of using Promises instead of callbacks?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Explain-the-difference-between-synchronous-and-asynchronous-functions"><span class="nav-number">7.</span> <span class="nav-text">Explain the difference between synchronous and asynchronous functions.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Explain-the-differences-on-the-usage-of-foo-between-function-foo-and-var-foo-function"><span class="nav-number">8.</span> <span class="nav-text">Explain the differences on the usage of foo between function foo() {} and var foo = function() {}</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-are-the-differences-between-null-and-undefined"><span class="nav-number">9.</span> <span class="nav-text">What are the differences between null and undefined?</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -598,6 +821,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -625,6 +852,17 @@
 
 
 
+
+  <script type="text/javascript">
+    (function(d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
          
 
 

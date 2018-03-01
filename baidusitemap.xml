@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/</loc>
+    <lastmod>2018-03-01T19:46:32.773Z</lastmod>
+    <data>
+        <display>
+        <title>Front-end Handbook JavaScript</title>
+        <pubTime>2018-03-01T19:41:49.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="Technology" url="http://yoursite.com/categories/Technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/02/15/Docker-Tutorial/</loc>
-    <lastmod>2018-02-20T22:44:57.614Z</lastmod>
+    <lastmod>2018-02-20T22:47:59.716Z</lastmod>
     <data>
         <display>
         <title>Docker Tutorial (1) -- Introduction</title>
