@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/</loc>
+    <lastmod>2018-03-02T18:28:34.867Z</lastmod>
+    <data>
+        <display>
+        <title>Front-end Handbook JavaScript</title>
+        <pubTime>2018-03-01T19:41:49.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="Technology" url="http://yoursite.com/categories/Technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/03/01/TypeScript-Introduction/</loc>
     <lastmod>2018-03-02T14:37:21.506Z</lastmod>
     <data>
@@ -35,26 +55,6 @@
         
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/</loc>
-    <lastmod>2018-03-01T20:00:15.333Z</lastmod>
-    <data>
-        <display>
-        <title>Front-end Handbook JavaScript</title>
-        <pubTime>2018-03-01T19:41:49.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="Technology" url="http://yoursite.com/categories/Technology/"/>
-          
         </display>
     </data>
     </url>
@@ -197,11 +197,11 @@
         
         <tag>Machine Learning</tag>
          
-        <tag>Python</tag>
-         
         <tag>Logistic Regression</tag>
          
         <tag>Neural Network</tag>
+         
+        <tag>Python</tag>
          
          
            
