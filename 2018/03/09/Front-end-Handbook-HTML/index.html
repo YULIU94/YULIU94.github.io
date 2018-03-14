@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="HTML," />
 
 
 
@@ -79,14 +79,20 @@
 
 
 
+<meta name="description" content="Describe the difference between a cookie, sessionStorage and localStorage   / cookie localStorage sessionStorage     Initiator Client or server. Server can use Set-Cookie header Client Client   Expiry">
+<meta name="keywords" content="HTML">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Front-end Handbook HTML">
-<meta property="og:url" content="http://yoursite.com/2018/03/02/Front-end-Handbook-HTML/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/03/09/Front-end-Handbook-HTML/index.html">
 <meta property="og:site_name" content="Yu Liu">
+<meta property="og:description" content="Describe the difference between a cookie, sessionStorage and localStorage   / cookie localStorage sessionStorage     Initiator Client or server. Server can use Set-Cookie header Client Client   Expiry">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-02T14:35:29.024Z">
+<meta property="og:image" content="https://s1.ax1x.com/2018/03/10/9RcHXV.png">
+<meta property="og:updated_time" content="2018-03-10T00:47:45.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Front-end Handbook HTML">
+<meta name="twitter:description" content="Describe the difference between a cookie, sessionStorage and localStorage   / cookie localStorage sessionStorage     Initiator Client or server. Server can use Set-Cookie header Client Client   Expiry">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/03/10/9RcHXV.png">
 
 
 
@@ -116,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/02/Front-end-Handbook-HTML/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/09/Front-end-Handbook-HTML/"/>
 
 
 
@@ -312,7 +318,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/02/Front-end-Handbook-HTML/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/09/Front-end-Handbook-HTML/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yu Liu">
@@ -341,8 +347,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-02T09:35:28-05:00">
-                2018-03-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-09T19:47:30-05:00">
+                2018-03-09
               </time>
             
 
@@ -352,6 +358,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -359,7 +387,7 @@
 
           
           
-             <span id="/2018/03/02/Front-end-Handbook-HTML/" class="leancloud_visitors" data-flag-title="Front-end Handbook HTML">
+             <span id="/2018/03/09/Front-end-Handbook-HTML/" class="leancloud_visitors" data-flag-title="Front-end Handbook HTML">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -390,7 +418,75 @@
       
 
       
-        
+        <h2 id="Describe-the-difference-between-a-cookie-sessionStorage-and-localStorage"><a href="#Describe-the-difference-between-a-cookie-sessionStorage-and-localStorage" class="headerlink" title="Describe the difference between a cookie, sessionStorage and localStorage"></a>Describe the difference between a <code>cookie</code>, <code>sessionStorage</code> and <code>localStorage</code></h2><table>
+<thead>
+<tr>
+<th>/</th>
+<th>cookie</th>
+<th>localStorage</th>
+<th>sessionStorage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initiator</td>
+<td>Client or server. Server can use Set-Cookie header</td>
+<td>Client</td>
+<td>Client</td>
+</tr>
+<tr>
+<td>Expiry</td>
+<td>Manually set</td>
+<td>Forever</td>
+<td>On tab close</td>
+</tr>
+<tr>
+<td>Persistent across browser sessions</td>
+<td>Depends on whether expiration is set</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Have domain associated</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Sent to server with every HTTP request</td>
+<td>Cookies are automatically being sent via Cookie header</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Capacity (per domain)</td>
+<td>4kb</td>
+<td>5MB</td>
+<td>5MB</td>
+</tr>
+<tr>
+<td>Accessibility</td>
+<td>Any window</td>
+<td>Any window</td>
+<td>Same tab</td>
+</tr>
+</tbody>
+</table>
+<p>References</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies</a><br><a href="http://tutorial.techaltum.com/local-and-session-storage.html" target="_blank" rel="noopener">http://tutorial.techaltum.com/local-and-session-storage.html</a><br><a id="more"></a></p>
+<h2 id="Can-you-explain-CSS-box-model"><a href="#Can-you-explain-CSS-box-model" class="headerlink" title="Can you explain CSS box model?"></a>Can you explain CSS box model?</h2><p>CSS box model is a rectangular space around a HTML element which defines border, padding and margin.</p>
+<p>Border: - This defines the maximum area in which the element will be contained. We can make the border visible, invisible, define height and width etc.</p>
+<p>Padding: - This defines the spacing between border and element.</p>
+<p>Margin: - This defines the spacing between border and any neighboring elements.</p>
+<p><a href="https://imgchr.com/i/9RcHXV" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/03/10/9RcHXV.png" alt="9RcHXV.png"></a></p>
+<h2 id="What-are-web-sockets"><a href="#What-are-web-sockets" class="headerlink" title="What are web sockets?"></a>What are web sockets?</h2><p>Web Sockets is a next-generation bidirectional communication technology for web applications which operates over a single socket and is exposed via a JavaScript interface in HTML 5 compliant browsers.</p>
+<p>Once you get a Web Socket connection with the web server, you can send data from browser to server by calling a send() method, and receive data from server to browser by an onmessage event handler.</p>
+<p>Following is the API which creates a new WebSocket object.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Socket = <span class="keyword">new</span> WebSocket(url, [protocal] );</span><br></pre></td></tr></table></figure></p>
+<p>Here first argument, url, specifies the URL to which to connect. The second attribute, protocol is optional, and if present, specifies a sub-protocol that the server must support for the connection to be successful.</p>
+<h2 id="Cross-Origin-Resource-Sharing-CORS"><a href="#Cross-Origin-Resource-Sharing-CORS" class="headerlink" title="Cross-Origin Resource Sharing (CORS)"></a>Cross-Origin Resource Sharing (CORS)</h2><p>Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to let a user agent gain permission to access selected resources from a server on a different origin (domain) than the site currently in use. A user agent makes a cross-origin HTTP request when it requests a resource from a different domain, protocol, or port than the one from which the current document originated.</p>
+<p>An example of a cross-origin request: A HTML page served from <a href="http://domain-a.com" target="_blank" rel="noopener">http://domain-a.com</a> makes an <code>&lt;img&gt; src</code> request for <a href="http://domain-b.com/image.jpg" target="_blank" rel="noopener">http://domain-b.com/image.jpg</a>. Many pages on the web today load resources like CSS stylesheets, images, and scripts from separate domains, such as content delivery networks (CDNs).</p>
+<p>For security reasons, browsers restrict cross-origin HTTP requests initiated from within scripts. For example, XMLHttpRequest and the Fetch API follow the same-origin policy. This means that a web application using those APIs can only request HTTP resources from the same domain the application was loaded from unless CORS headers are used.</p>
+
       
     </div>
     
@@ -405,6 +501,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/HTML/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            HTML</a>
+          
+        </div>
+      
 
       
       
@@ -414,8 +518,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/01/TypeScript-Introduction/" rel="next" title="TypeScript Introduction">
-                <i class="fa fa-chevron-left"></i> TypeScript Introduction
+              <a href="/2018/03/09/Machine-Learning-Glossary/" rel="next" title="Machine Learning Glossary">
+                <i class="fa fa-chevron-left"></i> Machine Learning Glossary
               </a>
             
           </div>
@@ -479,8 +583,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -495,7 +608,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -506,7 +619,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -517,7 +630,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -568,6 +681,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Describe-the-difference-between-a-cookie-sessionStorage-and-localStorage"><span class="nav-number">1.</span> <span class="nav-text">Describe the difference between a cookie, sessionStorage and localStorage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Can-you-explain-CSS-box-model"><span class="nav-number">2.</span> <span class="nav-text">Can you explain CSS box model?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-are-web-sockets"><span class="nav-number">3.</span> <span class="nav-text">What are web sockets?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cross-Origin-Resource-Sharing-CORS"><span class="nav-number">4.</span> <span class="nav-text">Cross-Origin Resource Sharing (CORS)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

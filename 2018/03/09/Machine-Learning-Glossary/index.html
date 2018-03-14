@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Machine Learning," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Aactivation functionA function (for example, ReLU or sigmoid) that takes in the weighted sum of all of the inputs from the previous layer and then generates and passes an output value (typically nonli">
+<meta name="keywords" content="Machine Learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Machine Learning Glossary">
+<meta property="og:url" content="http://yoursite.com/2018/03/09/Machine-Learning-Glossary/index.html">
+<meta property="og:site_name" content="Yu Liu">
+<meta property="og:description" content="Aactivation functionA function (for example, ReLU or sigmoid) that takes in the weighted sum of all of the inputs from the previous layer and then generates and passes an output value (typically nonli">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-03-14T20:28:18.851Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Machine Learning Glossary">
+<meta name="twitter:description" content="Aactivation functionA function (for example, ReLU or sigmoid) that takes in the weighted sum of all of the inputs from the previous layer and then generates and passes an output value (typically nonli">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/09/Machine-Learning-Glossary/"/>
+
+
+
+
+
+  <title>Machine Learning Glossary | Yu Liu</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-113481790-1', 'auto');
+  ga('send', 'pageview');
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yu Liu</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-gallery">
+          <a href="/gallery/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-university"></i> <br />
+            
+            Gallery
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/09/Machine-Learning-Glossary/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yu Liu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yu Liu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Machine Learning Glossary</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-09T13:22:02-05:00">
+                2018-03-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Machine-Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Machine Learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/03/09/Machine-Learning-Glossary/" class="leancloud_visitors" data-flag-title="Machine Learning Glossary">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1><h2 id="activation-function"><a href="#activation-function" class="headerlink" title="activation function"></a>activation function</h2><p>A function (for example, ReLU or sigmoid) that takes in the weighted sum of all of the inputs from the previous layer and then generates and passes an output value (typically nonlinear) to the next layer.</p>
+<h2 id="AdaGrad"><a href="#AdaGrad" class="headerlink" title="AdaGrad"></a>AdaGrad</h2><p>A sophisticated gradient descent algorithm that rescales the gradients of each parameter, effectively giving each parameter an independent learning rate. For a full explanation, see this paper.</p>
+<h2 id="AUC-Area-under-the-ROC-Curve"><a href="#AUC-Area-under-the-ROC-Curve" class="headerlink" title="AUC (Area under the ROC Curve)"></a>AUC (Area under the ROC Curve)</h2><p>An evaluation metric that considers all possible classification thresholds.</p>
+<p>The Area Under the ROC curve is the probability that a classifier will be more confident that a randomly chosen positive example is actually positive than that a randomly chosen negative example is positive.</p>
+<a id="more"></a>
+<h1 id="B"><a href="#B" class="headerlink" title="B"></a>B</h1><h2 id="backpropagation"><a href="#backpropagation" class="headerlink" title="backpropagation"></a>backpropagation</h2><p>The primary algorithm for performing gradient descent on neural networks. First, the output values of each node are calculated (and cached) in a forward pass. Then, the partial derivative of the error with respect to each parameter is calculated in a backward pass through the graph.</p>
+<h2 id="batch"><a href="#batch" class="headerlink" title="batch"></a>batch</h2><p>The set of examples used in one iteration (that is, one gradient update) of model training.</p>
+<h2 id="binary-classification"><a href="#binary-classification" class="headerlink" title="binary classification"></a>binary classification</h2><p>A type of classification task that outputs one of two mutually exclusive classes. For example, a machine learning model that evaluates email messages and outputs either “spam” or “not spam” is a binary classifier.</p>
+<h2 id="bucketing"><a href="#bucketing" class="headerlink" title="bucketing"></a>bucketing</h2><p>Converting a (usually continuous) feature into multiple binary features called buckets or bins, typically based on value range. For example, instead of representing temperature as a single continuous floating-point feature, you could chop ranges of temperatures into discrete bins. Given temperature data sensitive to a tenth of a degree, all temperatures between 0.0 and 15.0 degrees could be put into one bin, 15.1 to 30.0 degrees could be a second bin, and 30.1 to 50.0 degrees could be a third bin.</p>
+<h1 id="C"><a href="#C" class="headerlink" title="C"></a>C</h1><h2 id="cross-entropy"><a href="#cross-entropy" class="headerlink" title="cross-entropy"></a>cross-entropy</h2><p>A generalization of Log Loss to multi-class classification problems. Cross-entropy quantifies the difference between two probability distributions. See also perplexity.</p>
+<h1 id="D"><a href="#D" class="headerlink" title="D"></a>D</h1><h2 id="dropout-regularization"><a href="#dropout-regularization" class="headerlink" title="dropout regularization"></a>dropout regularization</h2><p>A form of regularization useful in training neural networks. Dropout regularization works by removing a random selection of a fixed number of the units in a network layer for a single gradient step. The more units dropped out, the stronger the regularization. This is analogous to training the network to emulate an exponentially large ensemble of smaller networks. For full details, see Dropout: A Simple Way to Prevent Neural Networks from Overfitting.</p>
+<h1 id="E"><a href="#E" class="headerlink" title="E"></a>E</h1><h2 id="early-stopping"><a href="#early-stopping" class="headerlink" title="early stopping"></a>early stopping</h2><p>A method for regularization that involves ending model training before training loss finishes decreasing. In early stopping, you end model training when the loss on a validation data set starts to increase, that is, when generalization performance worsens.</p>
+<h2 id="embeddings"><a href="#embeddings" class="headerlink" title="embeddings"></a>embeddings</h2><p>A categorical feature represented as a continuous-valued feature. Typically, an embedding is a translation of a high-dimensional vector into a low-dimensional space. For example, you can represent the words in an English sentence in either of the following two ways:</p>
+<ul>
+<li>As a million-element (high-dimensional) sparse vector in which all elements are integers. Each cell in the vector represents a separate English word; the value in a cell represents the number of times that word appears in a sentence. Since a single English sentence is unlikely to contain more than 50 words, nearly every cell in the vector will contain a 0. The few cells that aren’t 0 will contain a low integer (usually 1) representing the number of times that word appeared in the sentence.</li>
+<li>As a several-hundred-element (low-dimensional) dense vector in which each element holds a floating-point value between 0 and 1. This is an embedding.</li>
+</ul>
+<p>In TensorFlow, embeddings are trained by backpropagating loss just like any other parameter in a neural network.</p>
+<h2 id="empirical-risk-minimization-ERM"><a href="#empirical-risk-minimization-ERM" class="headerlink" title="empirical risk minimization (ERM)"></a>empirical risk minimization (ERM)</h2><p>Choosing the model function that minimizes loss on the training set. Contrast with structural risk minimization.</p>
+<h2 id="ensemble"><a href="#ensemble" class="headerlink" title="ensemble"></a>ensemble</h2><p>A merger of the predictions of multiple models. You can create an ensemble via one or more of the following:</p>
+<ul>
+<li>different initializations</li>
+<li>different hyperparameters</li>
+<li>different overall structure</li>
+</ul>
+<p>Deep and wide models are a kind of ensemble.</p>
+<h2 id="Epoch"><a href="#Epoch" class="headerlink" title="Epoch"></a>Epoch</h2><p>An Epoch is a complete pass through all the training data. A neural network is trained until the error rate is acceptable, and this will often take multiple passes through the complete data set.</p>
+<p>note An iteration is when parameters are updated and is typically less than a full pass. For example if BatchSize is 100 and data size is 1,000 an epoch will have 10 iterations. If trained for 30 epochs there will be 300 iterations.</p>
+<h1 id="F"><a href="#F" class="headerlink" title="F"></a>F</h1><h2 id="fully-connected-layer"><a href="#fully-connected-layer" class="headerlink" title="fully connected layer"></a>fully connected layer</h2><p>A hidden layer in which each node is connected to every node in the subsequent hidden layer.</p>
+<p>A fully connected layer is also known as a dense layer.</p>
+<h1 id="G"><a href="#G" class="headerlink" title="G"></a>G</h1><h2 id="gradient-descent"><a href="#gradient-descent" class="headerlink" title="gradient descent"></a>gradient descent</h2><p>The gradient is a derivative, which you will know from differential calculus. That is, it’s the ratio of the rate of change of a neural net’s parameters and the error it produces, as it learns how to reconstruct a dataset or make guesses about labels. The process of minimizing error is called gradient descent. Descending a gradient has two aspects: choosing the direction to step in (momentum) and choosing the size of the step (learning rate).</p>
+<h1 id="H"><a href="#H" class="headerlink" title="H"></a>H</h1><h2 id="heuristic"><a href="#heuristic" class="headerlink" title="heuristic"></a>heuristic</h2><p>A practical and nonoptimal solution to a problem, which is sufficient for making progress or for learning from.</p>
+<h2 id="hidden-layer"><a href="#hidden-layer" class="headerlink" title="hidden layer"></a>hidden layer</h2><p>A synthetic layer in a neural network between the input layer (that is, the features) and the output layer (the prediction). A neural network contains one or more hidden layers.</p>
+<h2 id="hinge-loss"><a href="#hinge-loss" class="headerlink" title="hinge loss"></a>hinge loss</h2><p>A family of loss functions for classification designed to find the decision boundary as distant as possible from each training example, thus maximizing the margin between examples and the boundary. KSVMs use hinge loss (or a related function, such as squared hinge loss). For binary classification, the hinge loss function is defined as follows:</p>
+<p>$$ loss = max(0, 1-(y’*y)) $$</p>
+<p>where y’ is the raw output of the classifier model:</p>
+<p>$$ y’ = b + w_1x_1 + w_2x_2 + … + w_nx_n $$</p>
+<p>and y is the true label, either -1 or +1.</p>
+<h2 id="hyperparameter"><a href="#hyperparameter" class="headerlink" title="hyperparameter"></a>hyperparameter</h2><p>The “knobs” that you tweak during successive runs of training a model. For example, learning rate is a hyperparameter.</p>
+<p>Contrast with parameter.</p>
+<h2 id="hyperplane"><a href="#hyperplane" class="headerlink" title="hyperplane"></a>hyperplane</h2><p>“A hyperplane in an n-dimensional Euclidean space is a flat, n-1 dimensional subset of that space that divides the space into two disconnected parts. What does that mean intuitively?</p>
+<p>First think of the real line. Now pick a point. That point divides the real line into two parts (the part above that point, and the part below that point). The real line has 1 dimension, while the point has 0 dimensions. So a point is a hyperplane of the real line.</p>
+<p>Now think of the two-dimensional plane. Now pick any line. That line divides the plane into two parts (“left” and “right” or maybe “above” and “below”). The plane has 2 dimensions, but the line has only one. So a line is a hyperplane of the 2d plane. Notice that if you pick a point, it doesn’t divide the 2d plane into two parts. So one point is not enough.</p>
+<p>Now think of a 3d space. Now to divide the space into two parts, you need a plane. Your plane has two dimensions, your space has three. So a plane is the hyperplane for a 3d space.</p>
+<p>OK, now we’ve run out of visual examples. But suppose you have a space of n dimensions. You can write down an equation describing an n-1 dimensional object that divides the n-dimensional space into two pieces. That’s a hyperplane.”</p>
+<p>#I</p>
+<h2 id="input-layer"><a href="#input-layer" class="headerlink" title="input layer"></a>input layer</h2><p>The first layer (the one that receives the input data) in a neural network.</p>
+<h1 id="K"><a href="#K" class="headerlink" title="K"></a>K</h1><h2 id="Keras"><a href="#Keras" class="headerlink" title="Keras"></a>Keras</h2><p>A popular Python machine learning API. Keras runs on several deep learning frameworks, including TensorFlow, where it is made available as tf.keras.</p>
+<h2 id="Kernel-Support-Vector-Machines-KSVMs"><a href="#Kernel-Support-Vector-Machines-KSVMs" class="headerlink" title="Kernel Support Vector Machines (KSVMs)"></a>Kernel Support Vector Machines (KSVMs)</h2><p>A classification algorithm that seeks to maximize the margin between positive and negative classes by mapping input data vectors to a higher dimensional space. For example, consider a classification problem in which the input data set consists of a hundred features. In order to maximize the margin between positive and negative classes, KSVMs could internally map those features into a million-dimension space. KSVMs uses a loss function called hinge loss.</p>
+<h1 id="L"><a href="#L" class="headerlink" title="L"></a>L</h1><h2 id="L1-loss"><a href="#L1-loss" class="headerlink" title="L1 loss"></a>L1 loss</h2><p>Loss function based on the absolute value of the difference between the values that a model is predicting and the actual values of the labels. L1 loss is less sensitive to outliers than L2 loss.</p>
+<h2 id="L1-regularization"><a href="#L1-regularization" class="headerlink" title="L1 regularization"></a>L1 regularization</h2><p>A type of regularization that penalizes weights in proportion to the sum of the absolute values of the weights. In models relying on sparse features, L1 regularization helps drive the weights of irrelevant or barely relevant features to exactly 0, which removes those features from the model. Contrast with L2 regularization.</p>
+<h2 id="L2-loss"><a href="#L2-loss" class="headerlink" title="L2 loss"></a>L2 loss</h2><p>See squared loss.</p>
+<h2 id="L2-regularization"><a href="#L2-regularization" class="headerlink" title="L2 regularization"></a>L2 regularization</h2><p>A type of regularization that penalizes weights in proportion to the sum of the squares of the weights. L2 regularization helps drive outlier weights (those with high positive or low negative values) closer to 0 but not quite to 0. (Contrast with L1 regularization.) L2 regularization always improves generalization in linear models.</p>
+<h2 id="learning-rate"><a href="#learning-rate" class="headerlink" title="learning rate"></a>learning rate</h2><p>A scalar used to train a model via gradient descent. During each iteration, the gradient descent algorithm multiplies the learning rate by the gradient. The resulting product is called the gradient step.</p>
+<p>Learning rate is a key hyperparameter.</p>
+<h2 id="least-squares-regression"><a href="#least-squares-regression" class="headerlink" title="least squares regression"></a>least squares regression</h2><p>A linear regression model trained by minimizing L2 Loss.</p>
+<h2 id="linear-regression"><a href="#linear-regression" class="headerlink" title="linear regression"></a>linear regression</h2><p>A type of regression model that outputs a continuous value from a linear combination of input features.</p>
+<h2 id="logistic-regression"><a href="#logistic-regression" class="headerlink" title="logistic regression"></a>logistic regression</h2><p>A model that generates a probability for each possible discrete label value in classification problems by applying a sigmoid function to a linear prediction. Although logistic regression is often used in binary classification problems, it can also be used in multi-class classification problems (where it becomes called <strong>multi-class logistic regression</strong> or <strong>multinomial regression</strong>).</p>
+<h2 id="log-likelihood"><a href="#log-likelihood" class="headerlink" title="log-likelihood"></a>log-likelihood</h2><p>Log likelihood is related to the statistical idea of the likelihood function. Likelihood is a function of the parameters of a statistical model. “The probability of some observed outcomes given a set of parameter values is referred to as the likelihood of the set of parameter values given the observed outcomes.”</p>
+<h2 id="loss"><a href="#loss" class="headerlink" title="loss"></a>loss</h2><p>A measure of how far a model’s predictions are from its label. Or, to phrase it more pessimistically, a measure of how bad the model is. To determine this value, a model must define a loss function. For example, linear regression models typically use mean squared error for a loss function, while logistic regression models use Log Loss.</p>
+<ul>
+<li>Hinge Loss (SVM)</li>
+<li>Cross Entropy Loss (Logistic Regression)</li>
+<li>Softmax Loss (Softmax)</li>
+<li>Square Loss (OLS)</li>
+<li>Exponential Loss (Adaboost)</li>
+<li>0-1 Loss, Absolute Loss…</li>
+</ul>
+<h1 id="M"><a href="#M" class="headerlink" title="M"></a>M</h1><h2 id="machine-learning"><a href="#machine-learning" class="headerlink" title="machine learning"></a>machine learning</h2><p>A program or system that builds (trains) a predictive model from input data. The system uses the learned model to make useful predictions from new (never-before-seen) data drawn from the same distribution as the one used to train the model. Machine learning also refers to the field of study concerned with these programs or systems.</p>
+<h2 id="Mean-Squared-Error-MSE"><a href="#Mean-Squared-Error-MSE" class="headerlink" title="Mean Squared Error (MSE)"></a>Mean Squared Error (MSE)</h2><p>The average squared loss per example. MSE is calculated by dividing the squared loss by the number of examples. The values that TensorFlow Playground displays for “Training loss” and “Test loss” are MSE.</p>
+<h2 id="mini-batch"><a href="#mini-batch" class="headerlink" title="mini-batch"></a>mini-batch</h2><p>A small, randomly selected subset of the entire batch of examples run together in a single iteration of training or inference. The batch size of a mini-batch is usually between 10 and 1,000. It is much more efficient to calculate the loss on a mini-batch than on the full training data.</p>
+<h2 id="mini-batch-stochastic-gradient-descent-SGD"><a href="#mini-batch-stochastic-gradient-descent-SGD" class="headerlink" title="mini-batch stochastic gradient descent (SGD)"></a>mini-batch stochastic gradient descent (SGD)</h2><p>A gradient descent algorithm that uses mini-batches. In other words, mini-batch SGD estimates the gradient based on a small subset of the training data. Vanilla SGD uses a mini-batch of size 1.</p>
+<h2 id="MNIST"><a href="#MNIST" class="headerlink" title="MNIST"></a>MNIST</h2><p>MNIST is the “hello world” of deep-learning datasets. Everyone uses MNIST to test their neural networks, just to see if the net actually works at all. MNIST contains 60,000 training examples and 10,000 test examples of the handwritten numerals 0-9. These images are 28x28 pixels, which means they require 784 nodes on the first input layer of a neural network. MNIST is available for download here. Here is an example of training a DBN on MNIST with Deeplearning4j.</p>
+<h2 id="Momentum"><a href="#Momentum" class="headerlink" title="Momentum"></a>Momentum</h2><p>A sophisticated gradient descent algorithm in which a learning step depends not only on the derivative in the current step, but also on the derivatives of the step(s) that immediately preceded it. Momentum involves computing an exponentially weighted moving average of the gradients over time, analogous to momentum in physics. Momentum sometimes prevents learning from getting stuck in local minima.</p>
+<h2 id="multi-class-classification"><a href="#multi-class-classification" class="headerlink" title="multi-class classification"></a>multi-class classification</h2><p>Classification problems that distinguish among more than two classes. For example, there are approximately 128 species of maple trees, so a model that categorized maple tree species would be multi-class. Conversely, a model that divided emails into only two categories (spam and not spam) would be a <strong>binary classification model</strong>.</p>
+<h1 id="N"><a href="#N" class="headerlink" title="N"></a>N</h1><h2 id="NaN-trap"><a href="#NaN-trap" class="headerlink" title="NaN trap"></a>NaN trap</h2><p>When one number in your model becomes a NaN during training, which causes many or all other numbers in your model to eventually become a NaN.</p>
+<p>NaN is an abbreviation for “Not a Number.”</p>
+<h2 id="neural-network"><a href="#neural-network" class="headerlink" title="neural network"></a>neural network</h2><p>A model that, taking inspiration from the brain, is composed of layers (at least one of which is hidden) consisting of simple connected units or neurons followed by nonlinearities.</p>
+<h2 id="neuron"><a href="#neuron" class="headerlink" title="neuron"></a>neuron</h2><p>A node in a neural network, typically taking in multiple input values and generating one output value. The neuron calculates the output value by applying an activation function (nonlinear transformation) to a weighted sum of input values.</p>
+<h2 id="node"><a href="#node" class="headerlink" title="node"></a>node</h2><p>An overloaded term that means either of the following:</p>
+<ul>
+<li>A neuron in a hidden layer.</li>
+<li>An operation in a TensorFlow graph.</li>
+</ul>
+<h2 id="normalization"><a href="#normalization" class="headerlink" title="normalization"></a>normalization</h2><p>The process of converting an actual range of values into a standard range of values, typically -1 to +1 or 0 to 1. For example, suppose the natural range of a certain feature is 800 to 6,000. Through subtraction and division, you can normalize those values into the range -1 to +1.</p>
+<p>See also scaling.</p>
+<h2 id="optimizer"><a href="#optimizer" class="headerlink" title="optimizer"></a>optimizer</h2><p>A specific implementation of the gradient descent algorithm. TensorFlow’s base class for optimizers is tf.train.Optimizer. Different optimizers may leverage one or more of the following concepts to enhance the effectiveness of gradient descent on a given training set:</p>
+<ul>
+<li>momentum (Momentum)</li>
+<li>update frequency (AdaGrad = ADAptive GRADient descent; Adam = ADAptive with Momentum; RMSProp)</li>
+<li>sparsity/regularization (Ftrl)</li>
+<li>more complex math (Proximal, and others)</li>
+</ul>
+<p>You might even imagine an NN-driven optimizer.</p>
+<h2 id="outliers"><a href="#outliers" class="headerlink" title="outliers"></a>outliers</h2><p>Values distant from most other values. In machine learning, any of the following are outliers:</p>
+<ul>
+<li>Weights with high absolute values.</li>
+<li>Predicted values relatively far away from the actual values.</li>
+<li>Input data whose values are more than roughly 3 standard deviations from the mean.</li>
+</ul>
+<p>Outliers often cause problems in model training.</p>
+<h2 id="output-layer"><a href="#output-layer" class="headerlink" title="output layer"></a>output layer</h2><p>The “final” layer of a neural network. The layer containing the answer(s).</p>
+<h2 id="overfitting"><a href="#overfitting" class="headerlink" title="overfitting"></a>overfitting</h2><p>Creating a model that matches the training data so closely that the model fails to make correct predictions on new data.</p>
+<h1 id="P"><a href="#P" class="headerlink" title="P"></a>P</h1><h2 id="parameter"><a href="#parameter" class="headerlink" title="parameter"></a>parameter</h2><p>A variable of a model that the ML system trains on its own. For example, weights are parameters whose values the ML system gradually learns through successive training iterations. Contrast with hyperparameter.</p>
+<h2 id="partial-derivative"><a href="#partial-derivative" class="headerlink" title="partial derivative"></a>partial derivative</h2><p>A derivative in which all but one of the variables is considered a constant. For example, the partial derivative of f(x, y) with respect to x is the derivative of f considered as a function of x alone (that is, keeping y constant). The partial derivative of f with respect to x focuses only on how x is changing and ignores all other variables in the equation.</p>
+<h2 id="performance"><a href="#performance" class="headerlink" title="performance"></a>performance</h2><p>Overloaded term with the following meanings:</p>
+<ul>
+<li>The traditional meaning within software engineering. Namely: How fast (or efficiently) does this piece of software run?</li>
+<li>The meaning within ML. Here, performance answers the following question: How correct is this model? That is, how good are the model’s predictions?</li>
+</ul>
+<h2 id="perplexity"><a href="#perplexity" class="headerlink" title="perplexity"></a>perplexity</h2><p>One measure of how well a model is accomplishing its task. For example, suppose your task is to read the first few letters of a word a user is typing on a smartphone keyboard, and to offer a list of possible completion words. Perplexity, P, for this task is approximately the number of guesses you need to offer in order for your list to contain the actual word the user is trying to type.</p>
+<p>Perplexity is related to cross-entropy as follows:<br>$$ P = 2^{-cross entropy} $$</p>
+<h2 id="pipeline"><a href="#pipeline" class="headerlink" title="pipeline"></a>pipeline</h2><p>The infrastructure surrounding a machine learning algorithm. A pipeline includes gathering the data, putting the data into training data files, training one or more models, and exporting the models to production.</p>
+<h2 id="pooling"><a href="#pooling" class="headerlink" title="pooling"></a>pooling</h2><p>Pooling, max pooling and average pooling are terms that refer to downsampling or subsampling within a convolutional network. Downsampling is a way of reducing the amount of data flowing through the network, and therefore decreasing the computational cost of the network. Average pooling takes the average of several values. Max pooling takes the greatest of several values. Max pooling is currently the preferred type of downsampling layer in convolutional networks.</p>
+<p>#R</p>
+<h2 id="Rectified-Linear-Unit-ReLU"><a href="#Rectified-Linear-Unit-ReLU" class="headerlink" title="Rectified Linear Unit (ReLU)"></a>Rectified Linear Unit (ReLU)</h2><p>An activation function with the following rules:</p>
+<ul>
+<li>If input is negative or zero, output is 0.</li>
+<li>If input is positive, output is equal to input.</li>
+</ul>
+<h2 id="regression-model"><a href="#regression-model" class="headerlink" title="regression model"></a>regression model</h2><p>A type of model that outputs continuous (typically, floating-point) values. Compare with classification models, which output discrete values, such as “day lily” or “tiger lily.”</p>
+<h2 id="regularization"><a href="#regularization" class="headerlink" title="regularization"></a>regularization</h2><p>The penalty on a model’s complexity. Regularization helps prevent overfitting. Different kinds of regularization include:</p>
+<ul>
+<li>L1 regularization</li>
+<li>L2 regularization</li>
+<li>dropout regularization</li>
+<li>early stopping (this is not a formal regularization method, but can effectively limit overfitting)</li>
+</ul>
+<h2 id="regularization-rate"><a href="#regularization-rate" class="headerlink" title="regularization rate"></a>regularization rate</h2><p>A scalar value, represented as lambda, specifying the relative importance of the regularization function. The following simplified loss equation shows the regularization rate’s influence:</p>
+<p>$$ minimize(loss function + \lambda(regularization function))$$</p>
+<p>Raising the regularization rate reduces overfitting but may make the model less accurate.</p>
+<h2 id="ROC-receiver-operating-characteristic-Curve"><a href="#ROC-receiver-operating-characteristic-Curve" class="headerlink" title="ROC (receiver operating characteristic) Curve"></a>ROC (receiver operating characteristic) Curve</h2><p>A curve of true positive rate vs. false positive rate at different classification thresholds. See also AUC.</p>
+<h1 id="S"><a href="#S" class="headerlink" title="S"></a>S</h1><h2 id="scaling"><a href="#scaling" class="headerlink" title="scaling"></a>scaling</h2><p>A commonly used practice in feature engineering to tame a feature’s range of values to match the range of other features in the data set. For example, suppose that you want all floating-point features in the data set to have a range of 0 to 1. Given a particular feature’s range of 0 to 500, you could scale that feature by dividing each value by 500.</p>
+<p>See also normalization.</p>
+<h2 id="sigmoid-function"><a href="#sigmoid-function" class="headerlink" title="sigmoid function"></a>sigmoid function</h2><p>A function that maps logistic or multinomial regression output (log odds) to probabilities, returning a value between 0 and 1. The sigmoid function has the following formula:</p>
+<p>$$ y = \frac{1}{1+e^{-\sigma}} $$</p>
+<p>where $\sigma$ in logistic regression problems is simply:</p>
+<p>$$\sigma = b + w_1x_1 + w_2x_2 + … + w_nx_n$$</p>
+<p>In other words, the sigmoid function converts $\sigma$ into a probability between 0 and 1.</p>
+<p>In some neural networks, the sigmoid function acts as the activation function.</p>
+<h2 id="softmax"><a href="#softmax" class="headerlink" title="softmax"></a>softmax</h2><p>A function that provides probabilities for each possible class in a multi-class classification model. The probabilities add up to exactly 1.0. For example, softmax might determine that the probability of a particular image being a dog at 0.9, a cat at 0.08, and a horse at 0.02. (Also called full softmax.)</p>
+<p>Contrast with candidate sampling.</p>
+<h2 id="sparse-feature"><a href="#sparse-feature" class="headerlink" title="sparse feature"></a>sparse feature</h2><p>Feature vector whose values are predominately zero or empty. For example, a vector containing a single 1 value and a million 0 values is sparse. As another example, words in a search query could also be a sparse feature—there are many possible words in a given language, but only a few of them occur in a given query.</p>
+<p>Contrast with dense feature.</p>
+<h2 id="stochastic-gradient-descent-SGD"><a href="#stochastic-gradient-descent-SGD" class="headerlink" title="stochastic gradient descent (SGD)"></a>stochastic gradient descent (SGD)</h2><p>A gradient descent algorithm in which the batch size is one. In other words, SGD relies on a single example chosen uniformly at random from a data set to calculate an estimate of the gradient at each step.</p>
+<h2 id="structural-risk-minimization-SRM"><a href="#structural-risk-minimization-SRM" class="headerlink" title="structural risk minimization (SRM)"></a>structural risk minimization (SRM)</h2><p>An algorithm that balances two goals:</p>
+<p>The desire to build the most predictive model (for example, lowest loss).<br>The desire to keep the model as simple as possible (for example, strong regularization).<br>For example, a model function that minimizes loss+regularization on the training set is a structural risk minimization algorithm.</p>
+<p>For more information, see <a href="http://www.svms.org/srm/" target="_blank" rel="noopener">http://www.svms.org/srm/</a>.</p>
+<p>Contrast with empirical risk minimization.</p>
+<h2 id="supervised-machine-learning"><a href="#supervised-machine-learning" class="headerlink" title="supervised machine learning"></a>supervised machine learning</h2><p>Training a model from input data and its corresponding labels. Supervised machine learning is analogous to a student learning a subject by studying a set of questions and their corresponding answers. After mastering the mapping between questions and answers, the student can then provide answers to new (never-before-seen) questions on the same topic. Compare with unsupervised machine learning.</p>
+<h2 id="Tensor"><a href="#Tensor" class="headerlink" title="Tensor"></a>Tensor</h2><p>The primary data structure in TensorFlow programs. Tensors are N-dimensional (where N could be very large) data structures, most commonly scalars, vectors, or matrices. The elements of a Tensor can hold integer, floating-point, or string values.</p>
+<h2 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h2><p>A large-scale, distributed, machine learning platform. The term also refers to the base API layer in the TensorFlow stack, which supports general computation on dataflow graphs.</p>
+<p>Although TensorFlow is primarily used for machine learning, you may also use TensorFlow for non-ML tasks that require numerical computation using dataflow graphs.</p>
+<h2 id="time-series-analysis"><a href="#time-series-analysis" class="headerlink" title="time series analysis"></a>time series analysis</h2><p>A subfield of machine learning and statistics that analyzes temporal data. Many types of machine learning problems require time series analysis, including classification, clustering, forecasting, and anomaly detection. For example, you could use time series analysis to forecast the future sales of winter coats by month based on historical sales data.</p>
+<h2 id="training"><a href="#training" class="headerlink" title="training"></a>training</h2><p>The process of determining the ideal parameters comprising a model.</p>
+<h2 id="training-set"><a href="#training-set" class="headerlink" title="training set"></a>training set</h2><p>The subset of the data set used to train a model.</p>
+<p>Contrast with <strong>validation set</strong> and <strong>test set</strong>.</p>
+<h2 id="transfer-learning"><a href="#transfer-learning" class="headerlink" title="transfer learning"></a>transfer learning</h2><p>Transferring information from one machine learning task to another. For example, in multi-task learning, a single model solves multiple tasks, such as a deep model that has different output nodes for different tasks. Transfer learning might involve transferring knowledge from the solution of a simpler task to a more complex one, or involve transferring knowledge from a task where there is more data to one where there is less data.</p>
+<p>Most machine learning systems solve a single task. Transfer learning is a baby step towards artificial intelligence in which a single program can solve multiple tasks.</p>
+<h1 id="U"><a href="#U" class="headerlink" title="U"></a>U</h1><h2 id="unsupervised-machine-learning"><a href="#unsupervised-machine-learning" class="headerlink" title="unsupervised machine learning"></a>unsupervised machine learning</h2><p>Training a model to find patterns in a data set, typically an unlabeled data set.</p>
+<p>The most common use of unsupervised machine learning is to cluster data into groups of similar examples. For example, an unsupervised machine learning algorithm can cluster songs together based on various properties of the music. The resulting clusters can become an input to other machine learning algorithms (for example, to a music recommendation service). Clustering can be helpful in domains where true labels are hard to obtain. For example, in domains such as anti-abuse and fraud, clusters can help humans better understand the data.</p>
+<p>Another example of unsupervised machine learning is <strong>principal component analysis (PCA)</strong>. For example, applying PCA on a data set containing the contents of millions of shopping carts might reveal that shopping carts containing lemons frequently also contain antacids.</p>
+<p>Compare with <strong>supervised machine learning</strong>.</p>
+<p>#W</p>
+<h2 id="wide-model"><a href="#wide-model" class="headerlink" title="wide model"></a>wide model</h2><p>A linear model that typically has many sparse input features. We refer to it as “wide” since such a model is a special type of neural network with a large number of inputs that connect directly to the output node. Wide models are often easier to debug and inspect than deep models. Although wide models cannot express nonlinearities through hidden layers, they can use transformations such as feature crossing and bucketization to model nonlinearities in different ways.</p>
+<p>Contrast with deep model.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Machine-Learning/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            Machine Learning</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/01/TypeScript-Introduction/" rel="next" title="TypeScript Introduction">
+                <i class="fa fa-chevron-left"></i> TypeScript Introduction
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/09/Front-end-Handbook-HTML/" rel="prev" title="Front-end Handbook HTML">
+                Front-end Handbook HTML <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzYzNi8xMDE5MQ=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Yu Liu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.facebook.com/profile.php?id=100010002882463" target="_blank" title="Facebook">
+                      
+                        <i class="fa fa-fw fa-facebook"></i>Facebook</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/YULIU94" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.instagram.com/joshuuualy/" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:lyfcsc@hotmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A"><span class="nav-number">1.</span> <span class="nav-text">A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#activation-function"><span class="nav-number">1.1.</span> <span class="nav-text">activation function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AdaGrad"><span class="nav-number">1.2.</span> <span class="nav-text">AdaGrad</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AUC-Area-under-the-ROC-Curve"><span class="nav-number">1.3.</span> <span class="nav-text">AUC (Area under the ROC Curve)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B"><span class="nav-number">2.</span> <span class="nav-text">B</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#backpropagation"><span class="nav-number">2.1.</span> <span class="nav-text">backpropagation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#batch"><span class="nav-number">2.2.</span> <span class="nav-text">batch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#binary-classification"><span class="nav-number">2.3.</span> <span class="nav-text">binary classification</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bucketing"><span class="nav-number">2.4.</span> <span class="nav-text">bucketing</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C"><span class="nav-number">3.</span> <span class="nav-text">C</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cross-entropy"><span class="nav-number">3.1.</span> <span class="nav-text">cross-entropy</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#D"><span class="nav-number">4.</span> <span class="nav-text">D</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#dropout-regularization"><span class="nav-number">4.1.</span> <span class="nav-text">dropout regularization</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#E"><span class="nav-number">5.</span> <span class="nav-text">E</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#early-stopping"><span class="nav-number">5.1.</span> <span class="nav-text">early stopping</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#embeddings"><span class="nav-number">5.2.</span> <span class="nav-text">embeddings</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#empirical-risk-minimization-ERM"><span class="nav-number">5.3.</span> <span class="nav-text">empirical risk minimization (ERM)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ensemble"><span class="nav-number">5.4.</span> <span class="nav-text">ensemble</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Epoch"><span class="nav-number">5.5.</span> <span class="nav-text">Epoch</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#F"><span class="nav-number">6.</span> <span class="nav-text">F</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#fully-connected-layer"><span class="nav-number">6.1.</span> <span class="nav-text">fully connected layer</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#G"><span class="nav-number">7.</span> <span class="nav-text">G</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#gradient-descent"><span class="nav-number">7.1.</span> <span class="nav-text">gradient descent</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#H"><span class="nav-number">8.</span> <span class="nav-text">H</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#heuristic"><span class="nav-number">8.1.</span> <span class="nav-text">heuristic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hidden-layer"><span class="nav-number">8.2.</span> <span class="nav-text">hidden layer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hinge-loss"><span class="nav-number">8.3.</span> <span class="nav-text">hinge loss</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hyperparameter"><span class="nav-number">8.4.</span> <span class="nav-text">hyperparameter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hyperplane"><span class="nav-number">8.5.</span> <span class="nav-text">hyperplane</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#input-layer"><span class="nav-number">8.6.</span> <span class="nav-text">input layer</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#K"><span class="nav-number">9.</span> <span class="nav-text">K</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Keras"><span class="nav-number">9.1.</span> <span class="nav-text">Keras</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kernel-Support-Vector-Machines-KSVMs"><span class="nav-number">9.2.</span> <span class="nav-text">Kernel Support Vector Machines (KSVMs)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#L"><span class="nav-number">10.</span> <span class="nav-text">L</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#L1-loss"><span class="nav-number">10.1.</span> <span class="nav-text">L1 loss</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#L1-regularization"><span class="nav-number">10.2.</span> <span class="nav-text">L1 regularization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#L2-loss"><span class="nav-number">10.3.</span> <span class="nav-text">L2 loss</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#L2-regularization"><span class="nav-number">10.4.</span> <span class="nav-text">L2 regularization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#learning-rate"><span class="nav-number">10.5.</span> <span class="nav-text">learning rate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#least-squares-regression"><span class="nav-number">10.6.</span> <span class="nav-text">least squares regression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linear-regression"><span class="nav-number">10.7.</span> <span class="nav-text">linear regression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logistic-regression"><span class="nav-number">10.8.</span> <span class="nav-text">logistic regression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#log-likelihood"><span class="nav-number">10.9.</span> <span class="nav-text">log-likelihood</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#loss"><span class="nav-number">10.10.</span> <span class="nav-text">loss</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#M"><span class="nav-number">11.</span> <span class="nav-text">M</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#machine-learning"><span class="nav-number">11.1.</span> <span class="nav-text">machine learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mean-Squared-Error-MSE"><span class="nav-number">11.2.</span> <span class="nav-text">Mean Squared Error (MSE)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mini-batch"><span class="nav-number">11.3.</span> <span class="nav-text">mini-batch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mini-batch-stochastic-gradient-descent-SGD"><span class="nav-number">11.4.</span> <span class="nav-text">mini-batch stochastic gradient descent (SGD)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MNIST"><span class="nav-number">11.5.</span> <span class="nav-text">MNIST</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Momentum"><span class="nav-number">11.6.</span> <span class="nav-text">Momentum</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#multi-class-classification"><span class="nav-number">11.7.</span> <span class="nav-text">multi-class classification</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#N"><span class="nav-number">12.</span> <span class="nav-text">N</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NaN-trap"><span class="nav-number">12.1.</span> <span class="nav-text">NaN trap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#neural-network"><span class="nav-number">12.2.</span> <span class="nav-text">neural network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#neuron"><span class="nav-number">12.3.</span> <span class="nav-text">neuron</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node"><span class="nav-number">12.4.</span> <span class="nav-text">node</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#normalization"><span class="nav-number">12.5.</span> <span class="nav-text">normalization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#optimizer"><span class="nav-number">12.6.</span> <span class="nav-text">optimizer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#outliers"><span class="nav-number">12.7.</span> <span class="nav-text">outliers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#output-layer"><span class="nav-number">12.8.</span> <span class="nav-text">output layer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overfitting"><span class="nav-number">12.9.</span> <span class="nav-text">overfitting</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#P"><span class="nav-number">13.</span> <span class="nav-text">P</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#parameter"><span class="nav-number">13.1.</span> <span class="nav-text">parameter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#partial-derivative"><span class="nav-number">13.2.</span> <span class="nav-text">partial derivative</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#performance"><span class="nav-number">13.3.</span> <span class="nav-text">performance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#perplexity"><span class="nav-number">13.4.</span> <span class="nav-text">perplexity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pipeline"><span class="nav-number">13.5.</span> <span class="nav-text">pipeline</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pooling"><span class="nav-number">13.6.</span> <span class="nav-text">pooling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rectified-Linear-Unit-ReLU"><span class="nav-number">13.7.</span> <span class="nav-text">Rectified Linear Unit (ReLU)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#regression-model"><span class="nav-number">13.8.</span> <span class="nav-text">regression model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#regularization"><span class="nav-number">13.9.</span> <span class="nav-text">regularization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#regularization-rate"><span class="nav-number">13.10.</span> <span class="nav-text">regularization rate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ROC-receiver-operating-characteristic-Curve"><span class="nav-number">13.11.</span> <span class="nav-text">ROC (receiver operating characteristic) Curve</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#S"><span class="nav-number">14.</span> <span class="nav-text">S</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#scaling"><span class="nav-number">14.1.</span> <span class="nav-text">scaling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sigmoid-function"><span class="nav-number">14.2.</span> <span class="nav-text">sigmoid function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#softmax"><span class="nav-number">14.3.</span> <span class="nav-text">softmax</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sparse-feature"><span class="nav-number">14.4.</span> <span class="nav-text">sparse feature</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stochastic-gradient-descent-SGD"><span class="nav-number">14.5.</span> <span class="nav-text">stochastic gradient descent (SGD)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#structural-risk-minimization-SRM"><span class="nav-number">14.6.</span> <span class="nav-text">structural risk minimization (SRM)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#supervised-machine-learning"><span class="nav-number">14.7.</span> <span class="nav-text">supervised machine learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tensor"><span class="nav-number">14.8.</span> <span class="nav-text">Tensor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TensorFlow"><span class="nav-number">14.9.</span> <span class="nav-text">TensorFlow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#time-series-analysis"><span class="nav-number">14.10.</span> <span class="nav-text">time series analysis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#training"><span class="nav-number">14.11.</span> <span class="nav-text">training</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#training-set"><span class="nav-number">14.12.</span> <span class="nav-text">training set</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transfer-learning"><span class="nav-number">14.13.</span> <span class="nav-text">transfer learning</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#U"><span class="nav-number">15.</span> <span class="nav-text">U</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#unsupervised-machine-learning"><span class="nav-number">15.1.</span> <span class="nav-text">unsupervised machine learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wide-model"><span class="nav-number">15.2.</span> <span class="nav-text">wide model</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yu Liu</span>
+
+  
+</div>
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65090423";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function(d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+         
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("zBGMDGFlDvmmXIpuI8N89jgk-gzGzoHsz", "hcEKFxtD5zEyuXfu2DuTHEW6");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
