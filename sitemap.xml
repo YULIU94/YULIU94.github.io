@@ -2,6 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/03/15/Batch-normalization/</loc>
+    
+    <lastmod>2018-03-15T15:15:30.893Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/03/09/Front-end-Handbook-HTML/</loc>
+    
+    <lastmod>2018-03-14T23:22:41.644Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/03/01/TypeScript-Introduction/</loc>
+    
+    <lastmod>2018-03-14T23:22:35.282Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/</loc>
+    
+    <lastmod>2018-03-14T23:22:29.234Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/02/12/WebSocket/</loc>
+    
+    <lastmod>2018-03-14T23:22:12.247Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/01/30/ECMAScript-6-3/</loc>
+    
+    <lastmod>2018-03-14T23:21:53.673Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/01/28/ECMAScript-6-2/</loc>
+    
+    <lastmod>2018-03-14T23:21:48.557Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/01/28/ECMAScript-6-1/</loc>
+    
+    <lastmod>2018-03-14T23:21:42.107Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/02/14/Scrum-Introduction/</loc>
     
     <lastmod>2018-03-14T20:34:01.698Z</lastmod>
@@ -30,27 +86,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/03/09/Front-end-Handbook-HTML/</loc>
-    
-    <lastmod>2018-03-10T00:47:45.005Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/</loc>
-    
-    <lastmod>2018-03-02T18:28:34.867Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/03/01/TypeScript-Introduction/</loc>
-    
-    <lastmod>2018-03-02T14:37:21.506Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/02/15/Docker-Tutorial/</loc>
     
     <lastmod>2018-02-20T22:47:59.716Z</lastmod>
@@ -72,13 +107,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/02/12/WebSocket/</loc>
-    
-    <lastmod>2018-02-14T20:12:31.919Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/02/14/LINQ/</loc>
     
     <lastmod>2018-02-14T18:31:28.900Z</lastmod>
@@ -96,27 +124,6 @@
     <loc>http://yoursite.com/2018/02/08/Python-Broadcasting/</loc>
     
     <lastmod>2018-02-09T15:03:05.214Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/01/28/ECMAScript-6-1/</loc>
-    
-    <lastmod>2018-02-09T02:43:09.581Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/01/28/ECMAScript-6-2/</loc>
-    
-    <lastmod>2018-02-09T02:43:01.903Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/01/30/ECMAScript-6-3/</loc>
-    
-    <lastmod>2018-02-09T02:42:51.821Z</lastmod>
     
   </url>
   

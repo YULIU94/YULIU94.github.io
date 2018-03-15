@@ -4,6 +4,170 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/03/15/Batch-normalization/</loc>
+    <lastmod>2018-03-15T15:15:30.893Z</lastmod>
+    <data>
+        <display>
+        <title>Batch normalization in Neural Networks</title>
+        <pubTime>2018-03-15T15:13:22.000Z</pubTime>
+        
+        <tag>Batch normalization</tag>
+         
+        <tag>Neural Network</tag>
+         
+         
+           
+             
+              <breadCrumb title="Machine Learning" url="http://yoursite.com/categories/Machine-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/03/09/Front-end-Handbook-HTML/</loc>
+    <lastmod>2018-03-14T23:22:41.644Z</lastmod>
+    <data>
+        <display>
+        <title>Front-end Handbook HTML</title>
+        <pubTime>2018-03-10T00:47:30.000Z</pubTime>
+        
+        <tag>HTML</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/03/01/TypeScript-Introduction/</loc>
+    <lastmod>2018-03-14T23:22:35.282Z</lastmod>
+    <data>
+        <display>
+        <title>TypeScript Introduction</title>
+        <pubTime>2018-03-02T01:19:24.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>TypeScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/</loc>
+    <lastmod>2018-03-14T23:22:29.234Z</lastmod>
+    <data>
+        <display>
+        <title>Front-end Handbook JavaScript</title>
+        <pubTime>2018-03-01T19:41:49.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/02/12/WebSocket/</loc>
+    <lastmod>2018-03-14T23:22:12.247Z</lastmod>
+    <data>
+        <display>
+        <title>WebSocket Tutorial</title>
+        <pubTime>2018-02-12T16:20:52.000Z</pubTime>
+        
+        <tag>WebSocket</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/01/30/ECMAScript-6-3/</loc>
+    <lastmod>2018-03-14T23:21:53.673Z</lastmod>
+    <data>
+        <display>
+        <title>ECMAScript 6 features (3)</title>
+        <pubTime>2018-01-30T14:33:45.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/01/28/ECMAScript-6-2/</loc>
+    <lastmod>2018-03-14T23:21:48.557Z</lastmod>
+    <data>
+        <display>
+        <title>ECMAScript 6 features (2)</title>
+        <pubTime>2018-01-29T04:24:35.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/01/28/ECMAScript-6-1/</loc>
+    <lastmod>2018-03-14T23:21:42.107Z</lastmod>
+    <data>
+        <display>
+        <title>ECMAScript 6 features (1)</title>
+        <pubTime>2018-01-29T02:32:13.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/02/14/Scrum-Introduction/</loc>
     <lastmod>2018-03-14T20:34:01.698Z</lastmod>
     <data>
@@ -90,68 +254,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/03/09/Front-end-Handbook-HTML/</loc>
-    <lastmod>2018-03-10T00:47:45.005Z</lastmod>
-    <data>
-        <display>
-        <title>Front-end Handbook HTML</title>
-        <pubTime>2018-03-10T00:47:30.000Z</pubTime>
-        
-        <tag>HTML</tag>
-         
-         
-           
-             
-              <breadCrumb title="Technology" url="http://yoursite.com/categories/Technology/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/</loc>
-    <lastmod>2018-03-02T18:28:34.867Z</lastmod>
-    <data>
-        <display>
-        <title>Front-end Handbook JavaScript</title>
-        <pubTime>2018-03-01T19:41:49.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="Technology" url="http://yoursite.com/categories/Technology/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/03/01/TypeScript-Introduction/</loc>
-    <lastmod>2018-03-02T14:37:21.506Z</lastmod>
-    <data>
-        <display>
-        <title>TypeScript Introduction</title>
-        <pubTime>2018-03-02T01:19:24.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>TypeScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="Technology" url="http://yoursite.com/categories/Technology/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/02/15/Docker-Tutorial/</loc>
     <lastmod>2018-02-20T22:47:59.716Z</lastmod>
     <data>
@@ -193,26 +295,6 @@
     
     
   <url>
-    <loc>http://yoursite.com/2018/02/12/WebSocket/</loc>
-    <lastmod>2018-02-14T20:12:31.919Z</lastmod>
-    <data>
-        <display>
-        <title>WebSocket Tutorial</title>
-        <pubTime>2018-02-12T16:20:52.000Z</pubTime>
-        
-        <tag>WebSocket</tag>
-         
-         
-           
-             
-              <breadCrumb title="Technology" url="http://yoursite.com/categories/Technology/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/02/14/LINQ/</loc>
     <lastmod>2018-02-14T18:31:28.900Z</lastmod>
     <data>
@@ -244,13 +326,13 @@
         <title>Building a cat classifier with logistic regression from scratch</title>
         <pubTime>2018-02-09T21:15:40.000Z</pubTime>
         
+        <tag>Neural Network</tag>
+         
         <tag>Machine Learning</tag>
          
         <tag>Python</tag>
          
         <tag>Logistic Regression</tag>
-         
-        <tag>Neural Network</tag>
          
          
            
@@ -279,66 +361,6 @@
         <tag>vectorization</tag>
          
         <tag>broadcasting</tag>
-         
-         
-           
-             
-              <breadCrumb title="Technology" url="http://yoursite.com/categories/Technology/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/01/28/ECMAScript-6-1/</loc>
-    <lastmod>2018-02-09T02:43:09.581Z</lastmod>
-    <data>
-        <display>
-        <title>ECMAScript 6 features (1)</title>
-        <pubTime>2018-01-29T02:32:13.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="Technology" url="http://yoursite.com/categories/Technology/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/01/28/ECMAScript-6-2/</loc>
-    <lastmod>2018-02-09T02:43:01.903Z</lastmod>
-    <data>
-        <display>
-        <title>ECMAScript 6 features (2)</title>
-        <pubTime>2018-01-29T04:24:35.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="Technology" url="http://yoursite.com/categories/Technology/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/01/30/ECMAScript-6-3/</loc>
-    <lastmod>2018-02-09T02:42:51.821Z</lastmod>
-    <data>
-        <display>
-        <title>ECMAScript 6 features (3)</title>
-        <pubTime>2018-01-30T14:33:45.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
          
          
            
