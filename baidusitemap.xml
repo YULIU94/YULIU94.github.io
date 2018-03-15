@@ -328,9 +328,9 @@
         
         <tag>Neural Network</tag>
          
-        <tag>Machine Learning</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>Logistic Regression</tag>
          
@@ -352,8 +352,6 @@
         <title>Python - Vectorization and Broadcasting</title>
         <pubTime>2018-02-08T21:27:27.000Z</pubTime>
         
-        <tag>Machine Learning</tag>
-         
         <tag>Python</tag>
          
         <tag>NumPy</tag>
@@ -361,6 +359,8 @@
         <tag>vectorization</tag>
          
         <tag>broadcasting</tag>
+         
+        <tag>Machine Learning</tag>
          
          
            
