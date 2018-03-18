@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2018-03-18T16:05:34.356Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/03/09/Machine-Learning-Glossary/</loc>
     
     <lastmod>2018-03-16T20:05:11.864Z</lastmod>
@@ -131,13 +138,6 @@
     <loc>http://yoursite.com/2018/02/07/Weekly-Report-20180207/</loc>
     
     <lastmod>2018-02-07T21:08:06.048Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/about/index.html</loc>
-    
-    <lastmod>2018-02-01T18:31:33.379Z</lastmod>
     
   </url>
   
