@@ -88,7 +88,7 @@
 <meta property="og:description" content="Describe the difference between a cookie, sessionStorage and localStorage   / cookie localStorage sessionStorage     Initiator Client or server. Server can use Set-Cookie header Client Client   Expiry">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://s1.ax1x.com/2018/03/10/9RcHXV.png">
-<meta property="og:updated_time" content="2018-03-14T23:22:41.644Z">
+<meta property="og:updated_time" content="2018-03-19T20:14:53.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Front-end Handbook HTML">
 <meta name="twitter:description" content="Describe the difference between a cookie, sessionStorage and localStorage   / cookie localStorage sessionStorage     Initiator Client or server. Server can use Set-Cookie header Client Client   Expiry">
@@ -472,8 +472,7 @@
 </tr>
 </tbody>
 </table>
-<p>References</p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies</a><br><a href="http://tutorial.techaltum.com/local-and-session-storage.html" target="_blank" rel="noopener">http://tutorial.techaltum.com/local-and-session-storage.html</a><br><a id="more"></a></p>
+<p>References<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies</a><br><a href="http://tutorial.techaltum.com/local-and-session-storage.html" target="_blank" rel="noopener">http://tutorial.techaltum.com/local-and-session-storage.html</a><br><a id="more"></a></p>
 <h2 id="Can-you-explain-CSS-box-model"><a href="#Can-you-explain-CSS-box-model" class="headerlink" title="Can you explain CSS box model?"></a>Can you explain CSS box model?</h2><p>CSS box model is a rectangular space around a HTML element which defines border, padding and margin.</p>
 <p>Border: - This defines the maximum area in which the element will be contained. We can make the border visible, invisible, define height and width etc.</p>
 <p>Padding: - This defines the spacing between border and element.</p>
@@ -486,6 +485,32 @@
 <h2 id="Cross-Origin-Resource-Sharing-CORS"><a href="#Cross-Origin-Resource-Sharing-CORS" class="headerlink" title="Cross-Origin Resource Sharing (CORS)"></a>Cross-Origin Resource Sharing (CORS)</h2><p>Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to let a user agent gain permission to access selected resources from a server on a different origin (domain) than the site currently in use. A user agent makes a cross-origin HTTP request when it requests a resource from a different domain, protocol, or port than the one from which the current document originated.</p>
 <p>An example of a cross-origin request: A HTML page served from <a href="http://domain-a.com" target="_blank" rel="noopener">http://domain-a.com</a> makes an <code>&lt;img&gt; src</code> request for <a href="http://domain-b.com/image.jpg" target="_blank" rel="noopener">http://domain-b.com/image.jpg</a>. Many pages on the web today load resources like CSS stylesheets, images, and scripts from separate domains, such as content delivery networks (CDNs).</p>
 <p>For security reasons, browsers restrict cross-origin HTTP requests initiated from within scripts. For example, XMLHttpRequest and the Fetch API follow the same-origin policy. This means that a web application using those APIs can only request HTTP resources from the same domain the application was loaded from unless CORS headers are used.</p>
+<h2 id="HTTP-Status-Codes"><a href="#HTTP-Status-Codes" class="headerlink" title="HTTP Status Codes"></a>HTTP Status Codes</h2><ul>
+<li>1xx Informational</li>
+<li>2xx Success<ul>
+<li>200 OK</li>
+<li>201 Created</li>
+<li>204 No Content</li>
+</ul>
+</li>
+<li>3xx Redirection<ul>
+<li>304 Not Modified</li>
+</ul>
+</li>
+<li>4xx Client Error<ul>
+<li>400 Bad Request</li>
+<li>401 Unauthorized</li>
+<li>403 Forbidden</li>
+<li>404 Not Found</li>
+<li>409 Conflict</li>
+</ul>
+</li>
+<li>5xx Server Error<ul>
+<li>500 Internal Server Error</li>
+</ul>
+</li>
+</ul>
+<p>References<br><a href="http://www.restapitutorial.com/httpstatuscodes.html" target="_blank" rel="noopener">http://www.restapitutorial.com/httpstatuscodes.html</a></p>
 
       
     </div>
@@ -695,7 +720,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Describe-the-difference-between-a-cookie-sessionStorage-and-localStorage"><span class="nav-number">1.</span> <span class="nav-text">Describe the difference between a cookie, sessionStorage and localStorage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Can-you-explain-CSS-box-model"><span class="nav-number">2.</span> <span class="nav-text">Can you explain CSS box model?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-are-web-sockets"><span class="nav-number">3.</span> <span class="nav-text">What are web sockets?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cross-Origin-Resource-Sharing-CORS"><span class="nav-number">4.</span> <span class="nav-text">Cross-Origin Resource Sharing (CORS)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Describe-the-difference-between-a-cookie-sessionStorage-and-localStorage"><span class="nav-number">1.</span> <span class="nav-text">Describe the difference between a cookie, sessionStorage and localStorage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Can-you-explain-CSS-box-model"><span class="nav-number">2.</span> <span class="nav-text">Can you explain CSS box model?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-are-web-sockets"><span class="nav-number">3.</span> <span class="nav-text">What are web sockets?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cross-Origin-Resource-Sharing-CORS"><span class="nav-number">4.</span> <span class="nav-text">Cross-Origin Resource Sharing (CORS)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-Status-Codes"><span class="nav-number">5.</span> <span class="nav-text">HTTP Status Codes</span></a></li></ol></div>
             
 
           </div>

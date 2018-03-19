@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/03/09/Front-end-Handbook-HTML/</loc>
+    
+    <lastmod>2018-03-19T20:14:53.891Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2018-03-19T18:40:45.265Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com/2018/03/15/Batch-normalization/</loc>
     
     <lastmod>2018-03-15T15:15:30.893Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/03/09/Front-end-Handbook-HTML/</loc>
-    
-    <lastmod>2018-03-14T23:22:41.644Z</lastmod>
     
   </url>
   
