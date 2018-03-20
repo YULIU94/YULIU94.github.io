@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/03/20/Cross-Origin-Resource-Sharing-CORS-Introduction/</loc>
+    <lastmod>2018-03-20T18:53:50.133Z</lastmod>
+    <data>
+        <display>
+        <title>Cross-Origin Resource Sharing (CORS) Introduction</title>
+        <pubTime>2018-03-20T18:48:34.000Z</pubTime>
+        
+        <tag>CORS</tag>
+         
+        <tag>HTTP</tag>
+         
+        <tag>XMLHttpRequest</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/03/09/Front-end-Handbook-HTML/</loc>
-    <lastmod>2018-03-19T20:14:53.891Z</lastmod>
+    <lastmod>2018-03-19T20:15:23.790Z</lastmod>
     <data>
         <display>
         <title>Front-end Handbook HTML</title>
@@ -26,7 +50,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/03/09/Machine-Learning-Glossary/</loc>
-    <lastmod>2018-03-16T20:05:11.864Z</lastmod>
+    <lastmod>2018-03-17T00:07:15.497Z</lastmod>
     <data>
         <display>
         <title>Machine Learning Glossary</title>
@@ -329,9 +353,9 @@
         
         <tag>Neural Network</tag>
          
-        <tag>Python</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>Python</tag>
          
         <tag>Logistic Regression</tag>
          
@@ -353,6 +377,8 @@
         <title>Python - Vectorization and Broadcasting</title>
         <pubTime>2018-02-08T21:27:27.000Z</pubTime>
         
+        <tag>Machine Learning</tag>
+         
         <tag>Python</tag>
          
         <tag>NumPy</tag>
@@ -360,8 +386,6 @@
         <tag>vectorization</tag>
          
         <tag>broadcasting</tag>
-         
-        <tag>Machine Learning</tag>
          
          
            

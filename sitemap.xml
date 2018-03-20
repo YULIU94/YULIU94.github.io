@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/03/20/Cross-Origin-Resource-Sharing-CORS-Introduction/</loc>
+    
+    <lastmod>2018-03-20T18:53:50.133Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/03/09/Front-end-Handbook-HTML/</loc>
     
-    <lastmod>2018-03-19T20:14:53.891Z</lastmod>
+    <lastmod>2018-03-19T20:15:23.790Z</lastmod>
     
   </url>
   
@@ -18,7 +25,7 @@
   <url>
     <loc>http://yoursite.com/2018/03/09/Machine-Learning-Glossary/</loc>
     
-    <lastmod>2018-03-16T20:05:11.864Z</lastmod>
+    <lastmod>2018-03-17T00:07:15.497Z</lastmod>
     
   </url>
   
