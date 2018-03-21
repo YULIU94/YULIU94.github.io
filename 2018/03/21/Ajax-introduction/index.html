@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Yu Liu">
 <meta property="og:description" content="What is AJAX?AJAX stands for Asynchronous JavaScript and XML. AJAX is a new technique for creating better, faster, and more interactive web applications with the help of XML, HTML, CSS, and Java Scrip">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-21T15:26:39.825Z">
+<meta property="og:updated_time" content="2018-03-21T16:04:10.557Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AJAX introduction">
 <meta name="twitter:description" content="What is AJAX?AJAX stands for Asynchronous JavaScript and XML. AJAX is a new technique for creating better, faster, and more interactive web applications with the help of XML, HTML, CSS, and Java Scrip">
@@ -459,11 +459,9 @@
 <li><p><strong>getResponseHeader( headerName )</strong><br>  Returns the value of the specified HTTP header.</p>
 </li>
 <li><p><strong>open( method, URL, async, userName, password )</strong><br>  Specifies the method, URL, and other optional attributes of a request.</p>
+<p>  The method parameter can have a value of “GET”, “POST”, or “HEAD”. Other HTTP methods such as “PUT” and “DELETE” (primarily used in REST applications) may be possible.</p>
+<p>  The “async” parameter specifies whether the request should be handled asynchronously or not. “true” means that the script processing carries on after the send() method without waiting for a response, and “false” means that the script waits for a response before continuing script processing.</p>
 </li>
-</ul>
-<p>The method parameter can have a value of “GET”, “POST”, or “HEAD”. Other HTTP methods such as “PUT” and “DELETE” (primarily used in REST applications) may be possible.</p>
-<p>The “async” parameter specifies whether the request should be handled asynchronously or not. “true” means that the script processing carries on after the send() method without waiting for a response, and “false” means that the script waits for a response before continuing script processing.</p>
-<ul>
 <li><p><strong>send( content )</strong><br>  Sends the request.</p>
 </li>
 <li><p><strong>setRequestHeader( label, value )</strong><br>  Adds a label/value pair to the HTTP header to be sent.</p>
