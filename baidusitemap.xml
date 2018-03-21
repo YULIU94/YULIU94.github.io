@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/03/21/Ajax-introduction/</loc>
+    <lastmod>2018-03-21T15:17:58.299Z</lastmod>
+    <data>
+        <display>
+        <title>AJAX introduction</title>
+        <pubTime>2018-03-21T14:53:56.000Z</pubTime>
+        
+        <tag>AJAX</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JQuery</tag>
+         
+        <tag>Fetch API</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/03/20/Cross-Origin-Resource-Sharing-CORS-Introduction/</loc>
     <lastmod>2018-03-20T18:59:09.332Z</lastmod>
     <data>
@@ -262,9 +288,9 @@
         <title>PCA - Mathematics (1)</title>
         <pubTime>2018-01-30T21:42:45.000Z</pubTime>
         
-        <tag>Machine Learning</tag>
-         
         <tag>Mathematics</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>PCA</tag>
          

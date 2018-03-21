@@ -312,6 +312,256 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/Ajax-introduction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yu Liu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yu Liu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/21/Ajax-introduction/" itemprop="url">AJAX introduction</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-21T10:53:56-04:00">
+                2018-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web-Development/" itemprop="url" rel="index">
+                    <span itemprop="name">Web Development</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/03/21/Ajax-introduction/" class="leancloud_visitors" data-flag-title="AJAX introduction">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="What-is-AJAX"><a href="#What-is-AJAX" class="headerlink" title="What is AJAX?"></a>What is AJAX?</h2><p>AJAX stands for Asynchronous JavaScript and XML. AJAX is a new technique for creating better, faster, and more interactive web applications with the help of XML, HTML, CSS, and Java Script.</p>
+<h2 id="Steps-of-AJAX-Operation"><a href="#Steps-of-AJAX-Operation" class="headerlink" title="Steps of AJAX Operation"></a>Steps of AJAX Operation</h2><ul>
+<li><strong>A client event occurs.</strong></li>
+</ul>
+<p>A JavaScript function is called as the result of an event.</p>
+<ul>
+<li><p><strong>An XMLHttpRequest object is created.</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ajaxRequest;  <span class="comment">// The variable that makes Ajax possible!</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ajaxFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// Opera 8.0+, Firefox, Safari</span></span><br><span class="line">        ajaxRequest = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Internet Explorer Browsers</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            ajaxRequest = <span class="keyword">new</span> ActiveXObject(<span class="string">"Msxml2.XMLHTTP"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                ajaxRequest = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line"></span><br><span class="line">                <span class="comment">// Something went wrong</span></span><br><span class="line">                alert(<span class="string">"Your browser broke!"</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>The XMLHttpRequest object is configured.</strong></p>
+<p>  In this step, we will write a function that will be triggered by the client event and a callback function <code>processRequest()</code> will be registered.</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">validateUserId</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    ajaxFunction();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Here processRequest() is the callback function.</span></span><br><span class="line">    ajaxRequest.onreadystatechange = processRequest;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!target) target = <span class="built_in">document</span>.getElementById(<span class="string">"userid"</span>);</span><br><span class="line">    <span class="keyword">var</span> url = <span class="string">"validate?id="</span> + <span class="built_in">escape</span>(target.value);</span><br><span class="line"></span><br><span class="line">    ajaxRequest.open(<span class="string">"GET"</span>, url, <span class="literal">true</span>);</span><br><span class="line">    ajaxRequest.send(<span class="literal">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>The XMLHttpRequest object makes an asynchronous request to the Webserver.</strong><br>  Source code is available in the above piece of code. Code written in bold typeface is responsible to make a request to the webserver. This is all being done using the <code>XMLHttpRequest</code> object <code>ajaxRequest</code>.</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">validateUserId</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    ajaxFunction();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Here processRequest() is the callback function.</span></span><br><span class="line">    ajaxRequest.onreadystatechange = processRequest;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!target) target = <span class="built_in">document</span>.getElementById(<span class="string">"userid"</span>);</span><br><span class="line">    <span class="keyword">var</span> url = <span class="string">"validate?id = "</span> + <span class="built_in">escape</span>(target.value);</span><br><span class="line"></span><br><span class="line">    ajaxRequest.open(<span class="string">"GET"</span>, url, <span class="literal">true</span>);</span><br><span class="line">    ajaxRequest.send(<span class="literal">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>The Webserver returns the result containing XML document.</strong><br>  Here is the example code using Servlet.</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request,</span></span></span><br><span class="line"><span class="function"><span class="params">HttpServletResponse response)</span> <span class="keyword">throws</span> IOException, ServletException </span>&#123;</span><br><span class="line">    String targetId = request.getParameter(<span class="string">"id"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ((targetId != <span class="keyword">null</span>) &amp;&amp; !accounts.containsKey(targetId.trim())) &#123;</span><br><span class="line">        response.setContentType(<span class="string">"text/xml"</span>);</span><br><span class="line">        response.setHeader(<span class="string">"Cache-Control"</span>, <span class="string">"no-cache"</span>);</span><br><span class="line">        response.getWriter().write(<span class="string">"&lt;valid&gt;true&lt;/valid&gt;"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        response.setContentType(<span class="string">"text/xml"</span>);</span><br><span class="line">        response.setHeader(<span class="string">"Cache-Control"</span>, <span class="string">"no-cache"</span>);</span><br><span class="line">        response.getWriter().write(<span class="string">"&lt;valid&gt;false&lt;/valid&gt;"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>The XMLHttpRequest object calls the callback() function and processes the result.</strong></p>
+<p>  The <code>XMLHttpRequest</code> object was configured to call the <code>processRequest()</code> function when there is a state change to the readyState of the <code>XMLHttpRequest</code> object. Now this function will receive the result from the server and will do the required processing. As in the following example, it sets a variable message on true or false based on the returned value from the Webserver.</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">processRequest</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (req.readyState == <span class="number">4</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (req.status == <span class="number">200</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> message = ...;</span><br><span class="line">            ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>The HTML DOM is updated.</strong><br>This is the final step and in this step, your HTML page will be updated. It happens in the following way:</p>
+</li>
+<li>JavaScript gets a reference to any element in a page using DOM API.</li>
+<li><p>The recommended way to gain a reference to an element is to call.</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;userIdMessage&quot;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JavaScript may now be used to modify the element’s attributes; modify the element’s style properties; or add, remove, or modify the child elements.</p>
+</li>
+</ul>
+<h2 id="XMLHttpRequest"><a href="#XMLHttpRequest" class="headerlink" title="XMLHttpRequest"></a>XMLHttpRequest</h2><p><code>XMLHttpRequest (XHR)</code> is an API that can be used by JavaScript, JScript, VBScript, and other web browser scripting languages to transfer and manipulate XML data to and from a webserver using HTTP, establishing an independent connection channel between a webpage’s Client-Side and Server-Side.</p>
+<h3 id="XMLHttpRequest-Methods"><a href="#XMLHttpRequest-Methods" class="headerlink" title="XMLHttpRequest Methods"></a>XMLHttpRequest Methods</h3><ul>
+<li><p><strong>abort()</strong><br>  Cancels the current request.</p>
+</li>
+<li><p><strong>getAllResponseHeaders()</strong><br>  Returns the complete set of HTTP headers as a string.</p>
+</li>
+<li><p><strong>getResponseHeader( headerName )</strong><br>  Returns the value of the specified HTTP header.</p>
+</li>
+<li><p><strong>open( method, URL, async, userName, password )</strong><br>  Specifies the method, URL, and other optional attributes of a request.</p>
+</li>
+</ul>
+<p>The method parameter can have a value of “GET”, “POST”, or “HEAD”. Other HTTP methods such as “PUT” and “DELETE” (primarily used in REST applications) may be possible.</p>
+<p>The “async” parameter specifies whether the request should be handled asynchronously or not. “true” means that the script processing carries on after the send() method without waiting for a response, and “false” means that the script waits for a response before continuing script processing.</p>
+<ul>
+<li><p><strong>send( content )</strong><br>  Sends the request.</p>
+</li>
+<li><p><strong>setRequestHeader( label, value )</strong><br>  Adds a label/value pair to the HTTP header to be sent.</p>
+</li>
+</ul>
+<h3 id="XMLHttpRequest-Properties"><a href="#XMLHttpRequest-Properties" class="headerlink" title="XMLHttpRequest Properties"></a>XMLHttpRequest Properties</h3><ul>
+<li><p><strong>onreadystatechange</strong><br>An event handler for an event that fires at every state change.</p>
+</li>
+<li><p><strong>readyState</strong><br>The readyState property defines the current state of the XMLHttpRequest object.</p>
+</li>
+<li><p><strong>readyState = 0</strong><br>After you have created the XMLHttpRequest object, but before you have called the open() method.</p>
+</li>
+<li><p><strong>readyState = 1</strong><br>After you have called the open() method, but before you have called send().</p>
+</li>
+<li><p><strong>readyState = 2</strong><br>After you have called send().</p>
+</li>
+<li><p><strong>readyState = 3</strong><br>After the browser has established a communication with the server, but before the server has completed the response.</p>
+</li>
+<li><p><strong>readyState = 4</strong><br>After the request has been completed, and the response data has been completely received from the server.</p>
+</li>
+</ul>
+<h2 id="Implementation-of-AJAX"><a href="#Implementation-of-AJAX" class="headerlink" title="Implementation of AJAX"></a>Implementation of AJAX</h2><h3 id="Use-Native-JavaScript"><a href="#Use-Native-JavaScript" class="headerlink" title="Use Native JavaScript"></a>Use Native JavaScript</h3><p>Based on <code>XMLHttpRequest(XHR)</code> object. Supported by modern web browsers (IE7+、Firefox、Chrome、Safari and Opera).</p>
+<ol>
+<li><p>Get XMLHttpRequest object</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var xhr = new XMLHttpRequest();</span><br></pre></td></tr></table></figure>
+<p> If compatibility with IE5, IE6 is needed, we can use ActiveX object.</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var xhr;</span><br><span class="line">if (window.XMLHttpRequest) &#123; // Mozilla, Safari...</span><br><span class="line">xhr = new XMLHttpRequest();</span><br><span class="line">&#125; else if (window.ActiveXObject) &#123; // IE</span><br><span class="line">try &#123;</span><br><span class="line">xhr = new ActiveXObject(&apos;Msxml2.XMLHTTP&apos;);</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">try &#123;</span><br><span class="line">xhr = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</span><br><span class="line">&#125; catch (e) &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Send HTTP request<br> We will open a url and send a request.</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// GET</span></span><br><span class="line"><span class="keyword">var</span> xhr;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest) &#123; <span class="comment">// Mozilla, Safari...</span></span><br><span class="line">xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">window</span>.ActiveXObject) &#123; <span class="comment">// IE</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">'Msxml2.XMLHTTP'</span>);</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">'Microsoft.XMLHTTP'</span>);</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (xhr) &#123;</span><br><span class="line">xhr.open(<span class="string">'GET'</span>, <span class="string">'/api?username=admin&amp;password=root'</span>, <span class="literal">true</span>);</span><br><span class="line">xhr.send(<span class="literal">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// POST</span></span><br><span class="line"><span class="keyword">var</span> xhr;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest) &#123; <span class="comment">// Mozilla, Safari...</span></span><br><span class="line">xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">window</span>.ActiveXObject) &#123; <span class="comment">// IE</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">'Msxml2.XMLHTTP'</span>);</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">'Microsoft.XMLHTTP'</span>);</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (xhr) &#123;</span><br><span class="line">xhr.open(<span class="string">'POST'</span>, <span class="string">'/api'</span>, <span class="literal">true</span>);</span><br><span class="line"><span class="comment">// Set Content-Type as application/x-www-form-urlencoded</span></span><br><span class="line">xhr.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/x-www-form-urlencoded'</span>);</span><br><span class="line">xhr.send(<span class="string">'username=admin&amp;password=root'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Process response from server</p>
+<p> When we send request, we need to specify how to process response from server.</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Method 1, specify function to call</span></span><br><span class="line">xhr.onreadystatechange = onReadyStateChange;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">onReadyStateChange</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="comment">// do something</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Method 2, use anonymous function</span></span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="comment">// do the thing</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p> Then we can use the readyState property to get the current state. When the value of readyState is 4, which means a complete response has been received, we can now process the response</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// readyState value</span><br><span class="line">// 0 (unsent)</span><br><span class="line">// 1 (opened)</span><br><span class="line">// 2 (headers_rceived)</span><br><span class="line">// 3 (loading)</span><br><span class="line">// 4 (done)</span><br><span class="line"></span><br><span class="line">if (xhr.readyState === 4) &#123;</span><br><span class="line">// everything is good, the response is received</span><br><span class="line">&#125; else &#123;</span><br><span class="line">// still not ready</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> Complete code example:</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// POST</span></span><br><span class="line"><span class="keyword">var</span> xhr;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest) &#123; <span class="comment">// Mozilla, Safari...</span></span><br><span class="line">xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">window</span>.ActiveXObject) &#123; <span class="comment">// IE</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">'Msxml2.XMLHTTP'</span>);</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">'Microsoft.XMLHTTP'</span>);</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (xhr) &#123;</span><br><span class="line">xhr.onreadystatechange = onReadyStateChange;</span><br><span class="line">xhr.open(<span class="string">'POST'</span>, <span class="string">'/api'</span>, <span class="literal">true</span>);</span><br><span class="line"><span class="comment">// set Content-Type as application/x-www-form-urlencoded</span></span><br><span class="line">xhr.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/x-www-form-urlencoded'</span>);</span><br><span class="line">xhr.send(<span class="string">'username=admin&amp;password=root'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// onreadystatechange method</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">onReadyStateChange</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="comment">// the function will be called 4 times</span></span><br><span class="line"><span class="built_in">console</span>.log(xhr.readyState);</span><br><span class="line"><span class="keyword">if</span> (xhr.readyState === <span class="number">4</span>) &#123;</span><br><span class="line"><span class="comment">// everything is good, the response is received</span></span><br><span class="line"><span class="keyword">if</span> (xhr.status === <span class="number">200</span>) &#123;</span><br><span class="line"><span class="built_in">console</span>.log(xhr.responseText);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'There was a problem with the request.'</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="comment">// still not ready</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'still not ready...'</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> We can use <code>onload</code> to replace <code>onreadystatechange = 4</code> since <code>onload</code> is invoked only when readyState equals 4.</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">xhr.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;    <span class="comment">// invoke onload</span></span><br><span class="line"><span class="keyword">if</span> (xhr.status === <span class="number">200</span>) &#123;    <span class="comment">// status is 200 means success</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'success'</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'fail'</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Use-JQuery-to-implement-AJAX"><a href="#Use-JQuery-to-implement-AJAX" class="headerlink" title="Use JQuery to implement AJAX"></a>Use JQuery to implement AJAX</h3><p>Code example:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">method: <span class="string">'POST'</span>,</span><br><span class="line">url: <span class="string">'/api'</span>,</span><br><span class="line">data: &#123; <span class="attr">username</span>: <span class="string">'admin'</span>, <span class="attr">password</span>: <span class="string">'root'</span> &#125;</span><br><span class="line">&#125;)</span><br><span class="line">.done(<span class="function"><span class="keyword">function</span>(<span class="params">msg</span>) </span>&#123;</span><br><span class="line">alert( <span class="string">'Data Saved: '</span> + msg );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>The following are two common ways to implement Ajax using JQuery.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// GET</span></span><br><span class="line">$.get(<span class="string">'/api'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line"><span class="comment">// do something</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// POST</span></span><br><span class="line"><span class="keyword">var</span> data = &#123;</span><br><span class="line">username: <span class="string">'admin'</span>,</span><br><span class="line">password: <span class="string">'root'</span></span><br><span class="line">&#125;;</span><br><span class="line">$.post(<span class="string">'/api'</span>, data, <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line"><span class="comment">// do something</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Use-Fetch-API-to-implement-AJAX"><a href="#Use-Fetch-API-to-implement-AJAX" class="headerlink" title="Use Fetch API to implement AJAX"></a>Use Fetch API to implement AJAX</h3><p>The Fetch API provides an interface for fetching resources (including across the network). It will seem familiar to anyone who has used XMLHttpRequest, but the new API provides a more powerful and flexible feature set.</p>
+<p>Let’s see an example of using Fetch API:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'/api'</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> response.json();</span><br><span class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Oops, error: '</span>, error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Use arrow function of ES6:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'/api'</span>).then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</span><br><span class="line">.then(<span class="function"><span class="params">data</span> =&gt;</span> <span class="built_in">console</span>.log(data))</span><br><span class="line">.catch(<span class="function"><span class="params">error</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'Oops, error: '</span>, error))</span><br></pre></td></tr></table></figure></p>
+<p>We can see that it’s simpler after using Fetch API.</p>
+<p>Complete version:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> options = &#123;</span><br><span class="line">method: <span class="string">'POST'</span>,</span><br><span class="line">headers: &#123;</span><br><span class="line"><span class="string">'Accept'</span>: <span class="string">'application/json'</span>,</span><br><span class="line"><span class="string">'Content-Type'</span>: <span class="string">'application/json'</span></span><br><span class="line">&#125;,</span><br><span class="line">body: <span class="built_in">JSON</span>.stringify(&#123; <span class="attr">username</span>: <span class="string">'admin'</span>, <span class="attr">password</span>: <span class="string">'root'</span> &#125;),</span><br><span class="line">credentials: <span class="string">'include'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">fetch(<span class="string">'/api'</span>, options).then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</span><br><span class="line">.then(<span class="function"><span class="params">data</span> =&gt;</span> <span class="built_in">console</span>.log(data))</span><br><span class="line">.catch(<span class="function"><span class="params">error</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'Oops, error: '</span>, error))</span><br></pre></td></tr></table></figure></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://www.tutorialspoint.com/ajax/index.htm" target="_blank" rel="noopener">AJAX Tutorial</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState" target="_blank" rel="noopener">XMLHttpRequest.readyState</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank" rel="noopener">Fetch API</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/20/Cross-Origin-Resource-Sharing-CORS-Introduction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1783,169 +2033,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/14/Scrum-Introduction/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yu Liu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yu Liu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/14/Scrum-Introduction/" itemprop="url">Scrum Introduction</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-14T16:26:15-05:00">
-                2018-02-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-Development/" itemprop="url" rel="index">
-                    <span itemprop="name">Software Development</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/02/14/Scrum-Introduction/" class="leancloud_visitors" data-flag-title="Scrum Introduction">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Definition-of-Scrum"><a href="#Definition-of-Scrum" class="headerlink" title="Definition of Scrum"></a>Definition of Scrum</h2><p><strong>Scrum (n)</strong>: A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value.</p>
-<p>Scrum is:<br>• Lightweight<br>• Simple to understand<br>• Difficult to master</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/14/Scrum-Introduction/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1991,7 +2083,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2013,7 +2105,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

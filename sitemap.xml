@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/03/21/Ajax-introduction/</loc>
+    
+    <lastmod>2018-03-21T15:17:58.299Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/03/20/Cross-Origin-Resource-Sharing-CORS-Introduction/</loc>
     
     <lastmod>2018-03-20T18:59:09.332Z</lastmod>
