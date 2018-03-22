@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/03/22/Front-end-Handbook-CSS/</loc>
+    <lastmod>2018-03-22T18:51:47.301Z</lastmod>
+    <data>
+        <display>
+        <title>Front-end Handbook CSS</title>
+        <pubTime>2018-03-22T18:50:53.000Z</pubTime>
+        
+        <tag>CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/03/22/Closures-in-JavaScript/</loc>
     <lastmod>2018-03-22T15:01:25.478Z</lastmod>
     <data>
