@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Yu Liu">
 <meta property="og:description" content="What is CSS?CSS is short for Cascading Style Sheets and is the primary language used to describe look and formatting for webpages across the Internet and documents of markup (e.g. HTML and XML) in gen">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-22T18:51:47.301Z">
+<meta property="og:updated_time" content="2018-03-22T18:59:45.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Front-end Handbook CSS">
 <meta name="twitter:description" content="What is CSS?CSS is short for Cascading Style Sheets and is the primary language used to describe look and formatting for webpages across the Internet and documents of markup (e.g. HTML and XML) in gen">
@@ -420,32 +420,30 @@
 <h2 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h2><p>CSS3 is the latest version of CSS and contains a number of exciting, new features that make it easier for web developers to create great styling for websites.</p>
 <a id="more"></a>
 <h3 id="CSS3-features"><a href="#CSS3-features" class="headerlink" title="CSS3 features"></a>CSS3 features</h3><ul>
-<li><code>REM</code> VALUES<br>You will encounter rem values as you learn about the CSS font-size property, and other CSS properties that specify element size. In the case of the font-size property, a rem value displays a font-size relative to the font-size of the root element, called simply html.</li>
-</ul>
-<p>For example, consider the following CSS:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">0.75rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>In the code, font-size is set to 20px for the html selector. The p selector has a font-size of 0.75rem, which displays a size 3/4 that of html, or 15px.</p>
-<ul>
-<li>FLEXBOX<br>The CSS3 flexbox feature makes it much easier for web developers to arrange HTML elements vertically or horizontally. Website layouts designed with flexbox can respond to users with various screen widths, including mobile devices. To access the feature in CSS, the display property must be set to flex, as seen below:</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line"><span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>HTML elements that are children of an element with the “main” class are now flex items and can be arranged using flexbox properties. Here are two such properties:</p>
+<li><p><code>REM</code> VALUES<br>  You will encounter rem values as you learn about the CSS font-size property, and other CSS properties that specify element size. In the case of the font-size property, a rem value displays a font-size relative to the font-size of the root element, called simply html.</p>
+<p>  For example, consider the following CSS:</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">0.75rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  In the code, font-size is set to 20px for the html selector. The p selector has a font-size of 0.75rem, which displays a size 3/4 that of html, or 15px.</p>
+</li>
+<li><p>FLEXBOX<br>  The CSS3 flexbox feature makes it much easier for web developers to arrange HTML elements vertically or horizontally. Website layouts designed with flexbox can respond to users with various screen widths, including mobile devices. To access the feature in CSS, the display property must be set to flex, as seen below:</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line"><span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  HTML elements that are children of an element with the “main” class are now flex items and can be arranged using flexbox properties. Here are two such properties:</p>
 <ul>
 <li>flex-wrap: arranges flex items into a single line or wraps them across multiple lines of a webpage layout.</li>
-<li><p>justify-content: can orient flex items in a number of different positions on a webpage, including the center.</p>
+<li>justify-content: can orient flex items in a number of different positions on a webpage, including the center.</li>
+</ul>
 </li>
-<li><p>BACKGROUND-IMAGE<br>The CSS3 background-image property is used to set a background image for an HTML element.</p>
+<li><p>BACKGROUND-IMAGE<br>  The CSS3 background-image property is used to set a background image for an HTML element.</p>
+<p>  For example, consider the following CSS:</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line"><span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">"http://image-gallery.io/mountain-scene.png"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CSS Animations and Transitions</p>
+<p>  CSS animations are finally available in all major browsers, even in IE (since version 10). There are two ways to create CSS animations. The first is very easy, it is done through animating the changes of CSS properties with the <code>transition</code> declaration. With transitions, you can create hover or mouse down effects, or you can trigger the animation by changing the style of an element with JavaScript. You can see the transition below by hovering over the planet - this will cause the rocket to close in.</p>
+</li>
+<li><p>Box Sizing</p>
+<p>  The single biggest cause for headaches for CSS beginners is the <strong>box model</strong>. The standardization bodies have probably had their reasons, but it doesn’t feel at all intuitive to have the CSS width and height of an element affected by its padding and borders. This little (mis)feature breaks layouts and wreaks havoc, but finally there is a way to restore our sanity by using the <code>box-sizing</code> rule. You can set it to <code>border-box</code>, which makes elements behave exactly the way you expect.</p>
 </li>
 </ul>
-<p>For example, consider the following CSS:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line"><span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">"http://image-gallery.io/mountain-scene.png"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>CSS Animations and Transitions</li>
-</ul>
-<p>CSS animations are finally available in all major browsers, even in IE (since version 10). There are two ways to create CSS animations. The first is very easy, it is done through animating the changes of CSS properties with the <code>transition</code> declaration. With transitions, you can create hover or mouse down effects, or you can trigger the animation by changing the style of an element with JavaScript. You can see the transition below by hovering over the planet - this will cause the rocket to close in.</p>
-<ul>
-<li>Box Sizing</li>
-</ul>
-<p>The single biggest cause for headaches for CSS beginners is the <strong>box model</strong>. The standardization bodies have probably had their reasons, but it doesn’t feel at all intuitive to have the CSS width and height of an element affected by its padding and borders. This little (mis)feature breaks layouts and wreaks havoc, but finally there is a way to restore our sanity by using the <code>box-sizing</code> rule. You can set it to <code>border-box</code>, which makes elements behave exactly the way you expect.</p>
 <h2 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h2><p>The <code>box-sizing</code> property can be used to adjust this behavior:</p>
 <ul>
 <li><p><code>content-box</code> gives you the default CSS box-sizing behavior. If you set an element’s width to 100 pixels, then the element’s content box will be 100 pixels wide, and the width of any border or padding will be added to the final rendered width.</p>
@@ -499,7 +497,8 @@
 <h3 id="font-face"><a href="#font-face" class="headerlink" title="@font-face"></a>@font-face</h3><p>With the <code>@font-face</code> rule, web designers do not have to use one of the “web-safe” fonts anymore.</p>
 <p>In the <code>@font-face</code> rule you must first define a name for the font (e.g. myFirstFont), and then point to the font file.</p>
 <p>Tip: Use lowercase letters for the font URL. Uppercase letters can give unexpected results in IE!</p>
-<h2 id="Selector"><a href="#Selector" class="headerlink" title="Selector"></a>Selector</h2><h3 id="Simple-selectors"><a href="#Simple-selectors" class="headerlink" title="Simple selectors"></a>Simple selectors</h3><ul>
+<h2 id="Selector"><a href="#Selector" class="headerlink" title="Selector"></a>Selector</h2><p>CSS selectors define the elements to which a set of CSS rules apply.</p>
+<h3 id="Simple-selectors"><a href="#Simple-selectors" class="headerlink" title="Simple selectors"></a>Simple selectors</h3><ul>
 <li><p><strong>Type selector</strong><br>Selects all elements that match the given node name.<br>Syntax: <code>eltname</code><br>Example: <code>input</code> will match any <code>&lt;input&gt;</code> element.</p>
 </li>
 <li><p><strong>Class selector</strong><br>Selects all elements that have the given <code>class</code> attribute.<br>Syntax: <code>.classname</code><br>Example: <code>.index</code> will match any element that has a class of “index”.</p>
