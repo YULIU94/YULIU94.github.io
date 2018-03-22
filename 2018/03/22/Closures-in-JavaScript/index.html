@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript,Closures," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yu Liu">
-<meta property="og:url" content="http://yoursite.com/tags/NumPy/index.html">
+<meta name="description" content="JavaScript variables can belong to the local or global scope. Global variables can be made local (private) with closures. Global Variables vs Local VariablesA function can access all variables defined">
+<meta name="keywords" content="JavaScript,Closures">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Closures in JavaScript">
+<meta property="og:url" content="http://yoursite.com/2018/03/22/Closures-in-JavaScript/index.html">
 <meta property="og:site_name" content="Yu Liu">
+<meta property="og:description" content="JavaScript variables can belong to the local or global scope. Global variables can be made local (private) with closures. Global Variables vs Local VariablesA function can access all variables defined">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-03-22T14:29:45.151Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yu Liu">
+<meta name="twitter:title" content="Closures in JavaScript">
+<meta name="twitter:description" content="JavaScript variables can belong to the local or global scope. Global variables can be made local (private) with closures. Global Variables vs Local VariablesA function can access all variables defined">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/NumPy/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/22/Closures-in-JavaScript/"/>
 
 
 
 
 
-  <title>Tag: NumPy | Yu Liu</title>
+  <title>Closures in JavaScript | Yu Liu</title>
   
 
 
@@ -149,7 +154,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -297,54 +302,219 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>NumPy<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/22/Closures-in-JavaScript/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yu Liu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yu Liu">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/02/08/Python-Broadcasting/" itemprop="url">
-              
-                <span itemprop="name">Python - Vectorization and Broadcasting</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Closures in JavaScript</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-08T16:27:27-05:00"
-              content="2018-02-08" >
-          02-08
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-22T10:26:15-04:00">
+                2018-03-22
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web-Development/" itemprop="url" rel="index">
+                    <span itemprop="name">Web Development</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/03/22/Closures-in-JavaScript/" class="leancloud_visitors" data-flag-title="Closures in JavaScript">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>JavaScript variables can belong to the local or global scope.</p>
+<p>Global variables can be made local (private) with closures.</p>
+<h2 id="Global-Variables-vs-Local-Variables"><a href="#Global-Variables-vs-Local-Variables" class="headerlink" title="Global Variables vs Local Variables"></a>Global Variables vs Local Variables</h2><p>A function can access all variables defined inside the function, like this:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">return</span> a * a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>In above code, variable a is a <code>local variable</code>.</p>
+<a id="more"></a>
+<p>But a function can also access variables defined outside the function, like this:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">4</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> a * a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>In above code, variable a is a <code>global variable</code>.</p>
+<blockquote>
+<p>Variables created without the keyword var, are always global, even if they are created inside a function.</p>
+</blockquote>
+<h2 id="Variable-Lifetime"><a href="#Variable-Lifetime" class="headerlink" title="Variable Lifetime"></a>Variable Lifetime</h2><p>Global variables live as long as your application (your window / your web page) lives.</p>
+<p>Local variables have short lives. They are created when the function is invoked, and deleted when the function is finished.</p>
+<h2 id="A-Counter-Dilemma"><a href="#A-Counter-Dilemma" class="headerlink" title="A Counter Dilemma"></a>A Counter Dilemma</h2><p>Suppose you want to use a variable for counting something, and you want this counter to be available to all functions.</p>
+<p>You could use a global variable, and a function to increase the counter:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">counter += <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line"></span><br><span class="line"><span class="comment">// the counter is now equal to 3</span></span><br></pre></td></tr></table></figure>
+<p>The counter should only be changed by the add() function.</p>
+<p>The problem is, that any script on the page can change the counter, without calling add().</p>
+<p>If I declare the counter inside the function, nobody will be able to change it without calling add():</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span>;</span><br><span class="line">counter += <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line"></span><br><span class="line"><span class="comment">// the counter should now be 3, but it does not work !</span></span><br></pre></td></tr></table></figure>
+<p>It did not work! Every time I call the add() function, the counter is set to 1.</p>
+<p>A JavaScript inner function can solve this.</p>
+<h2 id="JavaScript-Closures"><a href="#JavaScript-Closures" class="headerlink" title="JavaScript Closures"></a>JavaScript Closures</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="keyword">return</span> counter += <span class="number">1</span>;&#125;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line"></span><br><span class="line"><span class="comment">// the counter is now 3</span></span><br></pre></td></tr></table></figure>
+<h3 id="Example-Explained"><a href="#Example-Explained" class="headerlink" title="Example Explained"></a>Example Explained</h3><p>The variable <code>add</code> is assigned the return value of a self-invoking function.</p>
+<p>The self-invoking function only runs once. It sets the counter to zero (0), and returns a function expression.</p>
+<p>This way add becomes a function. The “wonderful” part is that it can access the counter in the parent scope.</p>
+<p>This is called a JavaScript closure. It makes it possible for a function to have “private” variables.</p>
+<p>The counter is protected by the scope of the anonymous function, and can only be changed using the add function.</p>
+<blockquote>
+<p>A closure is a function having access to the parent scope, even after the parent function has closed.</p>
+</blockquote>
+<h2 id="Performance-considerations"><a href="#Performance-considerations" class="headerlink" title="Performance considerations"></a>Performance considerations</h2><p>It is unwise to unnecessarily create functions within other functions if closures are not needed for a particular task, as it will negatively affect script performance both in terms of processing speed and memory consumption.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures" target="_blank" rel="noopener">Closures</a><br><a href="https://www.w3schools.com/js/js_function_closures.asp" target="_blank" rel="noopener">JavaScript Closures</a><br><a href="https://javascript.info/closure" target="_blank" rel="noopener">Closure - The Modern Javascript Tutorial</a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            JavaScript</a>
+          
+            <a href="/tags/Closures/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            Closures</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/21/Ajax-introduction/" rel="next" title="AJAX introduction">
+                <i class="fa fa-chevron-left"></i> AJAX introduction
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -352,6 +522,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzYzNi8xMDE5MQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -372,8 +551,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -461,6 +649,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Global-Variables-vs-Local-Variables"><span class="nav-number">1.</span> <span class="nav-text">Global Variables vs Local Variables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Variable-Lifetime"><span class="nav-number">2.</span> <span class="nav-text">Variable Lifetime</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-Counter-Dilemma"><span class="nav-number">3.</span> <span class="nav-text">A Counter Dilemma</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-Closures"><span class="nav-number">4.</span> <span class="nav-text">JavaScript Closures</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Explained"><span class="nav-number">4.1.</span> <span class="nav-text">Example Explained</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Performance-considerations"><span class="nav-number">5.</span> <span class="nav-text">Performance considerations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">6.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -598,6 +802,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -625,6 +833,17 @@
 
 
 
+
+  <script type="text/javascript">
+    (function(d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
          
 
 

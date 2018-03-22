@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/03/22/Closures-in-JavaScript/</loc>
+    <lastmod>2018-03-22T14:29:45.151Z</lastmod>
+    <data>
+        <display>
+        <title>Closures in JavaScript</title>
+        <pubTime>2018-03-22T14:26:15.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Closures</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/03/21/Ajax-introduction/</loc>
     <lastmod>2018-03-22T03:06:08.057Z</lastmod>
     <data>
@@ -11,9 +33,9 @@
         <title>AJAX introduction</title>
         <pubTime>2018-03-21T14:53:56.000Z</pubTime>
         
-        <tag>AJAX</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>AJAX</tag>
          
         <tag>JQuery</tag>
          
