@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2018/03/22/Front-end-Handbook-CSS/</loc>
+    <loc>http://yoursite.com/about/index.html</loc>
     
-    <lastmod>2018-03-27T13:48:18.372Z</lastmod>
+    <lastmod>2018-05-03T18:36:15.967Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/about/index.html</loc>
+    <loc>http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/</loc>
     
-    <lastmod>2018-03-23T19:05:23.209Z</lastmod>
+    <lastmod>2018-03-27T14:46:25.301Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/03/22/Front-end-Handbook-CSS/</loc>
+    
+    <lastmod>2018-03-27T13:48:18.372Z</lastmod>
     
   </url>
   
@@ -61,13 +68,6 @@
     <loc>http://yoursite.com/2018/03/01/TypeScript-Introduction/</loc>
     
     <lastmod>2018-03-14T23:22:35.282Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/</loc>
-    
-    <lastmod>2018-03-14T23:22:29.234Z</lastmod>
     
   </url>
   

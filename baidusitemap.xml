@@ -3,6 +3,27 @@
 
 
     
+    
+  <url>
+    <loc>http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/</loc>
+    <lastmod>2018-03-27T14:46:25.301Z</lastmod>
+    <data>
+        <display>
+        <title>Front-end Handbook JavaScript</title>
+        <pubTime>2018-03-01T19:41:49.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://yoursite.com/2018/03/22/Front-end-Handbook-CSS/</loc>
     <lastmod>2018-03-27T13:48:18.372Z</lastmod>
@@ -22,7 +43,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://yoursite.com/2018/03/22/Closures-in-JavaScript/</loc>
@@ -169,26 +189,6 @@
         <tag>JavaScript</tag>
          
         <tag>TypeScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/03/01/Front-end-Handbook-JavaScript/</loc>
-    <lastmod>2018-03-14T23:22:29.234Z</lastmod>
-    <data>
-        <display>
-        <title>Front-end Handbook JavaScript</title>
-        <pubTime>2018-03-01T19:41:49.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
          
          
            
