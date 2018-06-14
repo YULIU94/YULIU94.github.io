@@ -312,6 +312,205 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/14/Angular-Component-Interaction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yu Liu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yu Liu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/14/Angular-Component-Interaction/" itemprop="url">Angular - Component Interaction</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-14T10:40:43-04:00">
+                2018-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web-Development/" itemprop="url" rel="index">
+                    <span itemprop="name">Web Development</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/06/14/Angular-Component-Interaction/" class="leancloud_visitors" data-flag-title="Angular - Component Interaction">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Pass-data-from-parent-to-child-with-input-binding"><a href="#Pass-data-from-parent-to-child-with-input-binding" class="headerlink" title="Pass data from parent to child with input binding"></a>Pass data from parent to child with input binding</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">// child-component.ts</span><br><span class="line">import &#123; OnInit, Component, Input &#125; from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;child-component&apos;,</span><br><span class="line">...</span><br><span class="line">&#125;)</span><br><span class="line">export class ChildComponent implements OnInit &#123;</span><br><span class="line">@Input</span><br><span class="line">count: number = 0;</span><br><span class="line"></span><br><span class="line">ngOnInit() &#123;</span><br><span class="line">console.log(this.count);    // input value or use default value 0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">increaseNumber() &#123;</span><br><span class="line">this.count ++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">descreaseNumber() &#123;</span><br><span class="line">this.count --;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Intercept-input-property-changes-with-a-setter"><a href="#Intercept-input-property-changes-with-a-setter" class="headerlink" title="Intercept input property changes with a setter"></a>Intercept input property changes with a setter</h2><p>Use an input property setter to intercept and act upon a value from the parent.</p>
+<p>The setter of the name input property in the child <code>NameChildComponent</code> trims the whitespace from a name and replaces an empty value with default text.</p>
+<blockquote>
+<p>Child component<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component, Input &#125; from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;app-name-child&apos;,</span><br><span class="line">template: &apos;&lt;h3&gt;&quot;&#123;&#123;name&#125;&#125;&quot;&lt;/h3&gt;&apos;</span><br><span class="line">&#125;)</span><br><span class="line">export class NameChildComponent &#123;</span><br><span class="line">private _name = &apos;&apos;;</span><br><span class="line"></span><br><span class="line">@Input()</span><br><span class="line">set name(name: string) &#123;</span><br><span class="line">this._name = (name &amp;&amp; name.trim()) || &apos;&lt;no name set&gt;&apos;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">get name(): string &#123; return this._name; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Parent component<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component &#125; from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;app-name-parent&apos;,</span><br><span class="line">template: `</span><br><span class="line">&lt;h2&gt;Master controls &#123;&#123;names.length&#125;&#125; names&lt;/h2&gt;</span><br><span class="line">&lt;app-name-child *ngFor=&quot;let name of names&quot; [name]=&quot;name&quot;&gt;&lt;/app-name-child&gt;</span><br><span class="line">`</span><br><span class="line">&#125;)</span><br><span class="line">export class NameParentComponent &#123;</span><br><span class="line">// Displays &apos;Mr. IQ&apos;, &apos;&lt;no name set&gt;&apos;, &apos;Bombasto&apos;</span><br><span class="line">names = [&apos;Mr. IQ&apos;, &apos;   &apos;, &apos;  Bombasto  &apos;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="Intercept-input-property-changes-with-ngOnChanges"><a href="#Intercept-input-property-changes-with-ngOnChanges" class="headerlink" title="Intercept input property changes with ngOnChanges()"></a>Intercept input property changes with <code>ngOnChanges()</code></h2><p>Detect and act upon changes to input property values with the <code>ngOnChanges()</code> method of the <code>OnChanges</code> lifecycle hook interface.</p>
+<p>This <code>VersionChildComponent</code> detects changes to the <code>major</code> and <code>minor</code> input properties and composes a log message reporting these changes:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component, Input, OnChanges, SimpleChange &#125; from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;app-version-child&apos;,</span><br><span class="line">template: `</span><br><span class="line">&lt;h3&gt;Version &#123;&#123;major&#125;&#125;.&#123;&#123;minor&#125;&#125;&lt;/h3&gt;</span><br><span class="line">&lt;h4&gt;Change log:&lt;/h4&gt;</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">&lt;li *ngFor=&quot;let change of changeLog&quot;&gt;&#123;&#123;change&#125;&#125;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">`</span><br><span class="line">&#125;)</span><br><span class="line">export class VersionChildComponent implements OnChanges &#123;</span><br><span class="line">@Input() major: number;</span><br><span class="line">@Input() minor: number;</span><br><span class="line">changeLog: string[] = [];</span><br><span class="line"></span><br><span class="line">ngOnChanges(changes: &#123;[propKey: string]: SimpleChange&#125;) &#123;</span><br><span class="line">let log: string[] = [];</span><br><span class="line">for (let propName in changes) &#123;</span><br><span class="line">let changedProp = changes[propName];</span><br><span class="line">let to = JSON.stringify(changedProp.currentValue);</span><br><span class="line">if (changedProp.isFirstChange()) &#123;</span><br><span class="line">log.push(`Initial value of $&#123;propName&#125; set to $&#123;to&#125;`);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">let from = JSON.stringify(changedProp.previousValue);</span><br><span class="line">log.push(`$&#123;propName&#125; changed from $&#123;from&#125; to $&#123;to&#125;`);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">this.changeLog.push(log.join(&apos;, &apos;));</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The `VersionParentComponent supplies the minor and major values and binds buttons to methods that change them.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component &#125; from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;app-version-parent&apos;,</span><br><span class="line">template: `</span><br><span class="line">&lt;h2&gt;Source code version&lt;/h2&gt;</span><br><span class="line">&lt;button (click)=&quot;newMinor()&quot;&gt;New minor version&lt;/button&gt;</span><br><span class="line">&lt;button (click)=&quot;newMajor()&quot;&gt;New major version&lt;/button&gt;</span><br><span class="line">&lt;app-version-child [major]=&quot;major&quot; [minor]=&quot;minor&quot;&gt;&lt;/app-version-child&gt;</span><br><span class="line">`</span><br><span class="line">&#125;)</span><br><span class="line">export class VersionParentComponent &#123;</span><br><span class="line">major = 1;</span><br><span class="line">minor = 23;</span><br><span class="line"></span><br><span class="line">newMinor() &#123;</span><br><span class="line">this.minor++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">newMajor() &#123;</span><br><span class="line">this.major++;</span><br><span class="line">this.minor = 0;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Parent-listens-for-child-event"><a href="#Parent-listens-for-child-event" class="headerlink" title="Parent listens for child event"></a>Parent listens for child event</h2><p>The child component exposes an <code>EventEmitter</code> property with which it <code>emits</code> events when something happens. The parent binds to that event property and reacts to those events.</p>
+<p>The child’s <code>EventEmitter</code> property is an output property, typically adorned with an <code>@Output</code> decoration as seen in this <code>VoterComponent</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component, EventEmitter, Input, Output &#125; from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;app-voter&apos;,</span><br><span class="line">template: `</span><br><span class="line">&lt;h4&gt;&#123;&#123;name&#125;&#125;&lt;/h4&gt;</span><br><span class="line">&lt;button (click)=&quot;vote(true)&quot;  [disabled]=&quot;didVote&quot;&gt;Agree&lt;/button&gt;</span><br><span class="line">&lt;button (click)=&quot;vote(false)&quot; [disabled]=&quot;didVote&quot;&gt;Disagree&lt;/button&gt;</span><br><span class="line">`</span><br><span class="line">&#125;)</span><br><span class="line">export class VoterComponent &#123;</span><br><span class="line">@Input()  name: string;</span><br><span class="line">@Output() voted = new EventEmitter&lt;boolean&gt;();</span><br><span class="line">didVote = false;</span><br><span class="line"></span><br><span class="line">vote(agreed: boolean) &#123;</span><br><span class="line">this.voted.emit(agreed);</span><br><span class="line">this.didVote = true;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The parent <code>VoteTakerComponent</code> binds an event handler called <code>onVoted()</code> that responds to the child event payload <code>$event</code> and updates a counter.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component &#125;      from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;app-vote-taker&apos;,</span><br><span class="line">template: `</span><br><span class="line">&lt;h2&gt;Should mankind colonize the Universe?&lt;/h2&gt;</span><br><span class="line">&lt;h3&gt;Agree: &#123;&#123;agreed&#125;&#125;, Disagree: &#123;&#123;disagreed&#125;&#125;&lt;/h3&gt;</span><br><span class="line">&lt;app-voter *ngFor=&quot;let voter of voters&quot;</span><br><span class="line">[name]=&quot;voter&quot;</span><br><span class="line">(voted)=&quot;onVoted($event)&quot;&gt;</span><br><span class="line">&lt;/app-voter&gt;</span><br><span class="line">`</span><br><span class="line">&#125;)</span><br><span class="line">export class VoteTakerComponent &#123;</span><br><span class="line">agreed = 0;</span><br><span class="line">disagreed = 0;</span><br><span class="line">voters = [&apos;Mr. IQ&apos;, &apos;Ms. Universe&apos;, &apos;Bombasto&apos;];</span><br><span class="line"></span><br><span class="line">onVoted(agreed: boolean) &#123;</span><br><span class="line">agreed ? this.agreed++ : this.disagreed++;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Parent-interacts-with-child-via-local-variable"><a href="#Parent-interacts-with-child-via-local-variable" class="headerlink" title="Parent interacts with child via local variable"></a>Parent interacts with child via local variable</h2><p>A parent component cannot use data binding to read child properties or invoke child methods. You can do both by creating a template reference variable for the child element and then reference that variable within the parent template as seen in the following example.</p>
+<p>The following is a child <code>CountdownTimerComponent</code> that repeatedly counts down to zero and launches a rocket. It has <code>start</code> and <code>stop</code> methods that control the clock and it displays a countdown status message in its own template.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component, OnDestroy, OnInit &#125; from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;app-countdown-timer&apos;,</span><br><span class="line">template: &apos;&lt;p&gt;&#123;&#123;message&#125;&#125;&lt;/p&gt;&apos;</span><br><span class="line">&#125;)</span><br><span class="line">export class CountdownTimerComponent implements OnInit, OnDestroy &#123;</span><br><span class="line"></span><br><span class="line">intervalId = 0;</span><br><span class="line">message = &apos;&apos;;</span><br><span class="line">seconds = 11;</span><br><span class="line"></span><br><span class="line">clearTimer() &#123; clearInterval(this.intervalId); &#125;</span><br><span class="line"></span><br><span class="line">ngOnInit()    &#123; this.start(); &#125;</span><br><span class="line">ngOnDestroy() &#123; this.clearTimer(); &#125;</span><br><span class="line"></span><br><span class="line">start() &#123; this.countDown(); &#125;</span><br><span class="line">stop()  &#123;</span><br><span class="line">this.clearTimer();</span><br><span class="line">this.message = `Holding at T-$&#123;this.seconds&#125; seconds`;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private countDown() &#123;</span><br><span class="line">this.clearTimer();</span><br><span class="line">this.intervalId = window.setInterval(() =&gt; &#123;</span><br><span class="line">this.seconds -= 1;</span><br><span class="line">if (this.seconds === 0) &#123;</span><br><span class="line">this.message = &apos;Blast off!&apos;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">if (this.seconds &lt; 0) &#123; this.seconds = 10; &#125; // reset</span><br><span class="line">this.message = `T-$&#123;this.seconds&#125; seconds and counting`;</span><br><span class="line">&#125;</span><br><span class="line">&#125;, 1000);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The <code>CountdownLocalVarParentComponent</code> that hosts the timer component is as follows:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component &#125;                from &apos;@angular/core&apos;;</span><br><span class="line">import &#123; CountdownTimerComponent &#125;  from &apos;./countdown-timer.component&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;app-countdown-parent-lv&apos;,</span><br><span class="line">template: `</span><br><span class="line">&lt;h3&gt;Countdown to Liftoff (via local variable)&lt;/h3&gt;</span><br><span class="line">&lt;button (click)=&quot;timer.start()&quot;&gt;Start&lt;/button&gt;</span><br><span class="line">&lt;button (click)=&quot;timer.stop()&quot;&gt;Stop&lt;/button&gt;</span><br><span class="line">&lt;div class=&quot;seconds&quot;&gt;&#123;&#123;timer.seconds&#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;app-countdown-timer #timer&gt;&lt;/app-countdown-timer&gt;</span><br><span class="line">`,</span><br><span class="line">styleUrls: [&apos;../assets/demo.css&apos;]</span><br><span class="line">&#125;)</span><br><span class="line">export class CountdownLocalVarParentComponent &#123; &#125;</span><br></pre></td></tr></table></figure>
+<p>The parent component cannot data bind to the child’s <code>start</code> and <code>stop</code> methods nor to its <code>seconds</code> property.</p>
+<p>You can place a local variable, <code>#timer</code>, on the tag <code>&lt;countdown-timer&gt;</code> representing the child component. That gives you a reference to the child component and the ability to access any of its properties or methods from within the parent template.</p>
+<h2 id="Parent-calls-an-ViewChild"><a href="#Parent-calls-an-ViewChild" class="headerlink" title="Parent calls an @ViewChild()"></a>Parent calls an @ViewChild()</h2><p>The local variable approach is simple and easy. But it is limited because the parent-child wiring must be done entirely within the parent template. The parent component itself has no access to the child.</p>
+<p>You can’t use the local variable technique if an instance of the parent component class must read or write child component values or must call child component methods.</p>
+<p>When the parent component class requires that kind of access, inject the child component into the parent as a ViewChild.</p>
+<p>The following example illustrates this technique with the same <code>Countdown Timer</code> example. Neither its appearance nor its behavior will change. The child <code>CountdownTimerComponent</code> is the same as well.</p>
+<p>Here is the parent, <code>CountdownViewChildParentComponent</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import &#123; AfterViewInit, ViewChild &#125; from &apos;@angular/core&apos;;</span><br><span class="line">import &#123; Component &#125;                from &apos;@angular/core&apos;;</span><br><span class="line">import &#123; CountdownTimerComponent &#125;  from &apos;./countdown-timer.component&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;app-countdown-parent-vc&apos;,</span><br><span class="line">template: `</span><br><span class="line">&lt;h3&gt;Countdown to Liftoff (via ViewChild)&lt;/h3&gt;</span><br><span class="line">&lt;button (click)=&quot;start()&quot;&gt;Start&lt;/button&gt;</span><br><span class="line">&lt;button (click)=&quot;stop()&quot;&gt;Stop&lt;/button&gt;</span><br><span class="line">&lt;div class=&quot;seconds&quot;&gt;&#123;&#123; seconds() &#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;app-countdown-timer&gt;&lt;/app-countdown-timer&gt;</span><br><span class="line">`,</span><br><span class="line">styleUrls: [&apos;../assets/demo.css&apos;]</span><br><span class="line">&#125;)</span><br><span class="line">export class CountdownViewChildParentComponent implements AfterViewInit &#123;</span><br><span class="line"></span><br><span class="line">@ViewChild(CountdownTimerComponent)</span><br><span class="line">private timerComponent: CountdownTimerComponent;</span><br><span class="line"></span><br><span class="line">seconds() &#123; return 0; &#125;</span><br><span class="line"></span><br><span class="line">ngAfterViewInit() &#123;</span><br><span class="line">// Redefine `seconds()` to get from the `CountdownTimerComponent.seconds` ...</span><br><span class="line">// but wait a tick first to avoid one-time devMode</span><br><span class="line">// unidirectional-data-flow-violation error</span><br><span class="line">setTimeout(() =&gt; this.seconds = () =&gt; this.timerComponent.seconds, 0);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">start() &#123; this.timerComponent.start(); &#125;</span><br><span class="line">stop() &#123; this.timerComponent.stop(); &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>It takes a bit more work to get the child view into the parent component class.</p>
+<p>First, you have to import references to the <code>ViewChild</code> decorator and the <code>AfterViewInit</code> lifecycle hook.</p>
+<p>Next, inject the child <code>CountdownTimerComponent</code> into the private <code>timerComponent</code> property via the <code>@ViewChild</code> property decoration.</p>
+<p>The <code>#timer</code> local variable is gone from the component metadata. Instead, bind the buttons to the parent component’s own start and stop methods and present the ticking seconds in an interpolation around the parent component’s seconds method.</p>
+<p>These methods access the injected timer component directly.</p>
+<p>The <code>ngAfterViewInit()</code> lifecycle hook is an important wrinkle. The timer component isn’t available until after Angular displays the parent view. So it displays 0 seconds initially.</p>
+<p>Then Angular calls the <code>ngAfterViewInit</code> lifecycle hook at which time it is too late to update the parent view’s display of the countdown seconds. Angular’s unidirectional data flow rule prevents updating the parent view’s in the same cycle. The app has to wait one turn before it can display the seconds.</p>
+<p>Use <code>setTimeout()</code> to wait one tick and then revise the seconds() method so that it takes future values from the timer component.</p>
+<h2 id="Parent-and-children-communicate-via-a-service"><a href="#Parent-and-children-communicate-via-a-service" class="headerlink" title="Parent and children communicate via a service"></a>Parent and children communicate via a service</h2><p>A parent component and its children share a service whose interface enables bi-directional communication within the family.</p>
+<p>The scope of the service instance is the parent component and its children. Components outside this component subtree have no access to the service or their communications.</p>
+<p>This <code>MissionService</code> connects the <code>MissionControlComponent</code> to multiple <code>AstronautComponent</code> children.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Injectable &#125; from &apos;@angular/core&apos;;</span><br><span class="line">import &#123; Subject &#125;    from &apos;rxjs&apos;;</span><br><span class="line"></span><br><span class="line">@Injectable()</span><br><span class="line">export class MissionService &#123;</span><br><span class="line"></span><br><span class="line">// Observable string sources</span><br><span class="line">private missionAnnouncedSource = new Subject&lt;string&gt;();</span><br><span class="line">private missionConfirmedSource = new Subject&lt;string&gt;();</span><br><span class="line"></span><br><span class="line">// Observable string streams</span><br><span class="line">missionAnnounced$ = this.missionAnnouncedSource.asObservable();</span><br><span class="line">missionConfirmed$ = this.missionConfirmedSource.asObservable();</span><br><span class="line"></span><br><span class="line">// Service message commands</span><br><span class="line">announceMission(mission: string) &#123;</span><br><span class="line">this.missionAnnouncedSource.next(mission);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">confirmMission(astronaut: string) &#123;</span><br><span class="line">this.missionConfirmedSource.next(astronaut);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The <code>MissionControlComponent</code> both provides the instance of the service that it shares with its children (through the providers metadata array) and injects that instance into itself through its constructor:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component &#125;          from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">import &#123; MissionService &#125;     from &apos;./mission.service&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;app-mission-control&apos;,</span><br><span class="line">template: `</span><br><span class="line">&lt;h2&gt;Mission Control&lt;/h2&gt;</span><br><span class="line">&lt;button (click)=&quot;announce()&quot;&gt;Announce mission&lt;/button&gt;</span><br><span class="line">&lt;app-astronaut *ngFor=&quot;let astronaut of astronauts&quot;</span><br><span class="line">[astronaut]=&quot;astronaut&quot;&gt;</span><br><span class="line">&lt;/app-astronaut&gt;</span><br><span class="line">&lt;h3&gt;History&lt;/h3&gt;</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">&lt;li *ngFor=&quot;let event of history&quot;&gt;&#123;&#123;event&#125;&#125;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">`,</span><br><span class="line">providers: [MissionService]</span><br><span class="line">&#125;)</span><br><span class="line">export class MissionControlComponent &#123;</span><br><span class="line">astronauts = [&apos;Lovell&apos;, &apos;Swigert&apos;, &apos;Haise&apos;];</span><br><span class="line">history: string[] = [];</span><br><span class="line">missions = [&apos;Fly to the moon!&apos;,</span><br><span class="line">&apos;Fly to mars!&apos;,</span><br><span class="line">&apos;Fly to Vegas!&apos;];</span><br><span class="line">nextMission = 0;</span><br><span class="line"></span><br><span class="line">constructor(private missionService: MissionService) &#123;</span><br><span class="line">missionService.missionConfirmed$.subscribe(</span><br><span class="line">astronaut =&gt; &#123;</span><br><span class="line">this.history.push(`$&#123;astronaut&#125; confirmed the mission`);</span><br><span class="line">&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">announce() &#123;</span><br><span class="line">let mission = this.missions[this.nextMission++];</span><br><span class="line">this.missionService.announceMission(mission);</span><br><span class="line">this.history.push(`Mission &quot;$&#123;mission&#125;&quot; announced`);</span><br><span class="line">if (this.nextMission &gt;= this.missions.length) &#123; this.nextMission = 0; &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The <code>AstronautComponent</code> also injects the service in its constructor. Each <code>AstronautComponent</code> is a child of the <code>MissionControlComponent</code> and therefore receives its parent’s service instance:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component, Input, OnDestroy &#125; from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">import &#123; MissionService &#125; from &apos;./mission.service&apos;;</span><br><span class="line">import &#123; Subscription &#125;   from &apos;rxjs&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;app-astronaut&apos;,</span><br><span class="line">template: `</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&#123;&#123;astronaut&#125;&#125;: &lt;strong&gt;&#123;&#123;mission&#125;&#125;&lt;/strong&gt;</span><br><span class="line">&lt;button</span><br><span class="line">(click)=&quot;confirm()&quot;</span><br><span class="line">[disabled]=&quot;!announced || confirmed&quot;&gt;</span><br><span class="line">Confirm</span><br><span class="line">&lt;/button&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">`</span><br><span class="line">&#125;)</span><br><span class="line">export class AstronautComponent implements OnDestroy &#123;</span><br><span class="line">@Input() astronaut: string;</span><br><span class="line">mission = &apos;&lt;no mission announced&gt;&apos;;</span><br><span class="line">confirmed = false;</span><br><span class="line">announced = false;</span><br><span class="line">subscription: Subscription;</span><br><span class="line"></span><br><span class="line">constructor(private missionService: MissionService) &#123;</span><br><span class="line">this.subscription = missionService.missionAnnounced$.subscribe(</span><br><span class="line">mission =&gt; &#123;</span><br><span class="line">this.mission = mission;</span><br><span class="line">this.announced = true;</span><br><span class="line">this.confirmed = false;</span><br><span class="line">&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">confirm() &#123;</span><br><span class="line">this.confirmed = true;</span><br><span class="line">this.missionService.confirmMission(this.astronaut);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ngOnDestroy() &#123;</span><br><span class="line">// prevent memory leak when component destroyed</span><br><span class="line">this.subscription.unsubscribe();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="https://angular.io/guide/component-interaction" target="_blank" rel="noopener">Component Interaction</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/22/Front-end-Handbook-CSS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1793,163 +1992,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Docker-Tutorial-Define-a-container-with-Dockerfile/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yu Liu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yu Liu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/16/Docker-Tutorial-Define-a-container-with-Dockerfile/" itemprop="url">Docker Tutorial(2) -- Define a container with Dockerfile</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-16T16:29:26-05:00">
-                2018-02-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/02/16/Docker-Tutorial-Define-a-container-with-Dockerfile/" class="leancloud_visitors" data-flag-title="Docker Tutorial(2) -- Define a container with Dockerfile">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Define-a-container-with-Dockerfile"><a href="#Define-a-container-with-Dockerfile" class="headerlink" title="Define a container with Dockerfile"></a>Define a container with Dockerfile</h2><p>Create an empty directory. Change directories (cd) into the new directory, create a file called Dockerfile, copy-and-paste the following content into that file, and save it. Take note of the comments that explain each statement in your new Dockerfile.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/16/Docker-Tutorial-Define-a-container-with-Dockerfile/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2000,7 +2042,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2022,7 +2064,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
