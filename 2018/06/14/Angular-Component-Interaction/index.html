@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Pass data from parent to child with input binding1234567891011121314151617181920212223// child-component.tsimport &amp;#123; OnInit, Component, Input &amp;#125; from &amp;apos;@angular/core&amp;apos;;@Component(&amp;#123">
+<meta name="description" content="Angular apps are built as a hierarchy of components. When you build applications you will need to communicate between components, while services are a good way to share data between components, there">
 <meta name="keywords" content="Angular">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Angular - Component Interaction">
 <meta property="og:url" content="http://yoursite.com/2018/06/14/Angular-Component-Interaction/index.html">
 <meta property="og:site_name" content="Yu Liu">
-<meta property="og:description" content="Pass data from parent to child with input binding1234567891011121314151617181920212223// child-component.tsimport &amp;#123; OnInit, Component, Input &amp;#125; from &amp;apos;@angular/core&amp;apos;;@Component(&amp;#123">
+<meta property="og:description" content="Angular apps are built as a hierarchy of components. When you build applications you will need to communicate between components, while services are a good way to share data between components, there">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-14T16:06:00.517Z">
+<meta property="og:updated_time" content="2018-06-14T18:10:49.849Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular - Component Interaction">
-<meta name="twitter:description" content="Pass data from parent to child with input binding1234567891011121314151617181920212223// child-component.tsimport &amp;#123; OnInit, Component, Input &amp;#125; from &amp;apos;@angular/core&amp;apos;;@Component(&amp;#123">
+<meta name="twitter:description" content="Angular apps are built as a hierarchy of components. When you build applications you will need to communicate between components, while services are a good way to share data between components, there">
 
 
 
@@ -416,7 +416,9 @@
       
 
       
-        <h2 id="Pass-data-from-parent-to-child-with-input-binding"><a href="#Pass-data-from-parent-to-child-with-input-binding" class="headerlink" title="Pass data from parent to child with input binding"></a>Pass data from parent to child with input binding</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">// child-component.ts</span><br><span class="line">import &#123; OnInit, Component, Input &#125; from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;child-component&apos;,</span><br><span class="line">...</span><br><span class="line">&#125;)</span><br><span class="line">export class ChildComponent implements OnInit &#123;</span><br><span class="line">@Input</span><br><span class="line">count: number = 0;</span><br><span class="line"></span><br><span class="line">ngOnInit() &#123;</span><br><span class="line">console.log(this.count);    // input value or use default value 0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">increaseNumber() &#123;</span><br><span class="line">this.count ++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">descreaseNumber() &#123;</span><br><span class="line">this.count --;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>Angular apps are built as a hierarchy of components. When you build applications you will need to communicate between components, while services are a good way to share data between components, there are specific methods to carry out parent-child component communication.</p>
+<a id="more"></a>
+<h2 id="Pass-data-from-parent-to-child-with-input-binding"><a href="#Pass-data-from-parent-to-child-with-input-binding" class="headerlink" title="Pass data from parent to child with input binding"></a>Pass data from parent to child with input binding</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">// child-component.ts</span><br><span class="line">import &#123; OnInit, Component, Input &#125; from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">selector: &apos;child-component&apos;,</span><br><span class="line">...</span><br><span class="line">&#125;)</span><br><span class="line">export class ChildComponent implements OnInit &#123;</span><br><span class="line">@Input</span><br><span class="line">count: number = 0;</span><br><span class="line"></span><br><span class="line">ngOnInit() &#123;</span><br><span class="line">console.log(this.count);    // input value or use default value 0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">increaseNumber() &#123;</span><br><span class="line">this.count ++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">descreaseNumber() &#123;</span><br><span class="line">this.count --;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Intercept-input-property-changes-with-a-setter"><a href="#Intercept-input-property-changes-with-a-setter" class="headerlink" title="Intercept input property changes with a setter"></a>Intercept input property changes with a setter</h2><p>Use an input property setter to intercept and act upon a value from the parent.</p>
 <p>The setter of the name input property in the child <code>NameChildComponent</code> trims the whitespace from a name and replaces an empty value with default text.</p>
 <blockquote>
@@ -505,6 +507,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/06/14/Angular-Lifecycle-Hooks/" rel="prev" title="Angular - Lifecycle Hooks">
+                Angular - Lifecycle Hooks <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -585,7 +591,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

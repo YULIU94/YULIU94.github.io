@@ -5,11 +5,31 @@
     
   <url>
     <loc>http://yoursite.com/2018/06/14/Angular-Component-Interaction/</loc>
-    <lastmod>2018-06-14T16:06:00.517Z</lastmod>
+    <lastmod>2018-06-14T18:10:49.849Z</lastmod>
     <data>
         <display>
         <title>Angular - Component Interaction</title>
         <pubTime>2018-06-14T14:40:43.000Z</pubTime>
+        
+        <tag>Angular</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web Development" url="http://yoursite.com/categories/Web-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/06/14/Angular-Lifecycle-Hooks/</loc>
+    <lastmod>2018-06-14T18:08:51.887Z</lastmod>
+    <data>
+        <display>
+        <title>Angular - Lifecycle Hooks</title>
+        <pubTime>2018-06-14T18:07:50.000Z</pubTime>
         
         <tag>Angular</tag>
          
@@ -94,9 +114,9 @@
         <title>AJAX introduction</title>
         <pubTime>2018-03-21T14:53:56.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>AJAX</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>JQuery</tag>
          
