@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/09/13/Large-Scale-Parallel-Data-Processing/</loc>
+    
+    <lastmod>2018-09-14T00:07:32.619Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/06/14/Angular-Component-Interaction/</loc>
     
     <lastmod>2018-06-14T18:10:49.849Z</lastmod>
@@ -11,7 +18,7 @@
   <url>
     <loc>http://yoursite.com/2018/06/14/Angular-Lifecycle-Hooks/</loc>
     
-    <lastmod>2018-06-14T18:08:51.887Z</lastmod>
+    <lastmod>2018-06-14T18:08:51.888Z</lastmod>
     
   </url>
   
@@ -32,7 +39,7 @@
   <url>
     <loc>http://yoursite.com/2018/03/22/Front-end-Handbook-CSS/</loc>
     
-    <lastmod>2018-03-27T13:48:18.372Z</lastmod>
+    <lastmod>2018-03-27T13:48:18.373Z</lastmod>
     
   </url>
   
@@ -60,7 +67,7 @@
   <url>
     <loc>http://yoursite.com/2018/03/09/Front-end-Handbook-HTML/</loc>
     
-    <lastmod>2018-03-19T20:15:23.790Z</lastmod>
+    <lastmod>2018-03-19T20:15:23.791Z</lastmod>
     
   </url>
   
@@ -81,7 +88,7 @@
   <url>
     <loc>http://yoursite.com/2018/03/01/TypeScript-Introduction/</loc>
     
-    <lastmod>2018-03-14T23:22:35.282Z</lastmod>
+    <lastmod>2018-03-14T23:22:35.283Z</lastmod>
     
   </url>
   
@@ -102,7 +109,7 @@
   <url>
     <loc>http://yoursite.com/2018/01/28/ECMAScript-6-2/</loc>
     
-    <lastmod>2018-03-14T23:21:48.557Z</lastmod>
+    <lastmod>2018-03-14T23:21:48.558Z</lastmod>
     
   </url>
   
@@ -137,7 +144,7 @@
   <url>
     <loc>http://yoursite.com/2018/02/15/Docker-Tutorial/</loc>
     
-    <lastmod>2018-02-20T22:47:59.716Z</lastmod>
+    <lastmod>2018-02-20T22:47:59.717Z</lastmod>
     
   </url>
   
@@ -186,14 +193,14 @@
   <url>
     <loc>http://yoursite.com/2018/01/27/hello-world/</loc>
     
-    <lastmod>2018-02-01T16:44:19.286Z</lastmod>
+    <lastmod>2018-02-01T16:44:19.287Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/index.html</loc>
     
-    <lastmod>2018-01-29T03:43:03.448Z</lastmod>
+    <lastmod>2018-01-29T03:43:03.449Z</lastmod>
     
   </url>
   

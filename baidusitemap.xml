@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/09/13/Large-Scale-Parallel-Data-Processing/</loc>
+    <lastmod>2018-09-14T00:07:32.619Z</lastmod>
+    <data>
+        <display>
+        <title>Large-Scale Parallel Data Processing</title>
+        <pubTime>2018-09-14T00:03:53.000Z</pubTime>
+        
+        <tag>Mapreduce</tag>
+         
+        <tag>Big Data</tag>
+         
+        <tag>Cloud</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="http://yoursite.com/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/06/14/Angular-Component-Interaction/</loc>
     <lastmod>2018-06-14T18:10:49.849Z</lastmod>
     <data>
@@ -25,7 +49,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/06/14/Angular-Lifecycle-Hooks/</loc>
-    <lastmod>2018-06-14T18:08:51.887Z</lastmod>
+    <lastmod>2018-06-14T18:08:51.888Z</lastmod>
     <data>
         <display>
         <title>Angular - Lifecycle Hooks</title>
@@ -66,7 +90,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/03/22/Front-end-Handbook-CSS/</loc>
-    <lastmod>2018-03-27T13:48:18.372Z</lastmod>
+    <lastmod>2018-03-27T13:48:18.373Z</lastmod>
     <data>
         <display>
         <title>Front-end Handbook CSS</title>
@@ -158,7 +182,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/03/09/Front-end-Handbook-HTML/</loc>
-    <lastmod>2018-03-19T20:15:23.790Z</lastmod>
+    <lastmod>2018-03-19T20:15:23.791Z</lastmod>
     <data>
         <display>
         <title>Front-end Handbook HTML</title>
@@ -220,7 +244,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/03/01/TypeScript-Introduction/</loc>
-    <lastmod>2018-03-14T23:22:35.282Z</lastmod>
+    <lastmod>2018-03-14T23:22:35.283Z</lastmod>
     <data>
         <display>
         <title>TypeScript Introduction</title>
@@ -282,7 +306,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/01/28/ECMAScript-6-2/</loc>
-    <lastmod>2018-03-14T23:21:48.557Z</lastmod>
+    <lastmod>2018-03-14T23:21:48.558Z</lastmod>
     <data>
         <display>
         <title>ECMAScript 6 features (2)</title>
@@ -388,7 +412,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/02/15/Docker-Tutorial/</loc>
-    <lastmod>2018-02-20T22:47:59.716Z</lastmod>
+    <lastmod>2018-02-20T22:47:59.717Z</lastmod>
     <data>
         <display>
         <title>Docker Tutorial (1) -- Introduction</title>
@@ -527,7 +551,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/01/27/hello-world/</loc>
-    <lastmod>2018-02-01T16:44:19.286Z</lastmod>
+    <lastmod>2018-02-01T16:44:19.287Z</lastmod>
     <data>
         <display>
         <title>Hello world</title>
