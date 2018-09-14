@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Yu Liu">
 <meta property="og:description" content="What are speedup and scaleup, and how do we measure them for a given application?Scaleup is the ability to sustain the same performance levels (response time) when both workload and resources increase">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-14T01:33:11.825Z">
+<meta property="og:updated_time" content="2018-09-14T01:38:59.013Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Large-Scale Parallel Data Processing Basics">
 <meta name="twitter:description" content="What are speedup and scaleup, and how do we measure them for a given application?Scaleup is the ability to sustain the same performance levels (response time) when both workload and resources increase">
@@ -428,6 +428,7 @@
 </blockquote>
 <p><em>Note: to determine scaleup, the time to work on the job is fixed!</em></p>
 <p>On n identical machines, the theoretically best possible scaleup is n.</p>
+<a id="more"></a>
 <h2 id="Is-load-balance-a-measure-of-good-parallelization"><a href="#Is-load-balance-a-measure-of-good-parallelization" class="headerlink" title="Is load balance a measure of good parallelization?"></a>Is load balance a measure of good parallelization?</h2><p><strong>load imbalance</strong> = $\frac{load \;on \;the \;most \;loaded \;machine}{avg \;load \;over \;all \;machines}$</p>
 <p>which is a secondary metric. When the total remains same, smaller as it as better.</p>
 <h2 id="Will-adding-more-processors-always-speed-up-computation-Why-or-why-not"><a href="#Will-adding-more-processors-always-speed-up-computation-Why-or-why-not" class="headerlink" title="Will adding more processors always speed up computation? Why or why not?"></a>Will adding more processors always speed up computation? Why or why not?</h2><p>No, adding too many processors might lead to cost of resources for communication and scheduling.</p>

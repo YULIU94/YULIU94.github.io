@@ -415,8 +415,7 @@
 
       
         
-          
-            <h2 id="What-are-speedup-and-scaleup-and-how-do-we-measure-them-for-a-given-application"><a href="#What-are-speedup-and-scaleup-and-how-do-we-measure-them-for-a-given-application" class="headerlink" title="What are speedup and scaleup, and how do we measure them for a given application?"></a>What are speedup and scaleup, and how do we measure them for a given application?</h2><p><strong>Scaleup</strong> is the ability to sustain the same performance levels (response time) when both workload and resources increase proportionally:</p>
+          <h2 id="What-are-speedup-and-scaleup-and-how-do-we-measure-them-for-a-given-application"><a href="#What-are-speedup-and-scaleup-and-how-do-we-measure-them-for-a-given-application" class="headerlink" title="What are speedup and scaleup, and how do we measure them for a given application?"></a>What are speedup and scaleup, and how do we measure them for a given application?</h2><p><strong>Scaleup</strong> is the ability to sustain the same performance levels (response time) when both workload and resources increase proportionally:</p>
 <blockquote>
 <p>Speedup = sequentialTime / parallelTime</p>
 </blockquote>
@@ -428,35 +427,13 @@
 </blockquote>
 <p><em>Note: to determine scaleup, the time to work on the job is fixed!</em></p>
 <p>On n identical machines, the theoretically best possible scaleup is n.</p>
-<h2 id="Is-load-balance-a-measure-of-good-parallelization"><a href="#Is-load-balance-a-measure-of-good-parallelization" class="headerlink" title="Is load balance a measure of good parallelization?"></a>Is load balance a measure of good parallelization?</h2><p><strong>load imbalance</strong> = $\frac{load \;on \;the \;most \;loaded \;machine}{avg \;load \;over \;all \;machines}$</p>
-<p>which is a secondary metric. When the total remains same, smaller as it as better.</p>
-<h2 id="Will-adding-more-processors-always-speed-up-computation-Why-or-why-not"><a href="#Will-adding-more-processors-always-speed-up-computation-Why-or-why-not" class="headerlink" title="Will adding more processors always speed up computation? Why or why not?"></a>Will adding more processors always speed up computation? Why or why not?</h2><p>No, adding too many processors might lead to cost of resources for communication and scheduling.</p>
-<p>Adding more compute power does not speed up computation, when data transfer to the processors is the bottleneck.</p>
-<h2 id="What-does-Amdahl’s-Law-say-Give-an-example-to-illustrate-it"><a href="#What-does-Amdahl’s-Law-say-Give-an-example-to-illustrate-it" class="headerlink" title="What does Amdahl’s Law say? Give an example to illustrate it."></a>What does Amdahl’s Law say? Give an example to illustrate it.</h2><p><strong>Amdahl’s law</strong> is a formula which gives the theoretical speedup in latency of the execution of a task at fixed workload that can be expected of a system whose resources are improved.</p>
-<p>Amdahl’s law is often used in parallel computing to predict the theoretical speedup when using multiple processors. </p>
-<p>For example, if a program needs 20 hours using a single processor core, and a particular part of the program which takes one hour to execute cannot be parallelized, while the remaining 19 hours (p = 0.95) of execution time can be parallelized, then regardless of how many processors are devoted to a parallelized execution of this program, the minimum execution time cannot be less than that critical one hour. Hence, the theoretical speedup is limited to at most 20 times (1/(1 − p) = 20). For this reason, parallel computing with many processors is useful only for highly parallelizable programs.</p>
-<p>Amdahl’s law can be formulated in the following way:</p>
-<p>$$ S_{latency}(s) = \frac{1}{(1-p)+\frac{p}{s}} $$</p>
-<p>where</p>
-<ul>
-<li>$S_{latency}$ is the theoretical speedup of the execution of the whole task;</li>
-<li>s is the speedup of the part of the task that benefits from improved system resources;</li>
-<li>p is the proportion of execution time that the part benefiting from improved resources originally occupied.</li>
-</ul>
-<p>Furthermore,</p>
-<p>$ S_{latency}(s) &lt;=  \frac{1}{1-p}$<br>equals to $\frac{1}{1-p}$ when s approaches infinity.</p>
-<h2 id="Why-is-programming-with-shared-data-structures-generally-not-considered-“scalable”"><a href="#Why-is-programming-with-shared-data-structures-generally-not-considered-“scalable”" class="headerlink" title="Why is programming with shared data structures generally not considered “scalable”?"></a>Why is programming with shared data structures generally not considered “scalable”?</h2><p>Sychronization. In order to guarantee thread security, we need to apply locks on data structure. When it’s scaling there will be lots of operations of lock/unlock, which would affect the performance and become not scalable.</p>
-<ol>
-<li>Concurrent access to shared data structures requires careful synchronization through locking. </li>
-<li>Locking reduces parallelism and increases computation cost for lock management.</li>
-<li>The more workers we use for increased parallelism, the higher the probability of locking conflicts. For this reason, the shared-memory programming approach is generally not considered highly scalable.</li>
-</ol>
-<h2 id="Show-an-example-of-a-“concurrency-bug”-where-concurrent-access-to-a-shared-data-structure-causes-inconsistency"><a href="#Show-an-example-of-a-“concurrency-bug”-where-concurrent-access-to-a-shared-data-structure-causes-inconsistency" class="headerlink" title="Show an example of a “concurrency bug” where concurrent access to a shared data structure causes inconsistency."></a>Show an example of a “concurrency bug” where concurrent access to a shared data structure causes inconsistency.</h2><p>Concurrency bugs usually happen, when two or more things occur at the same time in a place which wasn’t designed to work in a concurrent environment.</p>
-<p>Probably the most common type of concurrency problem that everyone who starts working with concurrent programming stumbles upon is a race condition. It usually manifests itself as an unpredictable and particularly difficult to debug erroneous behavior, which happens because each of the workers supposes that no other workers which work with the same resources exist at that time. What happens is some worker might make changes that other workers aren’t aware of and as a result, invalid behavior might occur from one of the workers.</p>
-<h2 id="Why-is-it-beneficial-to-have-data-partitioned-across-many-machines-before-the-computation-starts"><a href="#Why-is-it-beneficial-to-have-data-partitioned-across-many-machines-before-the-computation-starts" class="headerlink" title="Why is it beneficial to have data partitioned across many machines before the computation starts?"></a>Why is it beneficial to have data partitioned across many machines before the computation starts?</h2><p>Could explain it use the idea of divide and conquer. After partition data to machines, the program could be run simultaneously on machines, which could accelerate computation.</p>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="https://en.wikipedia.org/wiki/Amdahl%27s_law" target="_blank" rel="noopener">Amdahl’s law</a><br><a href="https://www.quora.com/What-are-concurrency-bugs" target="_blank" rel="noopener">What-are-concurrency-bugs</a></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/13/Large-Scale-Parallel-Data-Processing-Basics/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
