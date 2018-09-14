@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/09/13/Distributed-System-Services/</loc>
+    
+    <lastmod>2018-09-14T23:02:09.068Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/09/13/Large-Scale-Parallel-Data-Processing-Basics/</loc>
     
     <lastmod>2018-09-14T01:38:59.013Z</lastmod>

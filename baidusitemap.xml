@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/09/13/Distributed-System-Services/</loc>
+    <lastmod>2018-09-14T23:02:09.068Z</lastmod>
+    <data>
+        <display>
+        <title>Distributed System Services</title>
+        <pubTime>2018-09-14T01:40:12.000Z</pubTime>
+        
+        <tag>Mapreduce</tag>
+         
+        <tag>Big Data</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="http://yoursite.com/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/09/13/Large-Scale-Parallel-Data-Processing-Basics/</loc>
     <lastmod>2018-09-14T01:38:59.013Z</lastmod>
     <data>
