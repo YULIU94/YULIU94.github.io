@@ -4,11 +4,33 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/09/13/Large-Scale-Parallel-Data-Processing/</loc>
-    <lastmod>2018-09-14T00:07:32.619Z</lastmod>
+    <loc>http://yoursite.com/2018/09/13/Large-Scale-Parallel-Data-Processing-Basics/</loc>
+    <lastmod>2018-09-14T01:33:11.825Z</lastmod>
     <data>
         <display>
-        <title>Large-Scale Parallel Data Processing</title>
+        <title>Large-Scale Parallel Data Processing Basics</title>
+        <pubTime>2018-09-14T00:21:20.000Z</pubTime>
+        
+        <tag>Mapreduce</tag>
+         
+        <tag>Big Data</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="http://yoursite.com/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/09/13/Large-Scale-Parallel-Data-Processing/</loc>
+    <lastmod>2018-09-14T00:20:50.480Z</lastmod>
+    <data>
+        <display>
+        <title>Large-Scale Parallel Data Processing Overview</title>
         <pubTime>2018-09-14T00:03:53.000Z</pubTime>
         
         <tag>Mapreduce</tag>
