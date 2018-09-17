@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/09/17/Getting-Started-with-Amazon-EC2-Linux-Instances/</loc>
+    
+    <lastmod>2018-09-17T20:50:42.773Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/09/13/Distributed-System-Services/</loc>
     
     <lastmod>2018-09-14T23:02:09.068Z</lastmod>
