@@ -4,8 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/09/30/Association-Rules-Discovery/</loc>
+    <lastmod>2018-09-30T17:15:15.852Z</lastmod>
+    <data>
+        <display>
+        <title>Association Rules Discovery</title>
+        <pubTime>2018-09-30T16:58:49.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Data Mining" url="http://yoursite.com/categories/Data-Mining/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/09/17/Getting-Started-with-Amazon-EC2-Linux-Instances/</loc>
-    <lastmod>2018-09-17T20:50:42.773Z</lastmod>
+    <lastmod>2018-09-30T16:59:46.710Z</lastmod>
     <data>
         <display>
         <title>Getting Started with Amazon EC2 Linux Instances</title>
@@ -26,12 +44,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/09/13/Distributed-System-Services/</loc>
-    <lastmod>2018-09-14T23:02:09.068Z</lastmod>
+    <loc>http://yoursite.com/2018/09/13/Large-Scale-Parallel-Data-Processing-Basics/</loc>
+    <lastmod>2018-09-22T04:12:49.045Z</lastmod>
     <data>
         <display>
-        <title>Distributed System Services</title>
-        <pubTime>2018-09-14T01:40:12.000Z</pubTime>
+        <title>Large-Scale Parallel Data Processing Basics</title>
+        <pubTime>2018-09-14T00:21:20.000Z</pubTime>
         
         <tag>Mapreduce</tag>
          
@@ -48,12 +66,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/09/13/Large-Scale-Parallel-Data-Processing-Basics/</loc>
-    <lastmod>2018-09-14T01:38:59.013Z</lastmod>
+    <loc>http://yoursite.com/2018/09/13/Distributed-System-Services/</loc>
+    <lastmod>2018-09-14T23:02:09.068Z</lastmod>
     <data>
         <display>
-        <title>Large-Scale Parallel Data Processing Basics</title>
-        <pubTime>2018-09-14T00:21:20.000Z</pubTime>
+        <title>Distributed System Services</title>
+        <pubTime>2018-09-14T01:40:12.000Z</pubTime>
         
         <tag>Mapreduce</tag>
          

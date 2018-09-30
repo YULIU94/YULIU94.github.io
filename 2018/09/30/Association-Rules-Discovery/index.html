@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="DevOps," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,22 +79,17 @@
 
 
 
-<meta name="description" content="DefinitionDevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.">
-<meta name="keywords" content="DevOps">
+<meta name="description" content="Association Rule DiscoverySupermarket shelf management – Market-basket model: Goal: Identify items that are bought together by sufficiently many customers Approach: Process the sales data collected wi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DevOps Introduction">
-<meta property="og:url" content="http://yoursite.com/2018/02/15/DevOps-Introduction/index.html">
+<meta property="og:title" content="Association Rules Discovery">
+<meta property="og:url" content="http://yoursite.com/2018/09/30/Association-Rules-Discovery/index.html">
 <meta property="og:site_name" content="Yu Liu">
-<meta property="og:description" content="DefinitionDevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.">
+<meta property="og:description" content="Association Rule DiscoverySupermarket shelf management – Market-basket model: Goal: Identify items that are bought together by sufficiently many customers Approach: Process the sales data collected wi">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://s1.ax1x.com/2018/02/16/9YHHIK.png">
-<meta property="og:image" content="https://s1.ax1x.com/2018/02/16/9Y7shD.png">
-<meta property="og:image" content="https://s1.ax1x.com/2018/02/16/9YHTVx.png">
-<meta property="og:updated_time" content="2018-03-14T20:33:53.962Z">
+<meta property="og:updated_time" content="2018-09-30T17:15:15.852Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DevOps Introduction">
-<meta name="twitter:description" content="DefinitionDevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.">
-<meta name="twitter:image" content="https://s1.ax1x.com/2018/02/16/9YHHIK.png">
+<meta name="twitter:title" content="Association Rules Discovery">
+<meta name="twitter:description" content="Association Rule DiscoverySupermarket shelf management – Market-basket model: Goal: Identify items that are bought together by sufficiently many customers Approach: Process the sales data collected wi">
 
 
 
@@ -124,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/15/DevOps-Introduction/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/30/Association-Rules-Discovery/"/>
 
 
 
 
 
-  <title>DevOps Introduction | Yu Liu</title>
+  <title>Association Rules Discovery | Yu Liu</title>
   
 
 
@@ -320,7 +315,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/15/DevOps-Introduction/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/30/Association-Rules-Discovery/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yu Liu">
@@ -337,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">DevOps Introduction</h1>
+          <h1 class="post-title" itemprop="name headline">Association Rules Discovery</h1>
         
 
         <div class="post-meta">
@@ -349,8 +344,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-15T13:47:36-05:00">
-                2018-02-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-30T12:58:49-04:00">
+                2018-09-30
               </time>
             
 
@@ -372,8 +367,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-Development/" itemprop="url" rel="index">
-                    <span itemprop="name">Software Development</span>
+                  <a href="/categories/Data-Mining/" itemprop="url" rel="index">
+                    <span itemprop="name">Data Mining</span>
                   </a>
                 </span>
 
@@ -389,7 +384,7 @@
 
           
           
-             <span id="/2018/02/15/DevOps-Introduction/" class="leancloud_visitors" data-flag-title="DevOps Introduction">
+             <span id="/2018/09/30/Association-Rules-Discovery/" class="leancloud_visitors" data-flag-title="Association Rules Discovery">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -420,61 +415,182 @@
       
 
       
-        <h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p>DevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.</p>
+        <h1 id="Association-Rule-Discovery"><a href="#Association-Rule-Discovery" class="headerlink" title="Association Rule Discovery"></a>Association Rule Discovery</h1><h2 id="Supermarket-shelf-management-–-Market-basket-model"><a href="#Supermarket-shelf-management-–-Market-basket-model" class="headerlink" title="Supermarket shelf management – Market-basket model:"></a>Supermarket shelf management – Market-basket model:</h2><ul>
+<li><strong>Goal</strong>: Identify items that are bought together by sufficiently many customers</li>
+<li><strong>Approach</strong>: Process the sales data collected with barcode scanners to find dependencies among items</li>
+<li><strong>A classic rule</strong>:</li>
+<li>If someone buys diaper and milk, then he/she is likely to buy beer </li>
+<li>Don’t be surprised if you find six-packs next to diapers!</li>
+</ul>
+<h2 id="The-Market-Basket-Model"><a href="#The-Market-Basket-Model" class="headerlink" title="The Market-Basket Model"></a>The Market-Basket Model</h2><ul>
+<li>A large set of items</li>
+<li>A large set of baskets</li>
+<li>Each basket is a small subset of items</li>
+</ul>
 <a id="more"></a>
-<h2 id="DevOps-toolchain"><a href="#DevOps-toolchain" class="headerlink" title="DevOps toolchain"></a>DevOps toolchain</h2><ol>
-<li>Code — code development and review, source code management tools, code merging</li>
-<li>Build — continuous integration tools, build status</li>
-<li>Test — continuous testing tools that provide feedback on business risks</li>
-<li>Package — artifact repository, application pre-deployment staging</li>
-<li>Release — change management, release approvals, release automation</li>
-<li>Configure — infrastructure configuration and management, Infrastructure as Code tools</li>
-<li>Monitor — applications performance monitoring, end–user experience</li>
-</ol>
-<p><img src="https://s1.ax1x.com/2018/02/16/9YHHIK.png" alt="9YHHIK.png"></p>
-<h2 id="Why-DevOps"><a href="#Why-DevOps" class="headerlink" title="Why DevOps"></a>Why DevOps</h2><p>The Water-fall model worked fine and served well for many years however it had some challenges. In the following diagram the challenges of Waterfall Model are highlighted.</p>
-<p><img src="https://s1.ax1x.com/2018/02/16/9Y7shD.png" alt="9Y7shD.png"></p>
-<p>In the above diagram you can see that both Development and Operations had challenges in the Waterfall Model.</p>
-<p>From <strong>Developers</strong> point of view there were majorly two challenges:</p>
+<h2 id="Frequent-Itemsets"><a href="#Frequent-Itemsets" class="headerlink" title="Frequent Itemsets"></a>Frequent Itemsets</h2><ul>
+<li><strong>Simplest question</strong>: Find sets of items that appear together “frequently” in baskets</li>
+<li><strong>Support for itemset I</strong>: Number of baskets containing all items in I</li>
+<li>Given a support threshold s, then sets of items that appear in at least s baskets are called <strong>frequent itemsets</strong></li>
+</ul>
+<h2 id="Association-Rules"><a href="#Association-Rules" class="headerlink" title="Association Rules"></a>Association Rules</h2><blockquote>
+<p><strong>{i1, i2,…,ik} → j</strong> means:<br>“if a basket contains all of i1,…,ik then it is likely to contain j”</p>
+</blockquote>
+<p><em>In practice there are many rules, want to find significant/interesting ones!</em></p>
+<p><strong>Confidence</strong> of this association rule is the probability of j given I = {i1,…,ik}</p>
+<p>$$conf(I→j) = \frac{support(I \cup j)}{support(I)}$$</p>
+<ul>
+<li><p>Not all high-confidence rules are interesting</p>
+<blockquote>
+<p>The rule <strong>X → milk</strong> may have high confidence for many itemsets X, because milk is just purchased very often (independent of X) and the confidence will be high</p>
+</blockquote>
+</li>
+<li><p><strong>Interest</strong> of an association rule I → j:<br>difference between its confidence and the fraction of baskets that contain j<br>$$ Interest(I → j) = conf(I → j)− Pr[ j] $$<br><em>Interesting rules are those with high interest values<br>(usually above 0.5)</em></p>
+</li>
+</ul>
+<h3 id="Example-Confidence-and-Interest"><a href="#Example-Confidence-and-Interest" class="headerlink" title="Example: Confidence and Interest"></a>Example: Confidence and Interest</h3><p>Given:</p>
+<blockquote>
+<p>B1 = {m, c, b} B2 = {m, p, j}<br>B3 = {m, b}    B4= {c, j}<br>B5 = {m, p, b} B6 = {m, c, b, j}<br>B7 = {c, b, j} B8 = {b, c}</p>
+</blockquote>
+<p><strong>Association rule: {m, b} →c</strong></p>
+<ul>
+<li><strong>Confidence</strong> = 2/4 = 0.5</li>
+<li><strong>Interest</strong> = |0.5 – 5/8| = 1/8 &lt; 1/2</li>
+</ul>
+<p>Item c appears in 5/8 of the baskets<br>Rule is not very interesting!</p>
+<blockquote>
+<p><strong>Support</strong>(A ∪ B) = P(A&amp;B)</p>
+<p><strong>Confidence</strong>(A → B) = P(B | A) = P(A&amp;B) / P(A)</p>
+<p><strong>Interest</strong>(A → B) = | P(B|A) – P(B) |</p>
+<p><strong>Lift</strong>(A → B) = P(B|A) / P(B) = P(A&amp;B) / P(A)P(B)</p>
+</blockquote>
+<h2 id="Lift"><a href="#Lift" class="headerlink" title="Lift"></a>Lift</h2><blockquote>
+<p>Lift(A → B) = P(B|A) / P(B) = P(A&amp;B) / P(A)P(B)</p>
+</blockquote>
+<p>Measure of dependent events (here events=itemsets)</p>
+<p>It takes into account the </p>
 <ol>
-<li><p>After Development, the code deployment time was huge.</p>
-</li>
-<li><p>Pressure of work on old, pending and new code was high because development and deployment time was high.</p>
-</li>
+<li>confidence of the rule P(B|A)</li>
+<li>the probability of the consequent P(B)</li>
 </ol>
-<p>On the other hand, <strong>Operations</strong> was also not completely satisfied. There were four major challenges they faced as per the above diagram:</p>
+<h3 id="Lift-A-→-B-1"><a href="#Lift-A-→-B-1" class="headerlink" title="Lift(A → B) = 1"></a>Lift(A → B) = 1</h3><p>then A and B are independent of each other. Thus, no interesting rule can be constructed from A &amp; B.</p>
+<h3 id="Lift-A-→-B-gt-1"><a href="#Lift-A-→-B-gt-1" class="headerlink" title="Lift(A → B) &gt; 1"></a>Lift(A → B) &gt; 1</h3><p>then the rule is interesting because it informs us that the two itemsets are dependent on each other.</p>
+<h3 id="Lift-A-→-B-0"><a href="#Lift-A-→-B-0" class="headerlink" title="Lift(A → B) = 0"></a>Lift(A → B) = 0</h3><p>then P(A&amp;B) = 0<br>=&gt; A&amp;B did not appear in any basket</p>
+<h3 id="P-A-amp-B-0"><a href="#P-A-amp-B-0" class="headerlink" title="P(A&amp;B) = 0"></a>P(A&amp;B) = 0</h3><p>in two cases</p>
+<blockquote>
+<p>Case 1: P(A) = 0 or P(B|A) = 0 </p>
+<ul>
+<li>If P(A) = 0, it means that A did not appear in any basket<br>(not a good antecedent; recall that we want frequent itemsets)</li>
+<li>If P(B|A) = 0, it means our confidence in the rule A à B is 0<br>(not a good rule; its predictability/confidence = 0)</li>
+</ul>
+<p>Case 2: P(B) = 0 or P(A|B) = 0</p>
+<ul>
+<li>If P(B) = 0, it means that B did not appear in any basket<br>(not a good consequent; recall that we want rules from frequent itemsets)</li>
+<li>If P(A|B) = 0, it means the consequent does not tell us anything about the antecedent</li>
+</ul>
+</blockquote>
+<h3 id="0-lt-Lift-A-→-B-lt-1"><a href="#0-lt-Lift-A-→-B-lt-1" class="headerlink" title="0 &lt; Lift(A → B) &lt; 1"></a>0 &lt; Lift(A → B) &lt; 1</h3><p>(Note that Lift cannot be negative.)</p>
+<p>a lift &lt; 1 means that the two itemsets are less dependent → <strong>less interesting</strong>.</p>
+<p>It is hard to come up with interesting (i.e., actionable) rules that say:</p>
+<ul>
+<li>A → not B</li>
+<li>Not A → B</li>
+</ul>
+<p><em>Association != causation</em></p>
+<p>Association is statistical dependence</p>
+<p>Association != Correlation </p>
+<p>Association != Causation</p>
+<h2 id="Finding-association-rules"><a href="#Finding-association-rules" class="headerlink" title="Finding association rules"></a>Finding association rules</h2><p><strong>Problem</strong>: Find all association rules with support ≥s and confidence ≥c<br><strong>Hard part</strong>: Finding the frequent itemsets!</p>
+<blockquote>
+<p>If {i1, i2,…, ik} → j has high support and confidence, then both {i1, i2,…, ik} and {i1, i2,…,ik, j} will be “frequent”</p>
+</blockquote>
+<h2 id="Mining-association-rules"><a href="#Mining-association-rules" class="headerlink" title="Mining association rules"></a>Mining association rules</h2><p>Step 1: Find all frequent itemsets I<br>Step 2: Rule generation</p>
+<blockquote>
+<p>For every subset A of I, generate a rule A → I \ A</p>
+<ul>
+<li>Since I is frequent, A is also frequent</li>
+<li>Single pass to compute the rule confidence<br>confidence(A,B→C,D) = support(A,B,C,D) / support(A,B)</li>
+<li>Observation: If A,B,C→D is below confidence, so is A,B→C,D</li>
+</ul>
+<p>Output the rules above the confidence threshold</p>
+</blockquote>
+<h3 id="Compacting-the-output"><a href="#Compacting-the-output" class="headerlink" title="Compacting the output"></a>Compacting the output</h3><p>To reduce the number of rules we can post-process them and only output:</p>
+<ul>
+<li>Maximal frequent itemsets:<br>No immediate superset is frequent<br><em>Gives more pruning</em></li>
+<li>Closed itemsets:<br>No immediate superset has the same count (&gt; 0)<br><em>Stores not only frequent information, but exact counts</em></li>
+</ul>
+<p>Maximal Frequent Itemsets $\subset$ Closed Frequent Itemsets $\subset$ Frequent Itemsets</p>
+<h2 id="Finding-Frequent-Itemsets"><a href="#Finding-Frequent-Itemsets" class="headerlink" title="Finding Frequent Itemsets"></a>Finding Frequent Itemsets</h2><ul>
+<li>The true cost of mining disk-resident data is usually the number of disk I/Os</li>
+<li>In practice, association-rule algorithms read the data in <strong>passes</strong> – all baskets read in turn</li>
+<li>We measure the cost by the number of passes an algorithm makes over the data</li>
+</ul>
+<h2 id="Finding-Frequent-Pairs"><a href="#Finding-Frequent-Pairs" class="headerlink" title="Finding Frequent Pairs"></a>Finding Frequent Pairs</h2><p>The hardest problem often turns out to be finding the frequent pairs of items {i1, i2}</p>
+<p>The approach:</p>
+<ul>
+<li>Approach 1:<br>Count all pairs using a matrix</li>
+<li>Approach 2:<br>Keep a table of triples [i, j, c] = “the count of the pair of items {i, j} is c.”</li>
+</ul>
+<p>Note:<br>Approach 1 only requires 4 bytes per pair<br>Approach 2 uses 12 bytes per pair (but only for pairs with count &gt; 0)</p>
+<p>Approach 1: Triangular Matrix</p>
+<ul>
+<li>n = total number items</li>
+<li>Count pair of items {i, j} only if i&lt;j</li>
+<li>Keep pair counts in lexicographic order:<br>{1,2}, {1,3},…, {1,n}, {2,3}, {2,4}, …, {2,n}, {3,4}, …, {n-1,n}</li>
+<li>Pair {i, j} is at position k = (i –1)(n – i/2) + j – i</li>
+<li>Total number of pairs n(n –1)/2; total bytes= 2n2</li>
+<li>Triangular Matrix requires 4 bytes per pair</li>
+</ul>
+<p>Approach 2 uses 12 bytes per occurring pair<br>(but only for pairs with count &gt; 0)</p>
+<ul>
+<li>Beats Approach 1 if less than 1/3 of possible pairs actually occur</li>
+</ul>
+<h2 id="A-Priori-Algorithm"><a href="#A-Priori-Algorithm" class="headerlink" title="A-Priori Algorithm"></a>A-Priori Algorithm</h2><p>A two-pass approach called A-Priori limits the need for main memory</p>
+<p>Key idea: <strong>monotonicity</strong></p>
+<blockquote>
+<p>If a set of items I appears at least s times, so does every subset J of I</p>
+</blockquote>
+<p><strong>Contrapositive for pairs:</strong><br>If item i does not appear in s baskets, then no pair including i can appear in s baskets</p>
+<p>Pass 1:<br>Read baskets and count in main memory the occurrences of each individual item</p>
+<p>Pass 2:<br>Read baskets again and count in main memory only those pairs where both elements are frequent (from Pass 1)</p>
+<ul>
+<li>Requires memory proportional to square of frequent items only (for counts)</li>
+<li>Plus a list of the frequent items (so you know what must be counted)</li>
+</ul>
+<h2 id="Frequent-Triples"><a href="#Frequent-Triples" class="headerlink" title="Frequent Triples"></a>Frequent Triples</h2><p>For each k, we construct two sets of k-tuples (sets of size k):</p>
+<ul>
+<li>Ck = <strong>candidate k-tuples</strong> = those that might be frequent sets (support &gt; s) based on information from the pass for k–1</li>
+<li>Lk = the set of truly frequent k-tuples   </li>
+</ul>
+<h3 id="Hypothetical-steps-of-the-A-Priori-algorithm"><a href="#Hypothetical-steps-of-the-A-Priori-algorithm" class="headerlink" title="Hypothetical steps of the A-Priori algorithm"></a>Hypothetical steps of the A-Priori algorithm</h3><ul>
+<li>C1 = { {b}{c}{j}{m}{n}{p} }</li>
+<li>Count the support of itemsets in C1</li>
+<li>Prune non-frequent: L1 = { b, c, j, m }</li>
+<li>Generate C2 = { {b,c} {b,j} {b,m} {c,j} {c,m} {j,m} }</li>
+<li>Count the support of itemsets in C2</li>
+<li>Prune non-frequent: L2 = { {b,m} {b,c} {c,m} {c,j} }</li>
+<li>Generate C3 = { {b,c,m} {b,c,j} {b,m,j} {c,m,j} }</li>
+<li>Count the support of itemsets in C3</li>
+<li>Prune non-frequent: L3 = { {b,c,m} }</li>
+</ul>
+<h1 id="PCY-Algorithm"><a href="#PCY-Algorithm" class="headerlink" title="PCY Algorithm"></a>PCY Algorithm</h1><h3 id="Observation"><a href="#Observation" class="headerlink" title="Observation:"></a>Observation:</h3><p>In pass 1 of A-Priori, most memory is idle</p>
+<p><strong>Pass 1 of PCY</strong>: In addition to item counts, maintain a hash table with as many buckets as fit in memory</p>
+<p>Keep a count for each bucket into which pairs of items are hashed</p>
+<h3 id="Observations-about-Buckets"><a href="#Observations-about-Buckets" class="headerlink" title="Observations about Buckets"></a>Observations about Buckets</h3><p><strong>Observation</strong>: If a bucket contains a frequent pair, then the bucket is surely frequent</p>
+<p>However, even without any frequent pair, a bucket can still be frequent</p>
+<p>But, for a bucket with total count less than s, none of its pairs can be frequent</p>
+<p>Pass 2:<br>Only count pairs that hash to frequent buckets</p>
+<h3 id="Between-Passes"><a href="#Between-Passes" class="headerlink" title="Between Passes"></a>Between Passes</h3><p>Replace the buckets by a bit-vector:</p>
+<ul>
+<li>1 means the bucket count exceeded the support s<br>(call it a frequent bucket); </li>
+<li>0 means it did not.</li>
+</ul>
+<h3 id="Pass-2"><a href="#Pass-2" class="headerlink" title="Pass 2"></a>Pass 2</h3><p>Count all pairs {i, j} that meet the conditions for being a candidate pair:</p>
 <ol>
-<li><p>It was difficult to maintain ~100% uptime of the production environment.</p>
-</li>
-<li><p>Infrastructure Automation tools were not very affective.</p>
-</li>
-<li><p>Number of severs to be monitored keeps on increasing with time and hence the complexity.</p>
-</li>
-<li><p>It was very difficult to provide feedback and diagnose issue in the product.</p>
-</li>
+<li>Both i and j are frequent items</li>
+<li>The pair {i, j} hashes to a bucket whose bit in the bit vector is 1 (i.e., a frequent bucket)</li>
 </ol>
-<p>In the following diagram proposed solution to the challenges of Waterfall Model are highlighted.</p>
-<p><img src="https://s1.ax1x.com/2018/02/16/9YHTVx.png" alt="9YHTVx.png"></p>
-<p>In the above diagram, Probable Solutions for the issues faced by Developers and Operations are highlighted in blue. This sets the guidelines for an Ideal Software Development strategy.</p>
-<p>From Developers point of view:</p>
-<ol>
-<li><p>A system which enables code deployment without any delay or wait time.</p>
-</li>
-<li><p>A system where work happens on the current code itself i.e. development sprints are short and well planned.</p>
-</li>
-</ol>
-<p>From Operations point of view:</p>
-<ol>
-<li><p>System should have at-least 99% uptime.</p>
-</li>
-<li><p>Tools &amp; systems are there in place for easy administration.</p>
-</li>
-<li><p>Effective monitoring and feedbacks system should be there.</p>
-</li>
-<li><p>Better Collaboration between Development &amp; Operations and is common requirement for Developers and Operations team.</p>
-</li>
-</ol>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="https://en.wikipedia.org/wiki/DevOps" target="_blank" rel="noopener">DevOps - Wikipedia</a><br><a href="https://www.edureka.co/blog/devops-tutorial" target="_blank" rel="noopener">DevOps Tutorial : Introduction To DevOps</a><br><a href="https://theagileadmin.com/what-is-devops/" target="_blank" rel="noopener">What Is DevOps?</a></p>
+<p>Both conditions are necessary for the pair to have a chance of being frequent</p>
 
       
     </div>
@@ -490,14 +606,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/DevOps/" rel="tag">
-            <i class="fa fa-tag"></i> 
-            DevOps</a>
-          
-        </div>
-      
 
       
       
@@ -507,8 +615,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/14/Scrum-Introduction/" rel="next" title="Scrum Introduction">
-                <i class="fa fa-chevron-left"></i> Scrum Introduction
+              <a href="/2018/09/17/Getting-Started-with-Amazon-EC2-Linux-Instances/" rel="next" title="Getting Started with Amazon EC2 Linux Instances">
+                <i class="fa fa-chevron-left"></i> Getting Started with Amazon EC2 Linux Instances
               </a>
             
           </div>
@@ -516,10 +624,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/15/Docker-Tutorial/" rel="prev" title="Docker Tutorial (1) -- Introduction">
-                Docker Tutorial (1) -- Introduction <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -684,7 +788,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition"><span class="nav-number">1.</span> <span class="nav-text">Definition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DevOps-toolchain"><span class="nav-number">2.</span> <span class="nav-text">DevOps toolchain</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-DevOps"><span class="nav-number">3.</span> <span class="nav-text">Why DevOps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Association-Rule-Discovery"><span class="nav-number">1.</span> <span class="nav-text">Association Rule Discovery</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Supermarket-shelf-management-–-Market-basket-model"><span class="nav-number">1.1.</span> <span class="nav-text">Supermarket shelf management – Market-basket model:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Market-Basket-Model"><span class="nav-number">1.2.</span> <span class="nav-text">The Market-Basket Model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Frequent-Itemsets"><span class="nav-number">1.3.</span> <span class="nav-text">Frequent Itemsets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Association-Rules"><span class="nav-number">1.4.</span> <span class="nav-text">Association Rules</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Confidence-and-Interest"><span class="nav-number">1.4.1.</span> <span class="nav-text">Example: Confidence and Interest</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lift"><span class="nav-number">1.5.</span> <span class="nav-text">Lift</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lift-A-→-B-1"><span class="nav-number">1.5.1.</span> <span class="nav-text">Lift(A → B) = 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lift-A-→-B-gt-1"><span class="nav-number">1.5.2.</span> <span class="nav-text">Lift(A → B) &gt; 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lift-A-→-B-0"><span class="nav-number">1.5.3.</span> <span class="nav-text">Lift(A → B) = 0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P-A-amp-B-0"><span class="nav-number">1.5.4.</span> <span class="nav-text">P(A&amp;B) = 0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0-lt-Lift-A-→-B-lt-1"><span class="nav-number">1.5.5.</span> <span class="nav-text">0 &lt; Lift(A → B) &lt; 1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Finding-association-rules"><span class="nav-number">1.6.</span> <span class="nav-text">Finding association rules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mining-association-rules"><span class="nav-number">1.7.</span> <span class="nav-text">Mining association rules</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Compacting-the-output"><span class="nav-number">1.7.1.</span> <span class="nav-text">Compacting the output</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Finding-Frequent-Itemsets"><span class="nav-number">1.8.</span> <span class="nav-text">Finding Frequent Itemsets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Finding-Frequent-Pairs"><span class="nav-number">1.9.</span> <span class="nav-text">Finding Frequent Pairs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-Priori-Algorithm"><span class="nav-number">1.10.</span> <span class="nav-text">A-Priori Algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Frequent-Triples"><span class="nav-number">1.11.</span> <span class="nav-text">Frequent Triples</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hypothetical-steps-of-the-A-Priori-algorithm"><span class="nav-number">1.11.1.</span> <span class="nav-text">Hypothetical steps of the A-Priori algorithm</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PCY-Algorithm"><span class="nav-number">2.</span> <span class="nav-text">PCY Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Observation"><span class="nav-number">2.0.1.</span> <span class="nav-text">Observation:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Observations-about-Buckets"><span class="nav-number">2.0.2.</span> <span class="nav-text">Observations about Buckets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Between-Passes"><span class="nav-number">2.0.3.</span> <span class="nav-text">Between Passes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pass-2"><span class="nav-number">2.0.4.</span> <span class="nav-text">Pass 2</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
