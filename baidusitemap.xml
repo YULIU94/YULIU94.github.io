@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/09/30/Kernel-Density-Estimation-KDE/</loc>
+    <lastmod>2018-10-01T02:01:42.466Z</lastmod>
+    <data>
+        <display>
+        <title>Kernel Density Estimation (KDE)</title>
+        <pubTime>2018-10-01T02:00:56.000Z</pubTime>
+        
+        <tag>KDE</tag>
+         
+         
+           
+             
+              <breadCrumb title="Data Mining" url="http://yoursite.com/categories/Data-Mining/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/09/30/Association-Rules-Discovery/</loc>
-    <lastmod>2018-09-30T17:17:32.657Z</lastmod>
+    <lastmod>2018-09-30T17:19:26.829Z</lastmod>
     <data>
         <display>
         <title>Association Rules Discovery</title>
@@ -569,9 +589,9 @@
         
         <tag>Neural Network</tag>
          
-        <tag>Machine Learning</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>Logistic Regression</tag>
          
@@ -593,8 +613,6 @@
         <title>Python - Vectorization and Broadcasting</title>
         <pubTime>2018-02-08T21:27:27.000Z</pubTime>
         
-        <tag>Machine Learning</tag>
-         
         <tag>Python</tag>
          
         <tag>NumPy</tag>
@@ -602,6 +620,8 @@
         <tag>vectorization</tag>
          
         <tag>broadcasting</tag>
+         
+        <tag>Machine Learning</tag>
          
          
            
