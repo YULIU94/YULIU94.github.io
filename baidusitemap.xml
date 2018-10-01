@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/09/30/Kernel-Density-Estimation-KDE/</loc>
-    <lastmod>2018-10-01T02:01:42.466Z</lastmod>
+    <lastmod>2018-10-01T19:18:19.384Z</lastmod>
     <data>
         <display>
         <title>Kernel Density Estimation (KDE)</title>
@@ -498,9 +498,9 @@
         <title>PCA - Mathematics (1)</title>
         <pubTime>2018-01-30T21:42:45.000Z</pubTime>
         
-        <tag>Machine Learning</tag>
-         
         <tag>Mathematics</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>PCA</tag>
          
@@ -589,9 +589,9 @@
         
         <tag>Neural Network</tag>
          
-        <tag>Python</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>Python</tag>
          
         <tag>Logistic Regression</tag>
          
@@ -613,6 +613,8 @@
         <title>Python - Vectorization and Broadcasting</title>
         <pubTime>2018-02-08T21:27:27.000Z</pubTime>
         
+        <tag>Machine Learning</tag>
+         
         <tag>Python</tag>
          
         <tag>NumPy</tag>
@@ -620,8 +622,6 @@
         <tag>vectorization</tag>
          
         <tag>broadcasting</tag>
-         
-        <tag>Machine Learning</tag>
          
          
            

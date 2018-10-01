@@ -275,8 +275,8 @@
       </categories>
       <tags>
         <tag>Neural Network</tag>
-        <tag>Python</tag>
         <tag>Machine Learning</tag>
+        <tag>Python</tag>
         <tag>Logistic Regression</tag>
       </tags>
   </entry>
@@ -288,11 +288,11 @@
         <category>Technology</category>
       </categories>
       <tags>
+        <tag>Machine Learning</tag>
         <tag>Python</tag>
         <tag>NumPy</tag>
         <tag>vectorization</tag>
         <tag>broadcasting</tag>
-        <tag>Machine Learning</tag>
       </tags>
   </entry>
   <entry>
@@ -314,8 +314,8 @@
         <category>Machine Learning</category>
       </categories>
       <tags>
-        <tag>Machine Learning</tag>
         <tag>Mathematics</tag>
+        <tag>Machine Learning</tag>
         <tag>PCA</tag>
       </tags>
   </entry>
