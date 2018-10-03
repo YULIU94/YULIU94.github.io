@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/10/03/Joins/</loc>
+    <lastmod>2018-10-03T21:59:26.649Z</lastmod>
+    <data>
+        <display>
+        <title>Joins</title>
+        <pubTime>2018-10-03T21:58:06.000Z</pubTime>
+        
+        <tag>Join</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="http://yoursite.com/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/09/30/Kernel-Density-Estimation-KDE/</loc>
-    <lastmod>2018-10-01T19:18:19.384Z</lastmod>
+    <lastmod>2018-10-01T19:19:37.722Z</lastmod>
     <data>
         <display>
         <title>Kernel Density Estimation (KDE)</title>
@@ -498,9 +518,9 @@
         <title>PCA - Mathematics (1)</title>
         <pubTime>2018-01-30T21:42:45.000Z</pubTime>
         
-        <tag>Mathematics</tag>
-         
         <tag>Machine Learning</tag>
+         
+        <tag>Mathematics</tag>
          
         <tag>PCA</tag>
          
