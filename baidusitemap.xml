@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/10/09/Common-Algorithm-Building-Blocks/</loc>
+    <lastmod>2018-10-09T17:04:20.005Z</lastmod>
+    <data>
+        <display>
+        <title>Common Algorithm Building Blocks</title>
+        <pubTime>2018-10-09T17:01:57.000Z</pubTime>
+        
+        <tag>Mapreduce</tag>
+         
+        <tag>Spark</tag>
+         
+         
+           
+             
+              <breadCrumb title="Big Data" url="http://yoursite.com/categories/Big-Data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/10/03/Joins/</loc>
     <lastmod>2018-10-03T21:59:26.649Z</lastmod>
     <data>
@@ -518,9 +540,9 @@
         <title>PCA - Mathematics (1)</title>
         <pubTime>2018-01-30T21:42:45.000Z</pubTime>
         
-        <tag>Machine Learning</tag>
-         
         <tag>Mathematics</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>PCA</tag>
          
@@ -611,9 +633,9 @@
          
         <tag>Machine Learning</tag>
          
-        <tag>Python</tag>
-         
         <tag>Logistic Regression</tag>
+         
+        <tag>Python</tag>
          
          
            
