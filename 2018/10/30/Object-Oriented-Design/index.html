@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,OOD,Multithreading," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Object Oriented Design标签（空格分隔）：   MultithreadingMultithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such pr">
+<meta name="keywords" content="Java,OOD,Multithreading">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Object Oriented Design">
+<meta property="og:url" content="http://yoursite.com/2018/10/30/Object-Oriented-Design/index.html">
+<meta property="og:site_name" content="Yu Liu">
+<meta property="og:description" content="Object Oriented Design标签（空格分隔）：   MultithreadingMultithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such pr">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://www.tutorialspoint.com/java/images/Thread_Life_Cycle.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/b0aeb7ffd1667b9162e5329154d43777_hd.png">
+<meta property="og:updated_time" content="2018-10-31T00:05:25.925Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Object Oriented Design">
+<meta name="twitter:description" content="Object Oriented Design标签（空格分隔）：   MultithreadingMultithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such pr">
+<meta name="twitter:image" content="https://www.tutorialspoint.com/java/images/Thread_Life_Cycle.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/10/30/Object-Oriented-Design/"/>
+
+
+
+
+
+  <title>Object Oriented Design | Yu Liu</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-113481790-1', 'auto');
+  ga('send', 'pageview');
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yu Liu</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-gallery">
+          <a href="/gallery/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-university"></i> <br />
+            
+            Gallery
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/30/Object-Oriented-Design/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yu Liu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yu Liu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Object Oriented Design</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-30T18:23:07-04:00">
+                2018-10-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Object-Oriented-Design/" itemprop="url" rel="index">
+                    <span itemprop="name">Object Oriented Design</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/10/30/Object-Oriented-Design/" class="leancloud_visitors" data-flag-title="Object Oriented Design">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Object-Oriented-Design"><a href="#Object-Oriented-Design" class="headerlink" title="Object Oriented Design"></a>Object Oriented Design</h1><p>标签（空格分隔）： </p>
+<hr>
+<h2 id="Multithreading"><a href="#Multithreading" class="headerlink" title="Multithreading"></a>Multithreading</h2><p>Multithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such program is called a thread. So, threads are light-weight processes within a process.</p>
+<h3 id="Life-Cycle-of-a-Thread"><a href="#Life-Cycle-of-a-Thread" class="headerlink" title="Life Cycle of a Thread"></a>Life Cycle of a Thread</h3><p><img src="https://www.tutorialspoint.com/java/images/Thread_Life_Cycle.jpg" alt="此处输入图片的描述"></p>
+<ul>
+<li><p><strong>New</strong> − A new thread begins its life cycle in the new state. It remains in this state until the program starts the thread. It is also referred to as a born thread.</p>
+</li>
+<li><p><strong>Runnable</strong> − After a newly born thread is started, the thread becomes runnable. A thread in this state is considered to be executing its task.</p>
+</li>
+<li><p><strong>Waiting</strong> − Sometimes, a thread transitions to the waiting state while the thread waits for another thread to perform a task. A thread transitions back to the runnable state only when another thread signals the waiting thread to continue executing.</p>
+</li>
+<li><p><strong>Timed Waiting</strong> − A runnable thread can enter the timed waiting state for a specified interval of time. A thread in this state transitions back to the runnable state when that time interval expires or when the event it is waiting for occurs.</p>
+</li>
+<li><p><strong>Terminated (Dead)</strong> − A runnable thread enters the terminated state when it completes its task or otherwise terminates.</p>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="Creation"><a href="#Creation" class="headerlink" title="Creation"></a>Creation</h3><p>Threads can be created by using two mechanisms :</p>
+<ol>
+<li>Extending the Thread class</li>
+<li>Implementing the Runnable Interface</li>
+<li>Through Callable or Future</li>
+<li>Through Thread Pool</li>
+</ol>
+<h4 id="Extending-the-Thread-class"><a href="#Extending-the-Thread-class" class="headerlink" title="Extending the Thread class"></a>Extending the Thread class</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">class ThreadDemo extends Thread &#123;</span><br><span class="line">private Thread t;</span><br><span class="line">private String threadName;</span><br><span class="line"></span><br><span class="line">ThreadDemo( String name) &#123;</span><br><span class="line">threadName = name;</span><br><span class="line">System.out.println(&quot;Creating &quot; +  threadName );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void run() &#123;</span><br><span class="line">System.out.println(&quot;Running &quot; +  threadName );</span><br><span class="line">try &#123;</span><br><span class="line">for(int i = 4; i &gt; 0; i--) &#123;</span><br><span class="line">System.out.println(&quot;Thread: &quot; + threadName + &quot;, &quot; + i);</span><br><span class="line">Thread.sleep(50);</span><br><span class="line">&#125;</span><br><span class="line">&#125;catch (InterruptedException e) &#123;</span><br><span class="line">System.out.println(&quot;Thread &quot; +  threadName + &quot; interrupted.&quot;);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(&quot;Thread &quot; +  threadName + &quot; exiting.&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void start () &#123;</span><br><span class="line">System.out.println(&quot;Starting &quot; +  threadName );</span><br><span class="line">if (t == null) &#123;</span><br><span class="line">t = new Thread (this, threadName);</span><br><span class="line">t.start ();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class TestThread &#123;</span><br><span class="line"></span><br><span class="line">public static void main(String args[]) &#123;</span><br><span class="line">ThreadDemo T1 = new ThreadDemo( &quot;Thread-1&quot;);</span><br><span class="line">T1.start();</span><br><span class="line"></span><br><span class="line">ThreadDemo T2 = new ThreadDemo( &quot;Thread-2&quot;);</span><br><span class="line">T2.start();</span><br><span class="line">&#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Implementing-the-Runnable-Interface"><a href="#Implementing-the-Runnable-Interface" class="headerlink" title="Implementing the Runnable Interface"></a>Implementing the Runnable Interface</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">class RunnableDemo implements Runnable &#123;</span><br><span class="line">private Thread t;</span><br><span class="line">private String threadName;</span><br><span class="line"></span><br><span class="line">RunnableDemo( String name) &#123;</span><br><span class="line">threadName = name;</span><br><span class="line">System.out.println(&quot;Creating &quot; +  threadName );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void run() &#123;</span><br><span class="line">System.out.println(&quot;Running &quot; +  threadName );</span><br><span class="line">try &#123;</span><br><span class="line">for(int i = 4; i &gt; 0; i--) &#123;</span><br><span class="line">System.out.println(&quot;Thread: &quot; + threadName + &quot;, &quot; + i);</span><br><span class="line">Thread.sleep(50);</span><br><span class="line">&#125;</span><br><span class="line">&#125;catch (InterruptedException e) &#123;</span><br><span class="line">System.out.println(&quot;Thread &quot; +  threadName + &quot; interrupted.&quot;);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(&quot;Thread &quot; +  threadName + &quot; exiting.&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void start () &#123;</span><br><span class="line">System.out.println(&quot;Starting &quot; +  threadName );</span><br><span class="line">if (t == null) &#123;</span><br><span class="line">t = new Thread (this, threadName);</span><br><span class="line">t.start ();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class TestThread &#123;</span><br><span class="line"></span><br><span class="line">public static void main(String args[]) &#123;</span><br><span class="line">RunnableDemo R1 = new RunnableDemo( &quot;Thread-1&quot;);</span><br><span class="line">R1.start();</span><br><span class="line"></span><br><span class="line">RunnableDemo R2 = new RunnableDemo( &quot;Thread-2&quot;);</span><br><span class="line">R2.start();</span><br><span class="line">&#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Thread-Class-vs-Runnable-Interface"><a href="#Thread-Class-vs-Runnable-Interface" class="headerlink" title="Thread Class vs Runnable Interface"></a>Thread Class vs Runnable Interface</h4><ol>
+<li><p>If we extend the Thread class, our class cannot extend any other class because Java doesn’t support multiple inheritance. But, if we implement the Runnable interface, our class can still extend other base classes.</p>
+</li>
+<li><p>We can achieve basic functionality of a thread by extending Thread class because it provides some inbuilt methods like yield(), interrupt() etc. that are not available in Runnable interface.</p>
+</li>
+</ol>
+<h3 id="Thread-Pool"><a href="#Thread-Pool" class="headerlink" title="Thread Pool"></a>Thread Pool</h3><p>The following applications can benefit from using a thread pool:</p>
+<ul>
+<li>An application that is highly parallel and can dispatch a large number of small work items asynchronously (such as distributed index search or network I/O).</li>
+<li>An application that creates and destroys a large number of threads that each run for a short time. Using the thread pool can reduce the complexity of thread management and the overhead involved in thread creation and destruction.</li>
+<li>An application that processes independent work items in the background and in parallel (such as loading multiple tabs).</li>
+<li>An application that must perform an exclusive wait on kernel objects or block on incoming events on an object. Using the thread pool can reduce the complexity of thread management and increase performance by reducing the number of context switches.<br>An application that creates custom waiter threads to wait on events.</li>
+</ul>
+<h4 id="Thread-Pool-Architecture"><a href="#Thread-Pool-Architecture" class="headerlink" title="Thread Pool Architecture"></a>Thread Pool Architecture</h4><p>The thread pool architecture consists of the following:</p>
+<p>Worker threads that execute the callback functions<br>Waiter threads that wait on multiple wait handles<br>A work queue<br>A default thread pool for each process<br>A worker factory that manages the worker threads</p>
+<h4 id="Executor-Thread-Pool-Methods"><a href="#Executor-Thread-Pool-Methods" class="headerlink" title="Executor Thread Pool Methods"></a>Executor Thread Pool Methods</h4><blockquote>
+<p><strong>newFixedThreadPool(int)</strong>           Creates a fixed size thread pool.<br><strong>newCachedThreadPool()</strong>             Creates a thread pool that creates new threads as needed, but will reuse previously constructed threads when they are available<br><strong>newSingleThreadExecutor()</strong>         Creates a single thread. </p>
+</blockquote>
+<h4 id="Thread-Pool-Example"><a href="#Thread-Pool-Example" class="headerlink" title="Thread Pool Example"></a>Thread Pool Example</h4><p>Steps to be followed</p>
+<blockquote>
+<ol>
+<li>Create a task(Runnable Object) to execute</li>
+<li>Create Executor Pool using Executors</li>
+<li>Pass tasks to Executor Pool</li>
+<li>Shutdown the Executor Pool</li>
+</ol>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">// Java program to illustrate  </span><br><span class="line">// ThreadPool </span><br><span class="line">import java.text.SimpleDateFormat;  </span><br><span class="line">import java.util.Date; </span><br><span class="line">import java.util.concurrent.ExecutorService; </span><br><span class="line">import java.util.concurrent.Executors; </span><br><span class="line"></span><br><span class="line">// Task class to be executed (Step 1) </span><br><span class="line">class Task implements Runnable    </span><br><span class="line">&#123; </span><br><span class="line">private String name; </span><br><span class="line"></span><br><span class="line">public Task(String s) </span><br><span class="line">&#123; </span><br><span class="line">name = s; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">// Prints task name and sleeps for 1s </span><br><span class="line">// This Whole process is repeated 5 times </span><br><span class="line">public void run() </span><br><span class="line">&#123; </span><br><span class="line">try</span><br><span class="line">&#123; </span><br><span class="line">for (int i = 0; i&lt;=5; i++) </span><br><span class="line">&#123; </span><br><span class="line">if (i==0) </span><br><span class="line">&#123; </span><br><span class="line">Date d = new Date(); </span><br><span class="line">SimpleDateFormat ft = new SimpleDateFormat(&quot;hh:mm:ss&quot;); </span><br><span class="line">System.out.println(&quot;Initialization Time for&quot;</span><br><span class="line">+ &quot; task name - &quot;+ name +&quot; = &quot; +ft.format(d));    </span><br><span class="line">//prints the initialization time for every task  </span><br><span class="line">&#125; </span><br><span class="line">else</span><br><span class="line">&#123; </span><br><span class="line">Date d = new Date(); </span><br><span class="line">SimpleDateFormat ft = new SimpleDateFormat(&quot;hh:mm:ss&quot;); </span><br><span class="line">System.out.println(&quot;Executing Time for task name - &quot;+ </span><br><span class="line">name +&quot; = &quot; +ft.format(d));    </span><br><span class="line">// prints the execution time for every task  </span><br><span class="line">&#125; </span><br><span class="line">Thread.sleep(1000); </span><br><span class="line">&#125; </span><br><span class="line">System.out.println(name+&quot; complete&quot;); </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">catch(InterruptedException e) </span><br><span class="line">&#123; </span><br><span class="line">e.printStackTrace(); </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line">public class Test </span><br><span class="line">&#123; </span><br><span class="line">// Maximum number of threads in thread pool </span><br><span class="line">static final int MAX_T = 3;              </span><br><span class="line"></span><br><span class="line">public static void main(String[] args) </span><br><span class="line">&#123; </span><br><span class="line">// creates five tasks </span><br><span class="line">Runnable r1 = new Task(&quot;task 1&quot;); </span><br><span class="line">Runnable r2 = new Task(&quot;task 2&quot;); </span><br><span class="line">Runnable r3 = new Task(&quot;task 3&quot;); </span><br><span class="line">Runnable r4 = new Task(&quot;task 4&quot;); </span><br><span class="line">Runnable r5 = new Task(&quot;task 5&quot;);       </span><br><span class="line"></span><br><span class="line">// creates a thread pool with MAX_T no. of  </span><br><span class="line">// threads as the fixed pool size(Step 2) </span><br><span class="line">ExecutorService pool = Executors.newFixedThreadPool(MAX_T);   </span><br><span class="line"></span><br><span class="line">// passes the Task objects to the pool to execute (Step 3) </span><br><span class="line">pool.execute(r1); </span><br><span class="line">pool.execute(r2); </span><br><span class="line">pool.execute(r3); </span><br><span class="line">pool.execute(r4); </span><br><span class="line">pool.execute(r5);  </span><br><span class="line"></span><br><span class="line">// pool shutdown ( Step 4) </span><br><span class="line">pool.shutdown();     </span><br><span class="line">&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Risks-in-using-Thread-Pools"><a href="#Risks-in-using-Thread-Pools" class="headerlink" title="Risks in using Thread Pools"></a>Risks in using Thread Pools</h4><ul>
+<li><strong>Deadlock</strong> : While deadlock can occur in any multi-threaded program, thread pools introduce another case of deadlock, one in which all the executing threads are waiting for the results from the blocked threads waiting in the queue due to the unavailability of threads for execution.</li>
+<li><strong>Thread Leakage</strong> :Thread Leakage occurs if a thread is removed from the pool to execute a task but not returned to it when the task completed. As an example, if the thread throws an exception and pool class does not catch this exception, then the thread will simply exit, reducing the size of the thread pool by one. If this repeats many times, then the pool would eventually become empty and no threads would be available to execute other requests.</li>
+<li><strong>Resource Thrashing</strong> :If the thread pool size is very large then time is wasted in context switching between threads. Having more threads than the optimal number may cause starvation problem leading to resource thrashing as explained.</li>
+</ul>
+<h2 id="Type-System"><a href="#Type-System" class="headerlink" title="Type System"></a>Type System</h2><h3 id="Static-typing"><a href="#Static-typing" class="headerlink" title="Static typing"></a>Static typing</h3><p>Statically typed languages check the types and look for type errors during compile time.</p>
+<h3 id="Dynamic-typing"><a href="#Dynamic-typing" class="headerlink" title="Dynamic typing"></a>Dynamic typing</h3><p>Dynamically typed languages check the types and look for type errors during runtime.</p>
+<h3 id="Weak-typing"><a href="#Weak-typing" class="headerlink" title="Weak typing"></a>Weak typing</h3><p>Understood as the presence or absence of type safety, memory safety, static type-checking, or dynamic type-checking.</p>
+<h3 id="Strong-typing"><a href="#Strong-typing" class="headerlink" title="Strong typing"></a>Strong typing</h3><p>“Strong typing” generally refers to use of programming language types in order to both capture invariants of the code, and ensure its correctness, and definitely exclude certain classes of programming errors.</p>
+<p><img src="https://pic4.zhimg.com/80/b0aeb7ffd1667b9162e5329154d43777_hd.png" alt="此处输入图片的描述"></p>
+<h3 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h3><p>Dynamic typing is not worse or better than static typing. Both ways have advantages and disadvantages. Dynamically typed languages are usually easier to learn and to write programs in, but, as you can imagine, it leads to more mistakes and bugs.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://en.hexlet.io/courses/intro_to_programming/lessons/types/theory_unit" target="_blank" rel="noopener">Typing: dynamic vs. static and weak vs strong</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            Java</a>
+          
+            <a href="/tags/OOD/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            OOD</a>
+          
+            <a href="/tags/Multithreading/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            Multithreading</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/09/Common-Algorithm-Building-Blocks/" rel="next" title="Common Algorithm Building Blocks">
+                <i class="fa fa-chevron-left"></i> Common Algorithm Building Blocks
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzYzNi8xMDE5MQ=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Yu Liu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.facebook.com/profile.php?id=100010002882463" target="_blank" title="Facebook">
+                      
+                        <i class="fa fa-fw fa-facebook"></i>Facebook</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/YULIU94" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.instagram.com/joshuuualy/" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:lyfcsc@hotmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-Oriented-Design"><span class="nav-number">1.</span> <span class="nav-text">Object Oriented Design</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Multithreading"><span class="nav-number">1.1.</span> <span class="nav-text">Multithreading</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Life-Cycle-of-a-Thread"><span class="nav-number">1.1.1.</span> <span class="nav-text">Life Cycle of a Thread</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Creation"><span class="nav-number">1.1.2.</span> <span class="nav-text">Creation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Extending-the-Thread-class"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">Extending the Thread class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Implementing-the-Runnable-Interface"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">Implementing the Runnable Interface</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Thread-Class-vs-Runnable-Interface"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">Thread Class vs Runnable Interface</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thread-Pool"><span class="nav-number">1.1.3.</span> <span class="nav-text">Thread Pool</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Thread-Pool-Architecture"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">Thread Pool Architecture</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Executor-Thread-Pool-Methods"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">Executor Thread Pool Methods</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Thread-Pool-Example"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">Thread Pool Example</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Risks-in-using-Thread-Pools"><span class="nav-number">1.1.3.4.</span> <span class="nav-text">Risks in using Thread Pools</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Type-System"><span class="nav-number">1.2.</span> <span class="nav-text">Type System</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Static-typing"><span class="nav-number">1.2.1.</span> <span class="nav-text">Static typing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dynamic-typing"><span class="nav-number">1.2.2.</span> <span class="nav-text">Dynamic typing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Weak-typing"><span class="nav-number">1.2.3.</span> <span class="nav-text">Weak typing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Strong-typing"><span class="nav-number">1.2.4.</span> <span class="nav-text">Strong typing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Properties"><span class="nav-number">1.2.5.</span> <span class="nav-text">Properties</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.3.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yu Liu</span>
+
+  
+</div>
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65090423";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function(d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+         
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("jAoSxDgNhHOf0Y040fG3rDbe-gzGzoHsz", "9r9LdmF6chxQFOALVnqa04A1");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
