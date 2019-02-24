@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Network," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yu Liu">
-<meta property="og:url" content="http://yoursite.com/tags/CSS/index.html">
+<meta name="description" content="Sequence Number SpaceTCP uses a byte stream abstraction◦ Each byte in each stream is numbered◦ 32-bit value, wraps around◦ Initial, random values selected during setupByte stream broken down into segm">
+<meta name="keywords" content="Network">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Transport layer, Congestion control">
+<meta property="og:url" content="http://yoursite.com/2019/02/23/Transport-layer-Congestion-control/index.html">
 <meta property="og:site_name" content="Yu Liu">
+<meta property="og:description" content="Sequence Number SpaceTCP uses a byte stream abstraction◦ Each byte in each stream is numbered◦ 32-bit value, wraps around◦ Initial, random values selected during setupByte stream broken down into segm">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-02-24T01:27:13.774Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yu Liu">
+<meta name="twitter:title" content="Transport layer, Congestion control">
+<meta name="twitter:description" content="Sequence Number SpaceTCP uses a byte stream abstraction◦ Each byte in each stream is numbered◦ 32-bit value, wraps around◦ Initial, random values selected during setupByte stream broken down into segm">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/CSS/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/02/23/Transport-layer-Congestion-control/"/>
 
 
 
 
 
-  <title>Tag: CSS | Yu Liu</title>
+  <title>Transport layer, Congestion control | Yu Liu</title>
   
 
 
@@ -149,7 +154,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -297,54 +302,242 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>CSS<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/23/Transport-layer-Congestion-control/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yu Liu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yu Liu">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/03/22/Front-end-Handbook-CSS/" itemprop="url">
-              
-                <span itemprop="name">Front-end Handbook CSS</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Transport layer, Congestion control</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-22T14:50:53-04:00"
-              content="2018-03-22" >
-          03-22
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-23T20:26:06-05:00">
+                2019-02-23
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Network/" itemprop="url" rel="index">
+                    <span itemprop="name">Computer Network</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/02/23/Transport-layer-Congestion-control/" class="leancloud_visitors" data-flag-title="Transport layer, Congestion control">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Sequence-Number-Space"><a href="#Sequence-Number-Space" class="headerlink" title="Sequence Number Space"></a>Sequence Number Space</h2><p>TCP uses a byte stream abstraction<br>◦ Each byte in each stream is numbered<br>◦ 32-bit value, wraps around<br>◦ Initial, random values selected during setup<br>Byte stream broken down into segments (packets)<br>◦ Size limited by the Maximum Segment Size (MSS)<br>◦ Set to limit fragmentation<br>Each segment has a sequence number</p>
+<a id="more"></a>
+<h2 id="Flow-Control"><a href="#Flow-Control" class="headerlink" title="Flow Control"></a>Flow Control</h2><h3 id="Problem-how-many-packets-should-a-sender-transmit"><a href="#Problem-how-many-packets-should-a-sender-transmit" class="headerlink" title="Problem: how many packets should a sender transmit?"></a>Problem: how many packets should a sender transmit?</h3><p>◦ Too many packets may overwhelm the receiver<br>◦ Size of the receivers buffers may change over time</p>
+<h3 id="Solution-sliding-window"><a href="#Solution-sliding-window" class="headerlink" title="Solution: sliding window"></a>Solution: sliding window</h3><p>◦ Receiver tells the sender how big their buffer is<br>◦ Called the advertised window<br>◦ For window size n, sender may transmit n bytes without</p>
+<h3 id="receiving-an-ACK"><a href="#receiving-an-ACK" class="headerlink" title="receiving an ACK"></a>receiving an ACK</h3><p>◦ After each ACK, the window slides forward</p>
+<h2 id="Nagle’s-Algorithm"><a href="#Nagle’s-Algorithm" class="headerlink" title="Nagle’s Algorithm"></a>Nagle’s Algorithm</h2><ol>
+<li>If the window &gt;= MSS and available data &gt;= MSS: Send the data</li>
+<li>Elif there is unACKed data: Enqueue data in a buffer (send after a timeout)</li>
+<li>Else: send the data</li>
+</ol>
+<h2 id="What-Should-the-Receiver-ACK"><a href="#What-Should-the-Receiver-ACK" class="headerlink" title="What Should the Receiver ACK?"></a>What Should the Receiver ACK?</h2><ol>
+<li>ACK every packet</li>
+<li>Use <code>cumulative ACK</code>, where an ACK for sequence n implies ACKS for all k &lt; n</li>
+<li>Use <code>negative ACKs</code> (NACKs), indicating which packet did not arrive</li>
+<li>Use <code>selective ACKs</code> (SACKs), indicating those that did arrive, even if not in order<br>◦ SACK is an actual TCP extension</li>
+</ol>
+<h2 id="Error-Detection"><a href="#Error-Detection" class="headerlink" title="Error Detection"></a>Error Detection</h2><p>Checksum detects (some) packet corruption<br>◦ Computed over IP header, TCP header, and data<br>Sequence numbers catch sequence problems<br>◦ Duplicates are ignored<br>◦ Out-of-order packets are reordered or dropped<br>◦ Missing sequence numbers indicate lost packets<br>Lost segments detected by sender<br>◦ Use timeout to detect missing ACKs<br>◦ Need to estimate RTT to calibrate the timeout<br>◦ Sender must keep copies of all data until ACK</p>
+<h2 id="Goals-of-Congestion-Control"><a href="#Goals-of-Congestion-Control" class="headerlink" title="Goals of Congestion Control"></a>Goals of Congestion Control</h2><ol>
+<li>Adjusting to the bottleneck bandwidth</li>
+<li>Adjusting to variations in bandwidth</li>
+<li>Sharing bandwidth between flows</li>
+<li>Maximizing throughput</li>
+</ol>
+<h2 id="General-Approaches"><a href="#General-Approaches" class="headerlink" title="General Approaches"></a>General Approaches</h2><h3 id="Do-nothing-send-packets-indiscriminately"><a href="#Do-nothing-send-packets-indiscriminately" class="headerlink" title="Do nothing, send packets indiscriminately"></a>Do nothing, send packets indiscriminately</h3><p>◦ Many packets will drop, totally unpredictable performance<br>◦ May lead to congestion collapse</p>
+<h3 id="Reservations"><a href="#Reservations" class="headerlink" title="Reservations"></a>Reservations</h3><p>◦ Pre-arrange bandwidth allocations for flows<br>◦ Requires negotiation before sending packets<br>◦ Must be supported by the network</p>
+<h3 id="Dynamic-adjustment"><a href="#Dynamic-adjustment" class="headerlink" title="Dynamic adjustment"></a>Dynamic adjustment</h3><p>◦ Use probes to estimate level of congestion<br>◦ Speed up when congestion is low<br>◦ Slow down when congestion increases<br>◦ Messy dynamics, requires distributed coordination</p>
+<h2 id="TCP-Congestion-Control"><a href="#TCP-Congestion-Control" class="headerlink" title="TCP Congestion Control"></a>TCP Congestion Control</h2><p>Each TCP connection has a window<br>◦ Controls the number of unACKed packets<br>Sending rate is ~ window/RTT<br>Idea: vary the window size to control the send rate</p>
+<h3 id="Congestion-Window-cwnd"><a href="#Congestion-Window-cwnd" class="headerlink" title="Congestion Window (cwnd)"></a>Congestion Window (cwnd)</h3><p>Limits how much data is in transit<br>Denominated in bytes</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wnd = min(cwnd, adv_wnd);</span><br><span class="line">effective_wnd = wnd – (last_byte_sent – last_byte_acked);</span><br></pre></td></tr></table></figure>
+<h3 id="Two-Basic-Components"><a href="#Two-Basic-Components" class="headerlink" title="Two Basic Components"></a>Two Basic Components</h3><ol>
+<li>Detect congestion<br>◦ Packet dropping is most reliable signal<br>▪ ▪ Delay-based methods are hard and risky<br>◦ How do you detect packet drops? ACKs<br>▪ ▪ Timeout after not receiving an ACK<br>▪ ▪ Several duplicate ACKs in a row (ignore for now)</li>
+<li>Rate adjustment algorithm<br>◦ Modify cwnd<br>◦ Probe for bandwidth<br>◦ Responding to congestion</li>
+</ol>
+<h3 id="Rate-Adjustment"><a href="#Rate-Adjustment" class="headerlink" title="Rate Adjustment"></a>Rate Adjustment</h3><p>Recall: TCP is ACK clocked<br>◦ Congestion = delay = long wait between ACKs<br>◦ No congestion = low delay = ACKs arrive quickly<br>Basic algorithm</p>
+<ul>
+<li>Upon receipt of ACK: increase cwnd</li>
+<li>Data was delivered, perhaps we can send faster</li>
+<li>cwnd growth is proportional to RTT</li>
+<li>On loss: decrease cwnd</li>
+<li>Data is being lost, there must be congestion</li>
+</ul>
+<p>Question: increase/decrease functions to use?</p>
+<h3 id="Implementing-Congestion-Control"><a href="#Implementing-Congestion-Control" class="headerlink" title="Implementing Congestion Control"></a>Implementing Congestion Control</h3><p>Maintains three variables:<br>◦ cwnd: congestion window<br>◦ adv_wnd: receiver advertised window<br>◦ ssthresh: threshold size (used to update cwnd)<br>For sending, use: wnd = min(cwnd, adv_wnd)<br>Two phases of congestion control</p>
+<ol>
+<li>Slow start (cwnd &lt; ssthresh)<br>▪ Probe for bottleneck bandwidth</li>
+<li>Congestion avoidance (cwnd &gt;= ssthresh)<br>▪ AIMD</li>
+</ol>
+<h4 id="Slow-Start"><a href="#Slow-Start" class="headerlink" title="Slow Start"></a>Slow Start</h4><p>Goal: reach knee quickly<br>Upon starting/restarting a connection<br>◦ cwnd =1<br>◦ ssthresh = adv_wnd<br>◦ Each time a segment is ACKed, cwnd++<br>Continues until…<br>◦ ssthresh is reached<br>◦ Or a packet is lost<br>Slow Start is not actually slow<br>◦ cwnd increases exponentially</p>
+<h4 id="Congestion-Avoidance"><a href="#Congestion-Avoidance" class="headerlink" title="Congestion Avoidance"></a>Congestion Avoidance</h4><p>AIMD mode<br>ssthresh is lower-bound guess about location of the<br>knee<br>If cwnd &gt;= ssthresh then<br>each time a segment is ACKed<br>increment cwnd by 1/cwnd (cwnd += 1/cwnd).<br>So cwnd is increased by one only if all segments have<br>been acknowledged</p>
+<h2 id="TCP-Pseudocode"><a href="#TCP-Pseudocode" class="headerlink" title="TCP Pseudocode"></a>TCP Pseudocode</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Initially:</span><br><span class="line">cwnd = 1;</span><br><span class="line">ssthresh = adv_wnd;</span><br><span class="line">New ack received:</span><br><span class="line">if (cwnd &lt; ssthresh)</span><br><span class="line">/* Slow Start*/</span><br><span class="line">cwnd = cwnd + 1;</span><br><span class="line">else</span><br><span class="line">/* Congestion Avoidance */</span><br><span class="line">cwnd = cwnd + 1/cwnd;</span><br><span class="line">Timeout:</span><br><span class="line">/* Multiplicative decrease */</span><br><span class="line">ssthresh = cwnd/2;</span><br><span class="line">cwnd = 1;</span><br></pre></td></tr></table></figure>
+<h2 id="The-Evolution-of-TCP"><a href="#The-Evolution-of-TCP" class="headerlink" title="The Evolution of TCP"></a>The Evolution of TCP</h2><p>Thus far, we have discussed TCP Tahoe<br>◦ Original version of TCP<br>However, TCP was invented in 1974!<br>◦ Today, there are many variants of TCP<br>Early, popular variant: TCP Reno<br>◦ Tahoe features, plus…<br>◦ Fast retransmit<br>◦ Fast recovery</p>
+<h3 id="TCP-Reno-Fast-Retransmit"><a href="#TCP-Reno-Fast-Retransmit" class="headerlink" title="TCP Reno: Fast Retransmit"></a>TCP Reno: Fast Retransmit</h3><p>Problem: in Tahoe, if segment is lost, there is a long wait until the<br>RTO<br>Reno: retransmit after 3 duplicate ACKs</p>
+<h4 id="TCP-Reno-Fast-Recovery"><a href="#TCP-Reno-Fast-Recovery" class="headerlink" title="TCP Reno: Fast Recovery"></a>TCP Reno: Fast Recovery</h4><p>After a fast-retransmit set cwnd to ssthresh/2<br>◦ i.e. don’t reset cwnd to 1<br>◦ Avoid unnecessary return to slow start<br>◦ Prevents expensive timeouts<br>But when RTO expires still do cwnd = 1<br>◦ Return to slow start, same as Tahoe<br>◦ Indicates packets aren’t being delivered at all<br>◦ i.e. congestion must be really bad</p>
+<p>##Many TCP Variants…<br>Tahoe: the original<br>◦ Slow start with AIMD<br>◦ Dynamic RTO based on RTT estimate<br>Reno: fast retransmit and fast recovery<br>NewReno: improved fast retransmit<br>◦ Each duplicate ACK triggers a retransmission<br>◦ Problem: &gt;3 out-of-order packets causes pathological<br>retransmissions<br>Vegas: delay-based congestion avoidance</p>
+<h2 id="TCP-in-the-Real-World"><a href="#TCP-in-the-Real-World" class="headerlink" title="TCP in the Real World"></a>TCP in the Real World</h2><p>What are the most popular variants today?<br>◦ Key problem: TCP performs poorly on high bandwidth-delay<br>product networks (like the modern Internet)<br>◦ Compound TCP (Windows)<br>▪ Based on Reno<br>▪ Uses two congestion windows: delay based and loss based<br>▪ Thus, it uses a compound congestion controller<br>◦ TCP CUBIC (Linux)<br>▪ Enhancement of BIC (Binary Increase Congestion Control)<br>▪ Window size controlled by cubic function<br>▪ Parameterized by the time T since the last dropped packet</p>
+<h3 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h3><p>Fast window growth<br>◦ Slow start and additive increase are too slow when<br>bandwidth is large<br>◦ Want to converge more quickly<br>Maintain fairness with other TCP variants<br>◦ Window growth cannot be too aggressive<br>Improve RTT fairness<br>◦ TCP Tahoe/Reno flows are not fair when RTTs vary widely<br>Simple implementation</p>
+<h2 id="Compound-TCP-Implementation"><a href="#Compound-TCP-Implementation" class="headerlink" title="Compound TCP Implementation"></a>Compound TCP Implementation</h2><p>Default TCP implementation in Windows<br>Key idea: split cwnd into two separate windows<br>◦ Traditional, loss-based window<br>◦ New, delay-based window<br>wnd = min(cwnd + dwnd, adv_wnd)<br>◦ cwnd is controlled by AIMD<br>◦ dwnd is the delay window<br>Rules for adjusting dwnd:<br>◦ If RTT is increasing, decrease dwnd (dwnd &gt;= 0)<br>◦ If RTT is decreasing, increase dwnd<br>◦ Increase/decrease are proportional to the rate of change</p>
+<h2 id="Small-Flows"><a href="#Small-Flows" class="headerlink" title="Small Flows"></a>Small Flows</h2><p>Problem: TCP is biased against short flows<br>◦ 1 RTT wasted for connection setup (SYN, SYN/ACK)<br>◦ cwnd always starts at 1<br>Vast majority of Internet traffic is short flows<br>◦ Mostly HTTP transfers, &lt;100KB<br>◦ Most TCP flows never leave slow start!<br>Proposed solutions (driven by Google):<br>◦ Increase initial cwnd to 10<br>◦ TCP Fast Open: use cryptographic hashes to identify<br>receivers, eliminate the need for three-way handshake<br>◦ QUIC 0-RTT handshake</p>
+<h2 id="Wireless-Networks"><a href="#Wireless-Networks" class="headerlink" title="Wireless Networks"></a>Wireless Networks</h2><p>Problem: Tahoe and Reno assume loss = congestion<br>◦ True on the WAN, bit errors are very rare<br>◦ False on wireless, interference is very common<br>TCP throughput ~ 1/sqrt(drop rate)<br>◦ Even a few interference drops can kill performance<br>Possible solutions:<br>◦ Break layering, push data link info up to TCP<br>◦ Use delay-based congestion detection (TCP Vegas)<br>◦ Explicit congestion notification (ECN)</p>
+<h2 id="Denial-of-Service"><a href="#Denial-of-Service" class="headerlink" title="Denial of Service"></a>Denial of Service</h2><p>Problem: TCP connections require state<br>◦ Initial SYN allocates resources on the server<br>◦ State must persist for several minutes (RTO)<br>SYN flood: send enough SYNs to a server to allocate<br>all memory/meltdown the kernel<br>Solution: SYN cookies<br>◦ Idea: don’t store initial state on the server<br>◦ Securely insert state into the SYN/ACK packet<br>◦ Client will reflect the state back to the server</p>
+<h2 id="SYN-Cookies-in-Practice"><a href="#SYN-Cookies-in-Practice" class="headerlink" title="SYN Cookies in Practice"></a>SYN Cookies in Practice</h2><p>Advantages<br>◦ Effective at mitigating SYN floods<br>◦ Compatible with all TCP versions<br>◦ Only need to modify the server<br>◦ No need for client support<br>Disadvantages<br>◦ MSS limited to 3 bits, may be smaller than clients actual<br>MSS<br>◦ Server forgets all other TCP options included with the<br>client’s SYN<br>▪ SACK support, window scaling, etc.</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Network/" rel="tag">
+            <i class="fa fa-tag"></i> 
+            Network</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/22/Comparisons-of-Tahoe-Reno-and-SACK-TCP/" rel="next" title="Comparisons of Tahoe, Reno, and SACK TCP">
+                <i class="fa fa-chevron-left"></i> Comparisons of Tahoe, Reno, and SACK TCP
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -352,6 +545,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzYzNi8xMDE5MQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -372,8 +574,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -461,6 +672,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sequence-Number-Space"><span class="nav-number">1.</span> <span class="nav-text">Sequence Number Space</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flow-Control"><span class="nav-number">2.</span> <span class="nav-text">Flow Control</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-how-many-packets-should-a-sender-transmit"><span class="nav-number">2.1.</span> <span class="nav-text">Problem: how many packets should a sender transmit?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution-sliding-window"><span class="nav-number">2.2.</span> <span class="nav-text">Solution: sliding window</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#receiving-an-ACK"><span class="nav-number">2.3.</span> <span class="nav-text">receiving an ACK</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nagle’s-Algorithm"><span class="nav-number">3.</span> <span class="nav-text">Nagle’s Algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-Should-the-Receiver-ACK"><span class="nav-number">4.</span> <span class="nav-text">What Should the Receiver ACK?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-Detection"><span class="nav-number">5.</span> <span class="nav-text">Error Detection</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Goals-of-Congestion-Control"><span class="nav-number">6.</span> <span class="nav-text">Goals of Congestion Control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#General-Approaches"><span class="nav-number">7.</span> <span class="nav-text">General Approaches</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Do-nothing-send-packets-indiscriminately"><span class="nav-number">7.1.</span> <span class="nav-text">Do nothing, send packets indiscriminately</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reservations"><span class="nav-number">7.2.</span> <span class="nav-text">Reservations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dynamic-adjustment"><span class="nav-number">7.3.</span> <span class="nav-text">Dynamic adjustment</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-Congestion-Control"><span class="nav-number">8.</span> <span class="nav-text">TCP Congestion Control</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Congestion-Window-cwnd"><span class="nav-number">8.1.</span> <span class="nav-text">Congestion Window (cwnd)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Two-Basic-Components"><span class="nav-number">8.2.</span> <span class="nav-text">Two Basic Components</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rate-Adjustment"><span class="nav-number">8.3.</span> <span class="nav-text">Rate Adjustment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementing-Congestion-Control"><span class="nav-number">8.4.</span> <span class="nav-text">Implementing Congestion Control</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Slow-Start"><span class="nav-number">8.4.1.</span> <span class="nav-text">Slow Start</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Congestion-Avoidance"><span class="nav-number">8.4.2.</span> <span class="nav-text">Congestion Avoidance</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-Pseudocode"><span class="nav-number">9.</span> <span class="nav-text">TCP Pseudocode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Evolution-of-TCP"><span class="nav-number">10.</span> <span class="nav-text">The Evolution of TCP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-Reno-Fast-Retransmit"><span class="nav-number">10.1.</span> <span class="nav-text">TCP Reno: Fast Retransmit</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP-Reno-Fast-Recovery"><span class="nav-number">10.1.1.</span> <span class="nav-text">TCP Reno: Fast Recovery</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-in-the-Real-World"><span class="nav-number">11.</span> <span class="nav-text">TCP in the Real World</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Goals"><span class="nav-number">11.1.</span> <span class="nav-text">Goals</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Compound-TCP-Implementation"><span class="nav-number">12.</span> <span class="nav-text">Compound TCP Implementation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Small-Flows"><span class="nav-number">13.</span> <span class="nav-text">Small Flows</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wireless-Networks"><span class="nav-number">14.</span> <span class="nav-text">Wireless Networks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Denial-of-Service"><span class="nav-number">15.</span> <span class="nav-text">Denial of Service</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SYN-Cookies-in-Practice"><span class="nav-number">16.</span> <span class="nav-text">SYN Cookies in Practice</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -598,6 +825,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -625,6 +856,17 @@
 
 
 
+
+  <script type="text/javascript">
+    (function(d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
          
 
 
