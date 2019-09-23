@@ -3,13 +3,14 @@
 
 
     
+    
   <url>
     <loc>http://yoursite.com/2019/02/23/Transport-layer-Congestion-control/</loc>
     <lastmod>2019-02-24T01:27:13.774Z</lastmod>
     <data>
         <display>
         <title>Transport layer, Congestion control</title>
-        <pubTime>2019-02-24T01:26:06.000Z</pubTime>
+        <pubTime>2019-02-24T04:26:06.000Z</pubTime>
         
         <tag>Network</tag>
          
@@ -29,7 +30,7 @@
     <data>
         <display>
         <title>Comparisons of Tahoe, Reno, and SACK TCP</title>
-        <pubTime>2019-02-22T21:50:00.000Z</pubTime>
+        <pubTime>2019-02-23T00:50:00.000Z</pubTime>
         
         <tag>Network</tag>
          
@@ -49,7 +50,7 @@
     <data>
         <display>
         <title>SSH Tutorial</title>
-        <pubTime>2019-01-30T16:22:46.000Z</pubTime>
+        <pubTime>2019-01-30T19:22:46.000Z</pubTime>
         
         <tag>Network</tag>
          
@@ -69,7 +70,7 @@
     <data>
         <display>
         <title>Object Oriented Design</title>
-        <pubTime>2018-10-30T22:23:07.000Z</pubTime>
+        <pubTime>2018-10-31T01:23:07.000Z</pubTime>
         
         <tag>Java</tag>
          
@@ -93,7 +94,7 @@
     <data>
         <display>
         <title>Common Algorithm Building Blocks</title>
-        <pubTime>2018-10-09T17:01:57.000Z</pubTime>
+        <pubTime>2018-10-09T20:01:57.000Z</pubTime>
         
         <tag>Mapreduce</tag>
          
@@ -115,7 +116,7 @@
     <data>
         <display>
         <title>Joins</title>
-        <pubTime>2018-10-03T21:58:06.000Z</pubTime>
+        <pubTime>2018-10-04T00:58:06.000Z</pubTime>
         
         <tag>Join</tag>
          
@@ -135,7 +136,7 @@
     <data>
         <display>
         <title>Kernel Density Estimation (KDE)</title>
-        <pubTime>2018-10-01T02:00:56.000Z</pubTime>
+        <pubTime>2018-10-01T05:00:56.000Z</pubTime>
         
         <tag>KDE</tag>
          
@@ -155,7 +156,7 @@
     <data>
         <display>
         <title>Association Rules Discovery</title>
-        <pubTime>2018-09-30T16:58:49.000Z</pubTime>
+        <pubTime>2018-09-30T19:58:49.000Z</pubTime>
         
          
            
@@ -173,7 +174,7 @@
     <data>
         <display>
         <title>Getting Started with Amazon EC2 Linux Instances</title>
-        <pubTime>2018-09-17T20:49:25.000Z</pubTime>
+        <pubTime>2018-09-17T23:49:25.000Z</pubTime>
         
         <tag>AWS</tag>
          
@@ -195,7 +196,7 @@
     <data>
         <display>
         <title>Large-Scale Parallel Data Processing Basics</title>
-        <pubTime>2018-09-14T00:21:20.000Z</pubTime>
+        <pubTime>2018-09-14T03:21:20.000Z</pubTime>
         
         <tag>Mapreduce</tag>
          
@@ -217,7 +218,7 @@
     <data>
         <display>
         <title>Distributed System Services</title>
-        <pubTime>2018-09-14T01:40:12.000Z</pubTime>
+        <pubTime>2018-09-14T04:40:12.000Z</pubTime>
         
         <tag>Mapreduce</tag>
          
@@ -239,7 +240,7 @@
     <data>
         <display>
         <title>Large-Scale Parallel Data Processing Overview</title>
-        <pubTime>2018-09-14T00:03:53.000Z</pubTime>
+        <pubTime>2018-09-14T03:03:53.000Z</pubTime>
         
         <tag>Mapreduce</tag>
          
@@ -263,7 +264,7 @@
     <data>
         <display>
         <title>Angular - Component Interaction</title>
-        <pubTime>2018-06-14T14:40:43.000Z</pubTime>
+        <pubTime>2018-06-14T17:40:43.000Z</pubTime>
         
         <tag>Angular</tag>
          
@@ -283,7 +284,7 @@
     <data>
         <display>
         <title>Angular - Lifecycle Hooks</title>
-        <pubTime>2018-06-14T18:07:50.000Z</pubTime>
+        <pubTime>2018-06-14T21:07:50.000Z</pubTime>
         
         <tag>Angular</tag>
          
@@ -304,7 +305,7 @@
     <data>
         <display>
         <title>Front-end Handbook JavaScript</title>
-        <pubTime>2018-03-01T19:41:49.000Z</pubTime>
+        <pubTime>2018-03-01T22:41:49.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -324,7 +325,7 @@
     <data>
         <display>
         <title>Front-end Handbook CSS</title>
-        <pubTime>2018-03-22T18:50:53.000Z</pubTime>
+        <pubTime>2018-03-22T21:50:53.000Z</pubTime>
         
         <tag>CSS</tag>
          
@@ -344,7 +345,7 @@
     <data>
         <display>
         <title>Closures in JavaScript</title>
-        <pubTime>2018-03-22T14:26:15.000Z</pubTime>
+        <pubTime>2018-03-22T17:26:15.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -366,7 +367,7 @@
     <data>
         <display>
         <title>AJAX introduction</title>
-        <pubTime>2018-03-21T14:53:56.000Z</pubTime>
+        <pubTime>2018-03-21T17:53:56.000Z</pubTime>
         
         <tag>AJAX</tag>
          
@@ -392,7 +393,7 @@
     <data>
         <display>
         <title>Cross-Origin Resource Sharing (CORS) Introduction</title>
-        <pubTime>2018-03-20T18:48:34.000Z</pubTime>
+        <pubTime>2018-03-20T21:48:34.000Z</pubTime>
         
         <tag>CORS</tag>
          
@@ -416,7 +417,7 @@
     <data>
         <display>
         <title>Front-end Handbook HTML</title>
-        <pubTime>2018-03-10T00:47:30.000Z</pubTime>
+        <pubTime>2018-03-10T03:47:30.000Z</pubTime>
         
         <tag>HTML</tag>
          
@@ -436,7 +437,7 @@
     <data>
         <display>
         <title>Machine Learning Glossary</title>
-        <pubTime>2018-03-09T18:22:02.000Z</pubTime>
+        <pubTime>2018-03-09T21:22:02.000Z</pubTime>
         
         <tag>Machine Learning</tag>
          
@@ -456,7 +457,7 @@
     <data>
         <display>
         <title>Batch normalization in Neural Networks</title>
-        <pubTime>2018-03-15T15:13:22.000Z</pubTime>
+        <pubTime>2018-03-15T18:13:22.000Z</pubTime>
         
         <tag>Batch normalization</tag>
          
@@ -478,7 +479,7 @@
     <data>
         <display>
         <title>TypeScript Introduction</title>
-        <pubTime>2018-03-02T01:19:24.000Z</pubTime>
+        <pubTime>2018-03-02T04:19:24.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -500,7 +501,7 @@
     <data>
         <display>
         <title>WebSocket Tutorial</title>
-        <pubTime>2018-02-12T16:20:52.000Z</pubTime>
+        <pubTime>2018-02-12T19:20:52.000Z</pubTime>
         
         <tag>WebSocket</tag>
          
@@ -520,7 +521,7 @@
     <data>
         <display>
         <title>ECMAScript 6 features (3)</title>
-        <pubTime>2018-01-30T14:33:45.000Z</pubTime>
+        <pubTime>2018-01-30T17:33:45.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -540,7 +541,7 @@
     <data>
         <display>
         <title>ECMAScript 6 features (2)</title>
-        <pubTime>2018-01-29T04:24:35.000Z</pubTime>
+        <pubTime>2018-01-29T07:24:35.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -560,7 +561,7 @@
     <data>
         <display>
         <title>ECMAScript 6 features (1)</title>
-        <pubTime>2018-01-29T02:32:13.000Z</pubTime>
+        <pubTime>2018-01-29T05:32:13.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -580,7 +581,7 @@
     <data>
         <display>
         <title>Scrum Introduction</title>
-        <pubTime>2018-02-14T21:26:15.000Z</pubTime>
+        <pubTime>2018-02-15T00:26:15.000Z</pubTime>
         
         <tag>Scrum</tag>
          
@@ -602,7 +603,7 @@
     <data>
         <display>
         <title>DevOps Introduction</title>
-        <pubTime>2018-02-15T18:47:36.000Z</pubTime>
+        <pubTime>2018-02-15T21:47:36.000Z</pubTime>
         
         <tag>DevOps</tag>
          
@@ -622,11 +623,11 @@
     <data>
         <display>
         <title>PCA - Mathematics (1)</title>
-        <pubTime>2018-01-30T21:42:45.000Z</pubTime>
+        <pubTime>2018-01-31T00:42:45.000Z</pubTime>
         
-        <tag>Machine Learning</tag>
-         
         <tag>Mathematics</tag>
+         
+        <tag>Machine Learning</tag>
          
         <tag>PCA</tag>
          
@@ -646,7 +647,7 @@
     <data>
         <display>
         <title>Docker Tutorial (1) -- Introduction</title>
-        <pubTime>2018-02-15T19:28:58.000Z</pubTime>
+        <pubTime>2018-02-15T22:28:58.000Z</pubTime>
         
         <tag>Docker</tag>
          
@@ -666,7 +667,7 @@
     <data>
         <display>
         <title>Docker Tutorial(2) -- Define a container with Dockerfile</title>
-        <pubTime>2018-02-16T21:29:26.000Z</pubTime>
+        <pubTime>2018-02-17T00:29:26.000Z</pubTime>
         
         <tag>Docker</tag>
          
@@ -680,14 +681,13 @@
     </url>
 
     
-    
   <url>
     <loc>http://yoursite.com/2018/02/14/LINQ/</loc>
     <lastmod>2018-02-14T18:31:28.900Z</lastmod>
     <data>
         <display>
         <title>LINQ Tutorial</title>
-        <pubTime>2018-02-14T15:55:41.000Z</pubTime>
+        <pubTime>2018-02-14T18:55:41.000Z</pubTime>
         
         <tag>LINQ</tag>
          
@@ -711,7 +711,7 @@
     <data>
         <display>
         <title>Building a cat classifier with logistic regression from scratch</title>
-        <pubTime>2018-02-09T21:15:40.000Z</pubTime>
+        <pubTime>2018-02-10T00:15:40.000Z</pubTime>
         
         <tag>Neural Network</tag>
          
@@ -737,7 +737,7 @@
     <data>
         <display>
         <title>Python - Vectorization and Broadcasting</title>
-        <pubTime>2018-02-08T21:27:27.000Z</pubTime>
+        <pubTime>2018-02-09T00:27:27.000Z</pubTime>
         
         <tag>Machine Learning</tag>
          
@@ -765,7 +765,7 @@
     <data>
         <display>
         <title>Google Analytics Introduction</title>
-        <pubTime>2018-02-07T19:59:32.000Z</pubTime>
+        <pubTime>2018-02-07T22:59:32.000Z</pubTime>
         
         <tag>Google Analytics</tag>
          
@@ -785,7 +785,7 @@
     <data>
         <display>
         <title>Hello world</title>
-        <pubTime>2018-01-28T03:21:01.000Z</pubTime>
+        <pubTime>2018-01-28T06:21:01.000Z</pubTime>
         
          
            
